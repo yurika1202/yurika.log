@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@use "../global" as global;
+
+/* footer
+-------------------------------------- */
+footer {
+    margin-top: 10.4rem;
+    padding-bottom: 8rem;
+    position: relative;
+
+    @include global.mq() {
+        padding-bottom: 4rem; 
+    }
+}
+
+.footer-bg {
+    width: 100%;
+    height: 33rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    @include global.mq() {
+        height: 23rem;
+    }
+
+    &._circle {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: 0 -35rem;
+        position: absolute;
+        left: -30%;
+        z-index: -1;
+        transform: scale(-1, -1);
+    
+        @include global.mq(md) {
+            object-position: 0 -20rem;
+        }
+    
+        @include global.mq() {
+            object-position: 0 -13rem;
+        }
+    }
+    
+    &._line {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: 35%;
+        transform: scale(1.2);
+    
+        @include global.mq(md) {
+            object-position: 50%;
+            transform: scale(1);    
+        }
+    
+        @include global.mq() {
+            object-position: 50% 1rem;
+            transform: scale(1);
+        }
+    }
+}
+
+/* footer-link
+----------------------------------------------- */
+.footer-link {
+    margin-top: 6.4rem;
+
+    @include global.mq() {
+        margin-top: 4rem;
+    }    
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        &:not(:first-child) {
+            margin-left: 2.4rem;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    i {
+        font-size: 3.2rem;
+        color: global.$color-main;
+    }
+}
+
+.privacy {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2.4rem;
+    transition: all ease 0.5s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    @include global.mq() {
+        margin-top: 1.6rem;
+    }
+}
+
+.copy {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: global.$font-family-awesome_en;
+    margin-top: 3.2rem;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@use "../global" as global;
+
+.section-line {
+    width: 44.609%;
+    margin: 0 auto;
+
+    @include global.mq() {
+        width: 70%;
+    }
+
+    &._portfolio {
+        margin-top: 3.2rem;
+
+        @include global.mq(md) {
+            margin-top: 8rem;
+        }
+    }
+}

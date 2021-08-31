@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use "../../../global" as global;
+
+/* portfolio
+---------------------------------------------- */
+.portfolio-section {
+    margin-top: 16rem;
+    position: relative;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 4.189rem;
+    font-family: global.$font-family-awesome_en;
+
+    @include global.mq() {
+        font-size: 3.2rem;
+    }
+}
+
+.section-title_ruby {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: global.$font-family-awesome_jp;
+    padding-left: 6.4rem;
+    vertical-align: middle;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0.05rem;
+        height: 2.4rem;
+        background: global.$color-text;
+        position: absolute;
+        top: 50%;
+        left: 3.2rem;
+        transform: translateY(-50%);
+
+        @include global.mq() {
+            left: 1.6rem;
+        }
+    }
+
+    @include global.mq() {
+        font-size: 1.2rem;
+        padding-left: 3.2rem;
+    }
+}
+
+.portfolio-container {
+    margin-top: 4.8rem;
+
+    @include global.mq() {
+        margin-top: 4rem;
+    }
+}
+

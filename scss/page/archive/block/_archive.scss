@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@use "../../../global" as global;
+
+/* archive-search
+----------------------------------------------- */
+.archive-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+
+    @include global.mq() {
+        font-size: 1.8rem;
+    }
+}
+
+.archive-search {
+    position: relative;
+    margin-top: 3.6rem;
+
+    @include global.mq() {
+        margin-top: 2.4rem;
+    }
+}
+
+.category-title {
+    margin-top: 4rem;
+
+    p {
+        display: inline-block;
+        background: global.$color-main;
+        padding: 0.8rem 3.2rem;
+        border-radius: 999px;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+    }
+}

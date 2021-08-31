@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<title>Yurika.portfolio</title>
+
+<meta name="description"  content="コーダーyurikaのポートフォリオ">
+<meta name="robots" content="all">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--Google Font-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+<!-- font awesome -->
+<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="icon" type="image/x-icon" href="/favicon .ico">
+
+</head>
+<body>
+    
+<!-- header -->
+<header>
+    <div class="header-bg">
+        <img src="img/header-line.svg" class="header-bg _line" alt="ヘッダーの背景">
+        <img src="img/circle.png" class="header-bg _circle" alt="ヘッダーの背景">
+    </div><!-- /.header-bg -->
+
+    <div class="inner">
+
+        <div class="header-top">
+            <p class="header-logo _portfolio-page">
+                <img src="img/portfolio.png" alt="Yurika.portfolioのロゴ">
+            </p><!-- /.header-logo -->
+        </div><!-- /.header-top -->
+
+    </div><!-- /.inner -->
+</header>
+<!-- ./header -->
+
+<main class="inner">
+
+    <!-- works-breadcrumb -->
+    <nav class="breadcrumb _works">
+        <ul class="breadcrumb-item _works">
+            <li><a href=""><i class="fas fa-home"></i>ホーム</a></li>
+            <li><a href="">実績一覧</a></li>
+            <li><a href="">自身のブログ・ポートフォリオ</a></li>
+        </ul>
+    </nav><!-- /.breadcrumb -->
+
+    <section class="works-content">
+
+        <div class="works-content_top">
+
+            <div class="works-thumbnail_single">
+                <img src="/img/lp.png" alt="ブログアイキャッチ画像" loading="lazy" decoding="async">
+            </div><!-- /.works-thumbnail -->
+    
+            <div class="works-info">
+                <div class="works-info_title">
+                    <h1>自身のポートフォリオ・ブログ</h1>
+                    <p><a href="index.html" target="_blank" rel="external"><i class="fas fa-external-link-alt"></i></a></p>    
+                </div><!-- /.works-info_title -->
+    
+                <div class="works-info_date">
+                    <div class="id-date">
+                        <p class="date-title"><span><i class="fas fa-thumbtack"></i></span>ID</p>
+                        <p><input type="text" id="copy-id" value="sample" readonly></p>
+                        <button onclick="cpId()"><i class="far fa-copy"></i></button>
+                    </div><!-- /.id-date -->
+                    <div class="pass-date">
+                        <p class="date-title"><span><i class="fas fa-unlock-alt"></i></span>PASS</p>
+                        <p><input type="text" id="copy-pass" value="password123" readonly></p>
+                        <button onclick="cpPass()"><i class="far fa-copy"></i></button>
+                    </div><!-- /.id-date -->
+                </div><!-- /.works-info_date -->
+    
+                <ul class="works-card_area works-info_area">
+                    <li>デザイン</li>
+                    <li>コーディング</li>
+                    <li>CMS導入</li>
+                    <li>SEO対策</li>
+                </ul><!-- /.works-info_area -->
+    
+                <div class="works-info_overview">
+                    <p>自身のスキルをまとめたポートフォリオと、自身の学習の記録を残すためにブログを制作しました。</p>
+                </div><!-- /.works-info_overview -->
+            </div><!-- /.works-info --> 
+            
+        </div><!-- /.works-content_top -->
+
+        <dl class="works-content_items">
+            <div class="works-content_item">
+                <dt>目的</dt>
+                <dd><p>ポートフォリオ：採用担当者様に見ていただき、私がどのような人間か、またスキルはどの程度なのかを知っていただくこと。<br>ブログ：学習の記録やアウトプットをする場として、自身の頭の中を整理するとともに、同じくWeb制作を学習中の方の参考になるサイトにすること。</p></dd>
+            </div><!-- /.works-content_item -->
+    
+            <div class="works-content_item">
+                <dt>アプローチ</dt>
+                <dd>
+                    <p>共通：落ち着きのある暖かな印象になるよう、柔らかな曲線や女性らしい細い線をあしらい、ベージュを基調としたデザインにしました。<br>ポートフォリオ：できるだけシンプルに、リンクやアニメーションを減らし、ストレスなくサッと見れるような構成にしました。<br>ブログ：ユーザーが求める記事までスムーズに誘導できるよう、カテゴリーやキーワード検索、タグ検索を設置しました。</p>
+                    <ul class="approach-list">
+                        <li>
+                            <p class="approach-list_title">お問い合わせフォーム</p>
+                            <p class="approach-list_text">必須項目を入力しないと送信ボタンが反映されないようにし、入力漏れを防ぐようにしました。姓と名を分けた入力欄や、入力例を記載することによって、分かりやすくしました。</p>
+                        </li>
+                        <li>
+                            <p class="approach-list_title">テストテスト</p>
+                            <p class="approach-list_text">サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。サンプルです。</p>
+                        </li>
+                    </ul>
+                </dd>
+            </div><!-- /.works-content_item -->
+      
+            <div class="works-content_item">
+                <dt>実践内容</dt>
+                <dd>
+                    <ul class="try-list">
+                        <li>CSS設計(吉本式BEM設計)</li>
+                        <li>Javascript(jQuery)</li>
+                        <li>Sass</li>
+                        <li>WordPress</li>
+                    </ul><!-- /.try-list -->
+                </dd>
+            </div><!-- /.works-content_item -->
+    
+            <div class="works-content_item">
+                <dt>制作工数</dt>
+                <dd>
+                    <p class="process-time"><span><i class="far fa-clock"></i></span>約 124時間</p>
+                    
+                    <ul class="process-items">
+                        <li class="process-item">
+                            <p class="process-list-title">サイト設計</p>
+                            <ul class="process-list">
+                                <li>サイトマップ</li>
+                                <li>ワイヤーフレーム作成</li>
+                            </ul><!-- /.process-list -->    
+                        </li>
+    
+                        <li class="process-item">
+                            <p class="process-list-title">デザイン</p>
+                            <ul class="process-list">
+                                <li>ベース</li>
+                                <li>下層</li>
+                            </ul><!-- /.process-list -->    
+                        </li>
+    
+                        <li class="process-item">
+                            <p class="process-list-title">コーディング</p>
+                            <ul class="process-list">
+                                <li>ベース</li>
+                                <li>下層</li>
+                                <li>アニメーション</li>
+                                <li>フォーム</li>
+                            </ul><!-- /.process-list -->    
+                        </li>
+    
+                        <li class="process-item">
+                            <p class="process-list-title">CMS導入</p>
+                            <ul class="process-list">
+                                <li>WordPress導入</li>
+                            </ul><!-- /.process-list -->    
+                        </li>
+    
+                        <li class="process-item">
+                            <p class="process-list-title">SEO対策</p>
+                            <ul class="process-list">
+                                <li></li>
+                            </ul><!-- /.process-list -->        
+                        </li>
+                    </ul><!-- /.process-lists -->
+                </dd>
+            </div><!-- /.works-content_item -->
+        </dl>
+
+    </section><!-- /.works-content -->
+
+</main><!-- /.inner -->
+
+<!-- footer -->
+<footer>
+    <div class="section-line"><img src="/img/section-line.png" alt="セクションの区切り" loading="lazy" decoding="async"></div><!-- /.section__line -->
+    
+    <div class="footer-bg">
+        <img src="/img/circle.png" alt="フッターの背景" class="footer-bg _circle">
+        <img src="/img/footer-line.svg" alt="フッターの画像" class="footer-bg _line">
+    </div><!-- /.footer-bg -->
+    
+    <div class="footer-link">
+        <div class="icons">
+            <a href="index.html" class="blog"><i class="far fa-file-alt"></i></a><!-- /.blog -->
+            <a href="https://twitter.com/bnku212" class="twitter"><i class="fab fa-twitter"></i></a><!-- /.twitter -->
+            <a href="" class="github"><i class="fab fa-github"></i></a><!-- /.github -->   
+        </div><!-- /.icons -->
+        <p class="privacy"><a href="">プライバシーポリシー</a></p>
+    </div><!-- /.footer__menu_link -->
+    
+    <small class="copy">&copy; 2021 Yurika.portfolio
+    </small>
+</footer>
+
+<div class="top-scroll">TOP</div><!-- /.top-scroll -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>

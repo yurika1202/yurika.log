@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@use "../../../global" as global;
+
+/* about-description
+------------------------------------------ */
+.description {
+    margin-top: 4.8rem;
+}
+
+.description-list {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+.description-text {
+    margin-top: 2.4rem;
+}
+
+.description-link {
+    text-align: center;
+    margin-top: 5.6rem;
+    display: flex;
+    justify-content: center;
+
+    p {
+        display: block;
+
+        &:not(:first-child) {
+            margin-left: 14.4rem;
+
+            @include global.mq() {
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    @include global.mq() {
+        display: block;
+    }
+}
+
+.description-btn {
+    padding-right: 2rem;
+    position: relative;
+    background: global.$color-main;
+    border-radius: 10px;
+    padding: 1.6rem 4.8rem 1.6rem 3.2rem;
+    color: #fff;
+    transition: all ease 0.5s;
+
+    &::after {
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

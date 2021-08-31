@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@use "../global" as global;
+
+/* pagination
+----------------------------------- */
+.pager {
+    margin-top: 7.2rem;
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+
+    li {
+        width: 6.4rem;
+        height: 6.4rem;
+
+        &:not(:first-child) {
+            margin-left: 2rem;
+
+            @include global.mq() {
+                margin-left: 1rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            width: inherit;
+            height: inherit;
+            padding: 1rem;
+            font-size: 2.4rem;
+            font-family: global.$font-family-awesome_en;
+            text-align: center;
+            transition: all ease 0.5s;
+
+            &:hover, &._active {
+                background: rgba(global.$color-main, 0.3);
+                border-radius: 999px;    
+            }
+
+            i {
+                color: global.$color-main;
+                font-size: 3.2rem;
+                vertical-align: middle;
+            }
+            
+            @include global.mq() {
+                font-size: 1.6rem;
+                padding: 0;
+            }
+        }
+
+        @include global.mq() {
+            width: 3.2rem;
+            height: 3.2rem;  
+        }
+    }
+}
+
+.current {
+    width: inherit;
+    height: inherit;
+    padding: 1rem;
+    font-size: 2.4rem;
+    font-family: global.$font-family-awesome_en;
+    text-align: center;
+    transition: all ease 0.5s;
+    background: rgba(global.$color-main, 0.3);
+    border-radius: 999px;
+    
+    @include global.mq() {
+        padding: 0.2rem;
+        font-size: 1.6rem;
+    }
+}
+
+.pager-number {
+    transition: all ease 0.5s;
+
+    &:hover, &._active {
+        background: rgba(global.$color-main, 0.3);
+        border-radius: 999px;    
+    }
+}
+
+.pre, .next {
+    transition: ease 0.5s;
+    
+    &:hover {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@use "../../../global" as global;
+
+/* side-bar
+---------------------------------------------- */
+.side-contents {
+    width: 27.7985%;
+    padding: 4rem 3.2rem 0;
+    border-left: 1px solid global.$color-main;
+
+    @include global.mq(md) {
+        display: none;
+    }
+
+    @include global.mq() {
+        display: none;
+    }
+}
+
+.side-profile {
+    text-align: center;
+}
+
+.profile-img {
+    width: 70%;
+    margin: 0 auto;
+
+    img {
+        border-radius: 999px;
+    }
+}
+
+.side-profile_text {
+    margin-top: 3.2rem;
+}
+
+.side-profile_title {
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin-left: 1rem;
+
+        &:first-of-type {
+            margin-left: 2.4rem;
+        }
+
+        i {
+            font-size: 1.6rem;
+            color: global.$color-main;
+            transition: all ease 0.5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-family: global.$font-family-awesome_en;
+}
+
+.side-profile_message {
+    margin-top: 2.4rem;
+}
+
+.side-section {
+    margin-top: 11.6rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0.08rem;
+        height: 4rem;
+        background: global.$color-text;
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.side-section_title {
+    padding-left: 2.8rem;
+    position: relative;
+    font-weight: 500;
+
+    &::before {
+        content: '';
+        width: 1.2rem;
+        height: 1.2rem;
+        background: global.$color-main;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.side-category_wrapper {
+    margin-top: 1.6rem;
+
+    li {
+        a {
+            transition: all ease 0.5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.side-category_list {
+    font-family: global.$font-family-awesome_en;
+    display: flex;
+
+    span {
+        font-family: global.$font-family-awesome_jp;
+        font-size: 1.2rem;
+        margin-left: 1.6rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &:not(:first-of-type) {
+        margin-top: 2.4rem;
+    }
+}
+
+.menu-item-112, .menu-item-116 {
+    margin-top: 2rem;
+}
+
+.side-table {
+    position: sticky;
+    top: 2rem;
+}
+
+.toc_widget {
+    list-style: none;
+    margin-top: 1.6rem;
+}
+
+.widgettitle {
+    display: none;
+}
+
+.toc_widget_list {
+    li {
+        margin-top: 0.8rem;
+
+        ul {
+            margin-left: 1.6rem;
+        }
+
+        a {
+            transition: all ease 0.5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

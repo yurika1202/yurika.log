@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@use "../global" as global;
+
+/* header-table_btn
+------------------------------------------- */
+.header-table_btn {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 4.6%;
+    right: 25%;
+    z-index: -2;
+    padding: 0.5rem 1.2rem 0.5rem 2.5rem;
+    background: global.$color-main;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+
+    p {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    &::before {
+        content: '';
+        width: 0.4rem;
+        height: 0.4rem;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        top: 38%;
+        left: 20%;
+        transform: rotate(45deg);
+        transition: all ease 1s;
+    }
+
+    &.is_open {
+        &::before {
+            top: 50%;
+            transform: rotate(-135deg);
+        }
+    }
+
+    @include global.mq() {
+        display: block;
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+/* header-table_nav
+--------------------------------------------- */
+.header-table_nav {
+    width: 96%;
+    background: global.$color-bg;
+    box-shadow: 1px 1px 10px -4px global.$color-main;
+    border-radius: 20px;
+    padding: 0 1.6rem 2.4rem;
+    position: fixed;
+    top: 10%;
+    right: 50%;
+    z-index: 99;
+    transform: translate(50%, -500%);
+    transition: all 1s ease;
+
+    &.panel_active {
+        transform: translate(50%, 0);
+    }
+}
+
+.table-list {
+    li {
+        a {
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        &:not(:first-of-type) {
+            margin-top: 1.2rem;
+        }
+
+        ul {
+            padding-left: 0.8rem;
+
+            li {
+                margin-top: 0.6rem;
+
+                a {
+                    font-weight: 500;
+                }
+        
+                ul {
+                    li {
+                        margin-top: 0.6rem;
+
+                        a {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &._side {
+        margin-top: 1.6rem;
+
+        li {
+            a {
+                font-weight: normal;
+            }
+        }
+    }
+}

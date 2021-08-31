@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@use "../../../global" as global;
+
+/* portfolio-works
+---------------------------------------- */
+.works-card {
+    scroll-snap-type: x mandatory;
+	white-space: nowrap;
+	overflow-x: auto; 
+    padding-bottom: 2.4rem; 
+}
+
+.works-card_item {
+    scroll-snap-align: center;
+	display: inline-block;
+	width: 25%;
+	white-space: normal;
+    overflow: hidden;
+    transition: all ease 0.5s;
+
+    &:hover {
+        transform: scale(1.03, 1.03);
+    }
+
+    &:not(:first-child) {
+        margin-left: 3.2rem;
+    }
+
+    @include global.mq(md) {
+        width: 40%;
+    }
+
+    @include global.mq() {
+        width: 100%;
+    }
+}
+
+.works-card_text {
+    margin-top: 3.2rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 3.2rem 2.4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.works-card_title {
+    font-size: 2rem;
+    font-weight: 500;
+    flex: 1;
+}
+
+.works-card_area {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        padding: 0 0.8rem;
+        margin-bottom: 0.8rem;
+        position: relative;
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                width: 0.08rem;
+                height: 1.2rem;
+                background: global.$color-text;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(15deg);
+            }    
+        }
+    }
+}

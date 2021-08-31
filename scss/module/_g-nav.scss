@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@use "../global" as global;
+
+/* header-nav
+----------------------------------- */
+.header-nav {
+    margin-top: 5.6rem;
+
+    @include global.mq() {
+        display: none;
+    }
+}
+
+.header-nav_item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    li {
+        margin-left: 10rem;
+
+        &:last-child {
+            margin-right: 10rem;
+        }
+
+        a {
+            font-size: 2.4rem;
+            font-family: global.$font-family-awesome_en;
+            position: relative;
+            display: inline-block;
+    
+    
+            .is_ruby {
+                display: block;
+                font-size: 1.2rem;
+                font-family: global.$font-family-awesome_jp;
+                text-align: center;
+                padding-bottom: 0.5rem;
+            }
+    
+            &::before {
+                content: '';
+                width: 0;
+                height: 0.1rem;
+                background: global.$color-text;
+                position: absolute;
+                top: 65%;
+                left: -4.8rem;
+                transition: all ease 0.3s;
+            }
+    
+            &:hover {
+                &::before {
+                    width: 3.2rem;
+                }            
+            }
+        }    
+    }
+}
+
+/* portfolio-header
+--------------------------------------- */
+.header-nav_portfolio {
+    @extend .header-nav;
+    margin-top: 12.8rem;
+    transition: all ease 0.5s;
+
+    &._fixed {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(#fff, 0.5);
+        border-radius: 10px;
+        margin-top: 1.6rem;
+        z-index: 9;
+    }
+}
