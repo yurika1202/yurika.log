@@ -5,309 +5,279 @@
 
 <title>Yurika.log</title>
 
-<meta name="description"  content="フロントエンドエンジニアを目指す、コーダーyurikaのアウトプットブログ">
+<meta name="description"  content="コーダーゆりかの学習記録ブログ">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!--Google Font-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
 <!-- font awesome -->
-<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/df603b5721.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
 
-<link rel="icon" type="image/x-icon" href="/favicon .ico">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="../favicon/favicon .ico">
 
 </head>
 <body>
-    
+
 <!-- header -->
-<header>
-    <div class="header-bg">
-        <img src="img/header-line.svg" class="header-bg _line" alt="ヘッダーの背景">
-        <img src="img/circle.png" class="header-bg _circle" alt="ヘッダーの背景">
-    </div><!-- /.header-bg -->
-
-    <div class="inner">
-
-        <h1 class="header-logo">
-            <img src="img/logo.png" alt="Yurika.logのロゴ">
-        </h1><!-- /.header-logo -->
-
-        <nav class="header-nav">
-            <ul class="header-nav_item">
-                <li><a href="about.html"><span class="is_ruby">このブログについて</span>ABOUT</a></li>
-                <li><a href=""><span class="is_ruby">制作実績</span>WORKS</a></li>
-                <li><a href=""><span class="is_ruby">お問い合わせ</span>CONTACT</a></li>
-            </ul><!-- /.header-nav _items -->
-        </nav><!-- /.header-nav --> 
-
-    <!-- sp-menu -->
-        <div class="sp-btn">
-            <span></span><span></span><span></span>
-        </div><!-- /.sp-btn -->
-
-        <nav class="sp-nav">
-            <div class="sp-nav_items inner">
-
-                <ul class="sp-menu">
-                    <li><a href="about.html">ABOUT<span class="is_ruby">このブログについて</span></a></li>
-                    <li><a href="">WORKS<span class="is_ruby">制作実績</span></a></li>
-                    <li><a href="">CONTACT<span class="is_ruby">お問い合わせ</span></a></li>
-                </ul><!-- /.sp-menu -->
-
-                <img src="/img/section-line.png" alt="メニューの区切り" loading="lazy" decoding="async">
-
-                <h2 class="sp-category_title">CATEGORY</h2>
-                <ul class="sp-category">
-                    <li><a href="#new">NEW<span class="is_ruby">新着記事</span></a></li>
-                    <li>
-                        <details class="sp-category_open">
-                            <summary>NOTE<span class="is_ruby">日記</summary>
-                            <ul class="sp-category_item">
-                                <li><a href="">すべて</a></li>
-                                <li><a href="">学習記録</a></li>
-                                <li><a href="">子育て</a></li>   
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details class="sp-category_open">
-                            <summary>CODE<span class="is_ruby">コードメモ</span></summary>
-                            <ul class="sp-category_item">
-                                <li><a href="">すべて</a></li>
-                                <li><a href="">HTML CSS</a></li>
-                                <li><a href="">JavaScript</a></li>
-                                <li><a href="">WordPress</a></li>
-                            </ul>
-                        </details>        
-                    </li>
-                    <li><a href="#design">DESIGN<span class="is_ruby">デザイン</span></a></li>
-                </ul><!-- /.sp-category -->
-
-                <div class="sp-search">
-                    <div class="sp-search_date">
-                        <input type="search" class="sp-search_window" placeholder="キーワードを入れてください"></input>
-                        <button type="submit" class="sp-search_submit" value="">
-                    </div><!-- /.sp-search _date --> 
-                    <ul class="sp-search_tag">
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                    </ul><!-- /.sp-search _tag -->  
-                </div><!-- /.sp-search -->
-            </div>
-        </nav><!-- /.sp-nav -->
-        <!-- ./sp-menu -->
-
-    </div><!-- /.inner -->
+<header class="ly_header">
+    <div class="bl_header_inner">
+        <h1 class="bl_header_logo">
+            <img src="../img/logo/logo.svg" alt="Yurika.logのロゴ">
+        </h1><!-- /.bl_header_logo -->
+    </div><!-- /.bl_header_inner -->
 </header>
-<!-- ./header -->
 
-<main class="inner">
+<main class="ly_main">
 
-    <!-- category-nav -->
-    <nav class="category-wrapper">
-        <ul class="category-item">
-            <li class="_active"><a href="index.html"><span class="is_ruby">新着記事</span>NEW</a><img src="img/category-line.svg" alt=""></li>
-            <li><a href="category-note.html"><span class="is_ruby">日記</span>NOTE</a><img src="img/category-line.svg" alt=""></li>
-            <li><a href="#code"><span class="is_ruby">コードメモ</span>CODE</a><img src="img/category-line.svg" alt=""></li>
-            <li><a href="#design"><span class="is_ruby">デザイン</span>DESIGN</a><img src="img/category-line.svg" alt=""></li>
-        </ul><!-- /.category-wrapper -->
+    <!-- articleList -->
+    <section class="bl_archive_wrap">
 
-        <details class="search-content">
-            <summary>
-                <div class="search-icon"><span><i class="far fa-times-circle"></i></span></div>
-            </summary>
-            <div class="search-wrapper">
-                <div class="search-date">
-                    <input type="search" class="search-window" placeholder="キーワードを入れてください"></input>
-                    <button type="submit" value=""  class="search-submit"></button>
-                </div><!-- /.search-date -->
-                <div class="search-tag">
-                    <ul class="search-tag_item">
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                        <li class="tag"><a href="">#タグ</a></li>
-                    </ul><!-- /.search-tag_item -->      
-                </div><!-- /.search-tag -->
-            </div><!-- /.search-wrapper-->
-        </details><!-- /.search-content -->
-    </nav><!-- /.category-wrapper -->
+        <article class="bl_articleCard_main">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
 
-    <!-- article-card -->
-    <div id="new" class="card-wrapper">
-        <ul class="card-items">
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルが入ります。</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルタイトルタイトタイトルが入ります。</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルが入ります。</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルが入ります。</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルが入ります。</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-            <li class="card-item">
-                <a class="card-wrapper" href="">
-                    <div class="card-thumbnail"><img src="/img/noimg.jpg" alt="ブログアイキャッチ画像" loading="lazy" decoding="async"></div>
-                    <div class="card-text">
-                        <h2 class="card-title">タイトルが入ります。タイトルが入ります。タイトルタイトルタイト</h2>
-                        <div class="card-date">
-                            <div class="card-date_tag">
-                                <p class="tag">#タグ</p>
-                                <p class="tag">#タグ</p>    
-                            </div><!-- /.card-date_tag -->
-                            <time datetime="2021-04-21">2021.04.21</time>   
-                        </div>
-                    </div><!-- /.card-text -->
-                </a>
-            </li>
-        </ul><!-- /.blog-item -->    
-    </div><!-- /.card-wrapper -->
+                <div class="bl_articleCard_contents">
+                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
 
-    <div class="pager">
-        <ul class="pagination">
-            <li class="pre"><a href="#"><i class="fas fa-caret-left"></i></a></li>
-            <li><a href="#" class="pager-number _active">1</a></li>
-            <li><a href="#" class="pager-number">2</a></li>
-            <li><a href="#" class="pager-number">3</a></li>
-            <li class="next"><a href="#"><i class="fas fa-caret-right"></i></a></li>
-        </ul>
-    </div><!-- /.pager -->
+                    <div class="bl_articleCard_tag">
+                        <p class="el_tag">タグタグタグ</p>
+                        <p class="el_tag">タグタグ</p>
+                        <p class="el_tag">タグタグタグタグ</p>
+                    </div><!-- /.bl_articleCard_tag -->
+
+                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
+                </div><!-- /.bl_articleCard_contents -->
+            </a>
+        </article><!-- /.bl_articleCard_main -->
+
+        <article class="bl_articleCard_main">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents">
+                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_tag">
+                        <p class="el_tag">タグタグタグ</p>
+                        <p class="el_tag">タグタグ</p>
+                        <p class="el_tag">タグタグタグタグ</p>
+                    </div><!-- /.bl_articleCard_tag -->
+
+                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
+                </div><!-- /.bl_articleCard_contents -->
+            </a>
+        </article><!-- /.bl_articleCard_main -->
+
+        <article class="bl_articleCard_main">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents">
+                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_tag">
+                        <p class="el_tag">タグタグタグ</p>
+                        <p class="el_tag">タグタグ</p>
+                        <p class="el_tag">タグタグタグタグ</p>
+                    </div><!-- /.bl_articleCard_tag -->
+
+                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
+                </div><!-- /.bl_articleCard_contents -->
+            </a>
+        </article><!-- /.bl_articleCard_main -->
+
+        <article class="bl_articleCard_main">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents">
+                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_tag">
+                        <p class="el_tag">タグタグタグ</p>
+                        <p class="el_tag">タグタグ</p>
+                        <p class="el_tag">タグタグタグタグ</p>
+                    </div><!-- /.bl_articleCard_tag -->
+
+                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
+                </div><!-- /.bl_articleCard_contents -->
+            </a>
+        </article><!-- /.bl_articleCard_main -->
+
+        <article class="bl_articleCard_main">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents">
+                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_tag">
+                        <p class="el_tag">タグタグタグ</p>
+                        <p class="el_tag">タグタグ</p>
+                        <p class="el_tag">タグタグタグタグ</p>
+                    </div><!-- /.bl_articleCard_tag -->
+
+                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
+                </div><!-- /.bl_articleCard_contents -->
+            </a>
+        </article><!-- /.bl_articleCard_main -->
+
+        <!-- pager -->
+        <div class="bl_pagination">
+            <ul class="bl_paginationList">
+                <li class="bl_paginationList_prev">
+                    <a href="#"><i class="fas fa-caret-left"></i></a>
+                </li><!-- /.bl_paginationList_prev -->
+
+                <li class="bl_paginationList_page">
+                    <a href="#" class="pager-number _active">1</a>
+                </li><!-- /.bl_paginationList_page -->
+
+                <li class="bl_paginationList_page">
+                    <a href="#" class="pager-number">2</a>
+                </li><!-- /.bl_paginationList_page -->
+
+                <li class="bl_paginationList_page">
+                    <a href="#" class="pager-number">3</a>
+                </li><!-- /.bl_paginationList_page -->
+
+                <li class="bl_paginationList_next">
+                    <a href="#"><i class="fas fa-caret-right"></i></a>
+                </li><!-- /.bl_paginationList_next -->
+            </ul><!-- /.bl_paginationList -->
+        </div><!-- /.bl_pagination -->
+
+    </section><!-- /.bl_archive_wrap -->
+
+    <!-- widget -->
+    <aside class="bl_aside_wrap">
+
+        <div class="bl_profile">
+            <div class="bl_profile_img">
+                <img src="../img/profile/profile.png" alt="プロフィール画像" width="136" height="136" loading="lazy" decoding="async">
+            </div><!-- /.bl_profile_img -->
+
+            <div class="bl_profile_contents">
+                <p class="bl_profile_name">ゆりか</p>
+                <p class="bl_profile_text">2歳男の子の育児に格闘しながら、Webを勉強しています。<br>もくもくとコードを書くことがすき。</p>
+            </div><!-- /.bl_profile_contents -->
+
+            <a href="" class="el_btn bl_profileLink">Portfolio</a>
+
+            <ul class="bl_profile_snsList">
+                <li class="bl_profile_snsItem">
+                    <a href="https://twitter.com/bnku212" class="el_btn bl_profile_snsItem__twitter"><i class="fab fa-twitter"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
+
+                <li class="bl_profile_snsItem">
+                    <a href="https://github.com/yurika1202" class="el_btn bl_profile_snsItem__github"><i class="fab fa-github"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
+
+                <li class="bl_profile_snsItem">
+                    <a href="" class="el_btn bl_profile_snsItem__mail"><i class="fas fa-envelope"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
+            </ul><!-- /.bl_profile_snsList -->
+        </div><!-- /.bl_profile -->
+
+        <div class="bl_search">
+            <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
+                <div class="bl_search_searchDate">
+                    <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください"></input>
+                    <button type="submit" class="el_btn bl_search_searchSubmit" value=""></button>
+                </div><!-- /.bl_search_searchDate -->
+            </form><!-- /.bl_search_searchForm -->
+
+            <div class="bl_search_tag">
+                <ul class="bl_search_tagList">
+                    <li class="bl_search_tagItem">
+                        <a class="el_tag">タグタグタグ</a>
+                    </li><!-- /.bl_search_tagItem -->
+
+                    <li class="bl_search_tagItem">
+                        <a class="el_tag">タグタグ</a>
+                    </li><!-- /.bl_search_tagItem -->
+
+                    <li class="bl_search_tagItem">
+                        <a class="el_tag">タグタグタグタグ</a>
+                    </li><!-- /.bl_search_tagItem -->
+
+                    <li class="bl_search_tagItem">
+                        <a class="el_tag">タグタグタグ</a>
+                    </li><!-- /.bl_search_tagItem -->
+
+                    <li class="bl_search_tagItem">
+                        <a class="el_tag">タグタグ</a>
+                    </li><!-- /.bl_search_tagItem -->
+                </ul><!-- /.bl_search_tagList -->
+            </div><!-- /.bl_search_tag -->
+        </div><!-- /.bl_search -->
+
+        <div class="bl_category">
+            <p class="bl_category_title">Category</p><!-- /.bl_category_title -->
+
+            <ul class="bl_category_list">
+                <li class="bl_category_item">
+                    <a href="">HTML/CSS</a>
+                </li><!-- /.bl_category_item -->
+
+                <li class="bl_category_item">
+                    <a href="">JavaScript</a>
+                </li><!-- /.bl_category_item -->
+
+                <li class="bl_category_item">
+                    <a href="">WordPress</a>
+                </li><!-- /.bl_category_item -->
+
+                <li class="bl_category_item">
+                    <a href="">制作の記録</a>
+                </li><!-- /.bl_category_item -->
+
+                <li class="bl_category_item">
+                    <a href="">ひとりごと</a>
+
+                    <ul class="bl_category_list__child">
+                        <li class="bl_category_item__child">
+                            <a href="">サブカテゴリー</a>
+                        </li><!-- /.bl_category_item__child -->
+
+                        <li class="bl_category_item__child">
+                            <a href="">サブカテゴリー</a>
+                        </li><!-- /.bl_category_item__child -->
+                    </ul><!-- /.bl_category_list__child -->
+                </li><!-- /.bl_category_item -->
+            </ul><!-- /.bl_category_list -->
+        </div><!-- /.bl_category -->
+
+    </aside><!-- /.bl_aside_wrap -->
+
 </main>
 
 <!-- footer -->
-<footer>
-    <div class="section-line"><img src="/img/section-line.png" alt="セクションの区切り" loading="lazy" decoding="async"></div><!-- /.section__line -->
-    
-    <div class="footer-bg">
-        <img src="/img/circle.png" alt="フッターの背景" class="footer-bg _circle">
-        <img src="/img/footer-line.svg" alt="フッターの画像" class="footer-bg _line">
-    </div><!-- /.footer-bg -->
-    
-    <div class="footer-menu inner">
+<footer class="ly_footer">
+    <small class="el_copy">&copy; 2021 Yurika.log</small>
+</footer><!-- /.ly_footer -->
 
-        <div class="footer-category">
-            <h3 class="footer-menu_title">CATEGORY<span>カテゴリー</span></h3>
-            <nav class="footer-category_wrapper">
-                <div class="footer-category_item">
-                    <h4 class="footer-category_title"><a href="">NOTE<span>日記</span></a></h4>
-                    <ul class="footer-category_list">
-                        <li><a href="">子育て</a></li>
-                    </ul>    
-                </div><!-- /.category-item -->
-                <div class="footer-category_item">
-                    <h4 class="footer-category_title"><a href="">CODE<span>コードメモ</span></a></h4>
-                    <ul class="footer-category_list">
-                        <li><a href="">HTML CSS</a></li>
-                        <li><a href="">JavaScript</a></li>
-                        <li><a href="">WordPress</a></li>
-                    </ul>    
-                </div><!-- /.category-item -->
-                <div class="footer-category_item">
-                    <h4 class="footer-category_title"><a href="">DESIGN<span>デザイン</span></a></h4>
-                </div><!-- /.category-item -->
-            </nav><!-- /.category-wrapper -->
-        </div><!-- /.footer-menu _category -->
-
-        <nav class="footer-tag">
-            <h3 class="footer-menu_title">TAG<span>タグ</span></h3>
-            <ul class="tag-item">
-                <li class="tag"><a href="">#タグ</a></li>
-                <li class="tag"><a href="">#タグ</a></li>
-                <li class="tag"><a href="">#タグ</a></li>
-                <li class="tag"><a href="">#タグ</a></li>
-            </ul><!-- /.tag-item -->  
-        </nav><!-- /.footer-menu _tag -->
-    </div><!-- /.footer__menu -->
-
-    <div class="footer-link">
-        <div class="icons">
-            <a href="" class="mail"><i class="fas fa-envelope"></i></a><!-- /.mail --> 
-            <a href="https://twitter.com/bnku212" class="twitter"><i class="fab fa-twitter"></i></a><!-- /.twitter -->
-            <a href="" class="github"><i class="fab fa-github"></i></a><!-- /.github -->   
-        </div><!-- /.icons -->
-        <p class="privacy"><a href="">プライバシーポリシー</a></p>
-    </div><!-- /.footer__menu_link -->
-    
-    <small class="copy">&copy; 2021 Yurika.log</small>
-</footer>
-
-<div class="top-scroll">TOP</div><!-- /.top-scroll -->
+<div class="el_toTop">
+    <i class="fas fa-caret-up"></i>
+</div><!-- /.el_toTop -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/script.js"></script>

@@ -38,14 +38,14 @@
                     <ul class="search-tag_item">
                     <?php
                         $option = array(
-                            'hide_empty' => '0',  
+                            'hide_empty' => '0',
                         );
                         $tags = get_tags($option);
                         foreach ($tags as $tag) {
                             echo '<li class="tag"><a href="' . get_tag_link($tag -> term_id) . '">#' . $tag -> name . '</a></li>';
                         }
                     ?>
-                    </ul><!-- /.search-tag_item -->      
+                    </ul><!-- /.search-tag_item -->
                 </div><!-- /.search-tag -->
 
             </div><!-- /.search-wrapper-->
