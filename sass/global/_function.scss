@@ -10,7 +10,7 @@
   @return $number;
 }
 
-@function rem($px, $base: 14px) {
+@function rem($px, $base: 16px) {
   $value: $px;
 
   // 単位がpx以外の場合は警告を出してそのまま返す

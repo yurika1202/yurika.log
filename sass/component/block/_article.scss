@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* article
+----------------------------------------- */
+.bl_article_wrap {
+    padding: 40px 20px;
+}
+
+.bl_articleCard_main {
+    &:not(:first-of-type) {
+        margin-top: 20px;
+    }
+}
+
+.bl_articleCard_contents {
+    padding: 20px 8px;
+}
+
+.bl_articleCard_title {
+    font-size: g.rem(16px);
+    margin-top: 10px;
+}
+
+.bl_articleCard_meta {
+    margin-top: 10px;
+    text-align: right;
+}

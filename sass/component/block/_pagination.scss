@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* pagination
+----------------------------------------- */
+.bl_paginationList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bl_paginationList_item {
+    width: 40px;
+    height: 40px;
+    border: 2px solid g.$cSober;
+    border-radius: 999px;
+    text-align: center;
+
+    &:not(:first-of-type) {
+        margin-left: 8px;
+    }
+
+    a {
+        font-family: g.$fontEn;
+        font-size: g.rem(20px);
+        color: g.$cText_br;
+    }
+
+    &__prev {
+        i {
+            padding-top: 8px;
+        }
+    }
+
+    &__next {
+        i {
+            padding: 8px 0 0 6px;
+        }
+    }
+}

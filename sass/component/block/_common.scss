@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* common
+----------------------------------------- */
+.bl_common_blockWrap {
+    width: 100%;
+    background: g.$cBg_contents;
+    border: 5px solid g.$cMain;
+    border-radius: 20px;
+}

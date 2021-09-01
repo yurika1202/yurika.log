@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* tag
+----------------------------------------- */
+.el_tag {
+    display: inline-block;
+    background: g.$cAccent;
+    padding: 0.333em 1em;
+    border-radius: 50px;
+    font-size: g.rem(10px);
+    color: g.$cText_wh;
+}

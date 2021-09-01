@@ -36,9 +36,9 @@ ol, ul {
 ----------------------------------------- */
 body {
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
-  letter-spacing: 0.8em;
+  letter-spacing: 0.15em;
   color: #333;
   background: #F6F4F3;
 }
@@ -74,6 +74,11 @@ button {
 
 /* main
 ----------------------------------------- */
+.ly_main {
+  width: 90%;
+  margin: 0 auto;
+}
+
 /* footer
 ----------------------------------------- */
 /* header
@@ -123,5 +128,90 @@ button {
 }
 .bl_header_navBtn span:not(:nth-of-type(3n + 1)) {
   margin-left: 8px;
+}
+
+/* common
+----------------------------------------- */
+.bl_common_blockWrap {
+  width: 100%;
+  background: #fff;
+  border: 5px solid #E1DCD7;
+  border-radius: 20px;
+}
+
+/* article
+----------------------------------------- */
+.bl_article_wrap {
+  padding: 40px 20px;
+}
+
+.bl_articleCard_main:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.bl_articleCard_contents {
+  padding: 20px 8px;
+}
+
+.bl_articleCard_title {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.bl_articleCard_meta {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* pagination
+----------------------------------------- */
+.bl_paginationList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bl_paginationList_item {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #AD9F9A;
+  border-radius: 999px;
+  text-align: center;
+}
+.bl_paginationList_item:not(:first-of-type) {
+  margin-left: 8px;
+}
+.bl_paginationList_item a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  color: #AD9F9A;
+}
+.bl_paginationList_item__prev i {
+  padding-top: 8px;
+}
+.bl_paginationList_item__next i {
+  padding: 8px 0 0 6px;
+}
+
+/* tag
+----------------------------------------- */
+.el_tag {
+  display: inline-block;
+  background: #CABFB9;
+  padding: 0.333em 1em;
+  border-radius: 50px;
+  font-size: 0.625rem;
+  color: #fff;
+}
+
+/* mt
+----------------------------------------- */
+.hp_mt50 {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */
