@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-@use "base";
-@use "mixin";
-@use "module";
+@use "global";
+@use "foundation";
+@use "layout";
+@use "component";
 @use "page";
+@use "utility";

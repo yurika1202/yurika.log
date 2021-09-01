@@ -1,88 +1,41 @@
 @charset "UTF-8";
-@use "../global" as global;
+@use "../../global" as g;
 
 /* header
 -------------------------------- */
-.header-bg {
-    &._line {
-        position: absolute;
-        top: -6rem;
-        left: 0;
-        z-index: -1;
-    
-        @include global.mq() {
-            top: -1rem;
-        }    
-    }
-
-    &._circle {
-        position: absolute;
-        top: -23rem;
-        right: 0;
-        z-index: -2;
-    
-        @include global.mq() {
-            top: -10%;
-        }    
-    }
+.bl_header_inner {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
 }
 
-.header-logo {
-    text-align: center;
-    display: block;
-    width: 60%;
-    margin: 8.8rem auto 0;
+.bl_header_logo {
+    width: 115px;
+}
 
-    @include global.mq() {
-        margin: 3rem auto 0;
-        width: 75%;
-    }
+.bl_header_navBtn {
+    width: 50px;
+    height: 50px;
+    padding: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
 
-    &._portfolio {
-        margin: 8.8rem auto 0 0;
+    span {
+        width: 4px;
+        height: 4px;
+        background: g.$cSober;
+        border-radius: 1px;
 
-        @include global.mq() {
-            margin: 3.2rem auto 0 0;
+        &:not(:nth-of-type(3n + 1)) {
+            margin-left: 8px;
         }
-    }
-
-    &._portfolio-page {
-        margin: 8.8rem auto 0 auto;
-
-        @include global.mq() {
-            margin: 3.2rem auto 0 auto;
-        }
-    }
-}
-
-.header-message {
-    margin-top: 5.6rem;
-
-    @include global.mq() {
-        margin-top: 4rem;
-    }
-}
-
-.header-message_title {
-    text-align: right;
-    font-size: 2.589rem;
-    font-weight: 500;
-
-    @include global.mq() {
-        font-size: 1.6rem;
-    }
-}
-
-.header-message_text {
-    display: block;
-    width: 56rem;
-    margin: 3.2rem 0 0 auto;
-    padding-right: 3.2rem;
-
-    @include global.mq() {
-        width: 75%;
-        font-size: 1.2rem;
-        margin-top: 2.4rem;
-        padding-right: 0;
     }
 }
