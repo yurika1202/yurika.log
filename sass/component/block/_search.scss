@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* search
+----------------------------------------- */
+.bl_search_searchDate {
+    border-bottom: 3px solid g.$cSober;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bl_search_searchWindow {
+    width: 80%;
+    height: 40px;
+}
+
+.bl_search_searchSubmit {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid g.$cSober;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        content: "";
+        width: 10px;
+        height: 2px;
+        background: g.$cSober;
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        transform: rotate(40deg);
+    }
+}
+
+.bl_search_tag {
+    margin-top: 30px;
+}
+
+.bl_search_tagList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -8px;
+}
+
+.bl_search_tagItem {
+    margin: 0 4px 8px;
+}
