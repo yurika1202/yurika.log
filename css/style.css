@@ -201,6 +201,84 @@ button {
   padding: 8px 0 0 6px;
 }
 
+/* profile
+----------------------------------------- */
+.bl_profile {
+  width: 100%;
+  max-width: 302px;
+  margin: 40px auto 0;
+  padding: 40px 24px 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E1DCD7), color-stop(10%, #E1DCD7), color-stop(10%, #fff), color-stop(90%, #fff));
+  background: linear-gradient(#E1DCD7 0%, #E1DCD7 10%, #fff 10%, #fff 90%);
+  position: relative;
+}
+.bl_profile::before {
+  content: "";
+  width: 100%;
+  height: 30%;
+  background: url(../../../img/profile/profile_bg.png) no-repeat center center/contain;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bl_profile_img {
+  width: 136px;
+  height: 136px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.bl_profile_img img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bl_profile_contents {
+  margin-top: 8px;
+}
+
+.bl_profile_name {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.bl_profile_text {
+  margin-top: 15px;
+}
+
+.bl_profile_link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bl_btn_profileLink {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.18em;
+  color: #fff;
+}
+
+.bl_profile_snsList {
+  width: 85%;
+  margin: 25px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bl_btn_profileSns i {
+  font-size: 20px;
+  color: #fff;
+}
+
 /* tag
 ----------------------------------------- */
 .el_tag {
@@ -210,6 +288,20 @@ button {
   border-radius: 50px;
   font-size: 0.625rem;
   color: #fff;
+}
+
+/* btn
+----------------------------------------- */
+.el_btn {
+  display: inline-block;
+  padding: 0.714em 1.714em;
+  background: #CABFB9;
+  border: 2px solid #CABFB9;
+  border-radius: 10px;
+}
+
+.el_btn__sns {
+  padding: 0.8em;
 }
 
 /* mt
