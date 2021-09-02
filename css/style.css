@@ -144,8 +144,7 @@ button {
 .bl_article_wrap {
   padding: 40px 20px;
 }
-
-.bl_articleCard_main:not(:first-of-type) {
+.bl_article_wrap > * + * {
   margin-top: 20px;
 }
 
@@ -165,6 +164,10 @@ button {
 
 /* pagination
 ----------------------------------------- */
+.bl_pagination {
+  margin-top: 50px;
+}
+
 .bl_paginationList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,7 +214,7 @@ button {
 
 /* mt
 ----------------------------------------- */
-.hp_mt50 {
-  margin-top: 50px;
+.hp_mt40 {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=style.css.map */

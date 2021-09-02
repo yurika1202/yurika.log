@@ -5,10 +5,8 @@
 ----------------------------------------- */
 .bl_article_wrap {
     padding: 40px 20px;
-}
 
-.bl_articleCard_main {
-    &:not(:first-of-type) {
+    > * + * {
         margin-top: 20px;
     }
 }
