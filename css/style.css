@@ -55,6 +55,11 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #333;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+a:focus, a:hover {
+  opacity: 0.7;
 }
 
 button, input {
@@ -70,13 +75,22 @@ button, input {
 .ly_header {
   width: 100%;
   height: 70px;
+  padding: 20px 0;
+  background: #F6F4F3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
 }
 
 /* main
 ----------------------------------------- */
 .ly_main {
   width: 90%;
-  margin: 0 auto;
+  margin: 70px auto 0;
+}
+.ly_main.is_fixed {
+  position: fixed;
 }
 
 /* footer
@@ -93,7 +107,6 @@ button, input {
 -------------------------------- */
 .bl_header_inner {
   width: 90%;
-  height: inherit;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,15 +140,54 @@ button, input {
           justify-content: space-between;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 .bl_header_navBtn span {
   width: 4px;
   height: 4px;
   background: #AD9F9A;
   border-radius: 1px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .bl_header_navBtn span:not(:nth-of-type(3n + 1)) {
   margin-left: 8px;
+}
+.bl_header_navBtn.is_open span:not(:nth-of-type(n + 4):nth-of-type(-n + 6)) {
+  opacity: 0;
+}
+@media screen and (min-width: 993px) {
+  .bl_header_navBtn {
+    display: none;
+  }
+}
+
+.bl_header_openNav {
+  width: 100%;
+  height: calc(100% - 70px);
+  padding-bottom: 80px;
+  background: #F6F4F3;
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  z-index: 100;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.bl_header_openNav.is_open {
+  right: 0;
+}
+@media screen and (min-width: 993px) {
+  .bl_header_openNav {
+    display: none;
+  }
+}
+
+.bl_header_navInner {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* common
@@ -460,5 +512,16 @@ button, input {
 ----------------------------------------- */
 .hp_mt40 {
   margin-top: 40px;
+}
+
+/* display
+----------------------------------------- */
+.hp_display__widget {
+  display: none;
+}
+@media screen and (min-width: 993px) {
+  .hp_display__widget {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

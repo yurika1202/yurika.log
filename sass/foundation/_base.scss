@@ -24,6 +24,11 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: g.$cText_bk;
+    transition: opacity .3s;
+
+    &:focus, &:hover {
+        opacity: .7;
+    }
 }
 
 button, input {

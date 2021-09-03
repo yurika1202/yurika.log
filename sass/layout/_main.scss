@@ -4,5 +4,9 @@
 ----------------------------------------- */
 .ly_main{
     width: 90%;
-    margin: 0 auto;
+    margin: 70px auto 0;
+
+    &.is_fixed {
+        position: fixed;
+    }
 }

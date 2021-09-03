@@ -35,15 +35,88 @@
             </a>
         </h1><!-- /.bl_header_logo -->
 
-        <button class="bl_header_navBtn">
+        <button class="bl_header_navBtn" id="js_drawerBtn">
             <span></span><span></span><span></span>
             <span></span><span></span><span></span>
             <span></span><span></span><span></span>
         </button><!-- /.bl_header_navBtn -->
     </div><!-- /.bl_header_inner -->
+
+    <nav class="bl_header_openNav" id="js_drawerContents">
+        <div class="bl_header_navInner">
+            <div class="bl_search bl_common_blockWrap hp_mt40">
+                <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
+                    <div class="bl_search_searchDate">
+                        <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください"></input>
+                        <button type="submit" class="bl_search_searchSubmit" value=""></button>
+                    </div><!-- /.bl_search_searchDate -->
+                </form><!-- /.bl_search_searchForm -->
+
+                <div class="bl_search_tag">
+                    <ul class="bl_search_tagList">
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+                    </ul><!-- /.bl_search_tagList -->
+                </div><!-- /.bl_search_tag -->
+            </div><!-- /.bl_search -->
+
+            <div class="bl_category bl_common_blockWrap hp_mt40">
+                <p class="bl_category_title">Category</p><!-- /.bl_category_title -->
+
+                <ul class="bl_category_list">
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">HTML/CSS</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">JavaScript</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">WordPress</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">制作の記録</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">ひとりごと</a>
+
+                        <ul class="bl_category_list__child">
+                            <li class="bl_category_item__child" id="js_navItem">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+
+                            <li class="bl_category_item__child" id="js_navItem">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+                        </ul><!-- /.bl_category_list__child -->
+                    </li><!-- /.bl_category_item -->
+                </ul><!-- /.bl_category_list -->
+            </div><!-- /.bl_category -->
+        </div><!-- /.bl_header_navInner -->
+    </nav><!-- /.bl_header_openNav -->
 </header>
 
-<main class="ly_main">
+<main class="ly_main" id="js_drawerFixed">
 
     <!-- articleList -->
     <section class="bl_article_wrap bl_cardWrap__2col bl_common_blockWrap">
@@ -197,7 +270,7 @@
             </ul><!-- /.bl_profile_snsList -->
         </div><!-- /.bl_profile -->
 
-        <div class="bl_search bl_common_blockWrap hp_mt40">
+        <div class="bl_search bl_common_blockWrap hp_mt40 hp_display__widget">
             <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
                 <div class="bl_search_searchDate">
                     <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください"></input>
@@ -230,7 +303,7 @@
             </div><!-- /.bl_search_tag -->
         </div><!-- /.bl_search -->
 
-        <div class="bl_category bl_common_blockWrap hp_mt40">
+        <div class="bl_category bl_common_blockWrap hp_mt40 hp_display__widget">
             <p class="bl_category_title">Category</p><!-- /.bl_category_title -->
 
             <ul class="bl_category_list">

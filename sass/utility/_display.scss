@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@use "../global" as g;
+
+/* display
+----------------------------------------- */
+.hp_display__widget {
+    display: none;
+
+    @include g.mq(lg) {
+        display: block;
+    }
+}
