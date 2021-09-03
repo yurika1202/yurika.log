@@ -81,6 +81,14 @@ button, input {
 
 /* footer
 ----------------------------------------- */
+.ly_footer {
+  margin-top: 90px;
+  padding: 28px 0;
+  text-align: center;
+  background: #E1DCD7;
+  position: relative;
+}
+
 /* header
 -------------------------------- */
 .bl_header_inner {
@@ -420,6 +428,32 @@ button, input {
 
 .el_btn__sns {
   padding: 0.8em;
+}
+
+/* copy
+----------------------------------------- */
+.el_copy {
+  color: #fff;
+  font-size: 20;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.18em;
+}
+
+/* toTop
+----------------------------------- */
+.el_toTop {
+  width: 70px;
+  height: 70px;
+  background: #AD9F9A;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  right: 6%;
+}
+.el_toTop i {
+  color: #E1DCD7;
+  font-size: 2.5rem;
+  padding: 12px 0 0 2px;
 }
 
 /* mt

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* copy
+----------------------------------------- */
+.el_copy {
+    color: g.$cText_wh;
+    font-size: g.rem(20);
+    font-family: g.$fontEn;
+    letter-spacing: .18em;
+}

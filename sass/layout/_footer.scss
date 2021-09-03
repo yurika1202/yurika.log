@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@use "../global" as g;
 
 /* footer
 ----------------------------------------- */
+.ly_footer {
+    margin-top: 90px;
+    padding: 28px 0;
+    text-align: center;
+    background: g.$cMain;
+    position: relative;
+}
