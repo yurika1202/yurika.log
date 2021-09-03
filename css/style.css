@@ -344,6 +344,59 @@ button, input {
   margin: 0 4px 8px;
 }
 
+/* category
+----------------------------------------- */
+.bl_category_title {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.18em;
+  color: #AD9F9A;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.bl_category_list {
+  margin-top: 20px;
+}
+.bl_category_list > * + * {
+  margin-top: 10px;
+}
+.bl_category_list__child {
+  margin-left: 30px;
+}
+
+.bl_category_item__child {
+  padding-left: 28px;
+  line-height: 2;
+  position: relative;
+}
+.bl_category_item__child::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #AD9F9A;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.bl_category_item__child::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #AD9F9A;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bl_category_item__child:first-of-type {
+  margin-top: 5px;
+}
+.bl_category_item__child:last-of-type::after {
+  height: 50%;
+}
+
 /* tag
 ----------------------------------------- */
 .el_tag {
