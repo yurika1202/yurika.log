@@ -6,7 +6,7 @@
 .hp_display__widget {
     display: none;
 
-    @include g.mq(lg) {
+    @include g.mq(md) {
         display: block;
     }
 }

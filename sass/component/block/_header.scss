@@ -48,7 +48,7 @@
         }
     }
 
-    @include g.mq(lg) {
+    @include g.mq(md) {
         display: none;
     }
 }
@@ -70,12 +70,13 @@
         right: 0;
     }
 
-    @include g.mq(lg) {
+    @include g.mq(md) {
         display: none;
     }
 }
 
 .bl_header_navInner {
     width: 90%;
+    max-width: 500px;
     margin: 0 auto;
 }

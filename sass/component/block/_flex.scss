@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* flex
+----------------------------------------- */
+.bl_2colUnit {
+    &__main {
+        @include g.mq(xl) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .bl_2colUnit_rightItem__main {
+                width: 278px;
+                margin-left: 32px;
+            }
+        }
+    }
+
+    &__card {
+        .bl_2colUnit_item__card {
+            margin-bottom: 20px;
+        }
+
+        @include g.mq(sm) {
+            display: flex;
+            flex-wrap: wrap;
+
+            .bl_2colUnit_item__card {
+                width: calc(100% / 2 - 40px * 1 / 2);
+
+                &:not(:nth-of-type(2n + 1)) {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    &__widget {
+        @include g.mq(md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .bl_2colUnit_leftItem__widget {
+                width: 65%;
+                margin-left: 40px;
+            }
+        }
+
+        @include g.mq(xl) {
+            display: block;
+
+            .bl_2colUnit_leftItem__widget {
+                width: 302px;
+                margin: 0;
+            }
+        }
+    }
+}

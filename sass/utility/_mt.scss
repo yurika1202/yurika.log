@@ -1,7 +1,12 @@
 @charset "UTF-8";
+@use "../global" as g;
 
 /* mt
 ----------------------------------------- */
 .hp_mt40 {
     margin-top: 40px;
+}
+
+.hp_mt50 {
+    margin-top: 50px;
 }

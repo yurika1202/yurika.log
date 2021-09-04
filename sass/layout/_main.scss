@@ -1,12 +1,18 @@
 @charset "UTF-8";
+@use "../global" as g;
 
 /* main
 ----------------------------------------- */
 .ly_main{
     width: 90%;
-    margin: 70px auto 0;
+    margin: 100px auto 0;
 
     &.is_fixed {
         position: fixed;
+    }
+
+    @include g.mq(md) {
+        width: calc(1200 / 1440 * 100%);
+        max-width: 1200px;
     }
 }

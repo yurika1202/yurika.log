@@ -4,8 +4,7 @@
 /* profile
 ----------------------------------------- */
 .bl_profile {
-    width: 100%;
-    max-width: 302px;
+    width: 302px;
     margin: 40px auto 0;
     background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
     position: relative;
@@ -19,6 +18,10 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    @include g.mq(xl) {
+        margin: 0 auto;
     }
 }
 

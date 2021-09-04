@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* aside
+----------------------------------------- */
+.bl_aside_wrap {
+    @include g.mq(md) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
