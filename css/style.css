@@ -78,7 +78,7 @@ button, input {
   width: 100%;
   height: 70px;
   padding: 20px 0;
-  background: #F6F4F3;
+  background: rgba(246, 244, 243, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -282,7 +282,7 @@ button, input {
 }
 .bl_profile::before {
   content: "";
-  width: 100%;
+  width: 101%;
   height: 30%;
   background: url(../../../img/profile/profile_bg.png) no-repeat center center/contain;
   position: absolute;
@@ -473,7 +473,7 @@ button, input {
 /* flex
 ----------------------------------------- */
 @media screen and (min-width: 1201px) {
-  .bl_2colUnit__main {
+  .bl_2colUnit__main, .bl_2colUnit__archive {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -484,10 +484,13 @@ button, input {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .bl_2colUnit__main .bl_2colUnit_rightItem__main {
+  .bl_2colUnit__main .bl_2colUnit_rightItem__main, .bl_2colUnit__archive .bl_2colUnit_rightItem__main {
     width: 278px;
     margin-left: 32px;
   }
+}
+.bl_2colUnit__archive {
+  margin-top: 35px;
 }
 .bl_2colUnit__card .bl_2colUnit_item__card {
   margin-bottom: 20px;
@@ -583,6 +586,63 @@ button, input {
   color: #E1DCD7;
   font-size: 2.5rem;
   padding: 12px 0 0 2px;
+}
+
+/* title
+----------------------------------------- */
+.el_title_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 577px) {
+  .el_title_wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 10px;
+  }
+}
+
+.el_title__mainTitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.15em;
+}
+@media screen and (min-width: 577px) {
+  .el_title__mainTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.el_title__contentsTitle {
+  padding-left: 40px;
+  margin-left: 20px;
+  line-height: 2em;
+  position: relative;
+}
+.el_title__contentsTitle::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background: #E1DCD7;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (min-width: 577px) {
+  .el_title__contentsTitle {
+    font-size: 1rem;
+  }
 }
 
 /* mt

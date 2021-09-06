@@ -25,36 +25,13 @@ for(let i = 0; i < headerNavItem.length; i++) {
     })
 }
 
-/* ドロワー背面コンテンツのスクロール制御
+/* トップスクロール
 ------------------------------------------- */
-// const drawerBgContents = (fixed) => {
-//     const scrollbarWidth = window.innerWidth - document.body.clientWidth;
-//     document.body.style.paddingRight = fixed ? `${scrollbarWidth}px` : '';
+const toTop = document.getElementById('js_toTop');
 
-//     const scrollEl = () => {
-//         const browser = window.navigator.userAgent.toLowerCase();
-//         if('scrollEl' in document) return document.scrollEl;
-//         if(browser.indexOf('webkit') > 0) return document.body;
-//         return document.documentElement;
-//     }
-
-//     const scrollY = fixed
-//         ? scrollEl().scrollTop
-//         : perseInt(document.body.style.top || '0');
-
-//     const styles = {
-//         height: '100vh',
-//         left: '0',
-//         overflow: 'hidden',
-//         position: 'fixed',
-//         top: `${scrollY * -1}px`,
-//         width: '100vw',
-//     };
-
-//     Object.keys(styles).forEach((key) => {
-//         document.body.style[key] = fixed ? styles[key] : '';
-//     });
-
-//     if(!fixed) window.scrollTo(0, scrollY * -1);
-// };
-
+toTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

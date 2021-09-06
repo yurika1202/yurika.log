@@ -17,6 +17,11 @@
         }
     }
 
+    &__archive {
+        @extend .bl_2colUnit__main;
+        margin-top: 35px;
+    }
+
     &__card {
         .bl_2colUnit_item__card {
             margin-bottom: 20px;
