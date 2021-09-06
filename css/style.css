@@ -43,6 +43,14 @@ body {
   letter-spacing: 0.15em;
   color: #333;
   background: #F6F4F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
@@ -90,6 +98,9 @@ button, input {
 .ly_main {
   width: 90%;
   margin: 100px auto 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .ly_main.is_fixed {
   position: fixed;
@@ -109,6 +120,10 @@ button, input {
   text-align: center;
   background: #E1DCD7;
   position: relative;
+}
+.ly_footer.is_fixed {
+  position: fixed;
+  top: 100px;
 }
 
 /* header
@@ -557,9 +572,15 @@ button, input {
   border: 2px solid #CABFB9;
   border-radius: 10px;
 }
-
 .el_btn__sns {
   padding: 0.8em;
+}
+.el_btn__error {
+  color: #fff;
+}
+.el_btn__error i {
+  font-size: 1.125rem;
+  padding-right: 10px;
 }
 
 /* copy
@@ -643,6 +664,44 @@ button, input {
   .el_title__contentsTitle {
     font-size: 1rem;
   }
+}
+
+/* error
+----------------------------------------- */
+.bl_error_wrap {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.bl_error_title {
+  text-align: center;
+  color: #AD9F9A;
+  padding-top: 145px;
+  font-size: 1.875rem;
+  font-weight: 600;
+  position: relative;
+}
+.bl_error_title span {
+  font-size: 9.375rem;
+  font-weight: 600;
+  color: #E1DCD7;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+
+.bl_error_text {
+  text-align: left;
+  margin-top: 50px;
+}
+
+.bl_error_link {
+  text-align: center;
+  margin-top: 80px;
 }
 
 /* mt

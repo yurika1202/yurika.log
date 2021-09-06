@@ -9,4 +9,9 @@
     text-align: center;
     background: g.$cMain;
     position: relative;
+
+    &.is_fixed {
+        position: fixed;
+        top: 100px;
+    }
 }

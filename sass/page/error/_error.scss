@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* error
+----------------------------------------- */
+.bl_error_wrap {
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.bl_error_title {
+    text-align: center;
+    color: g.$cText_br;
+    padding-top: 145px;
+    font-size: g.rem(30px);
+    font-weight: 600;
+    position: relative;
+
+    span {
+        font-size: g.rem(150px);
+        font-weight: 600;
+        color: g.$cMain;
+        opacity: .8;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+.bl_error_text {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.bl_error_link {
+    text-align: center;
+    margin-top: 80px;
+}

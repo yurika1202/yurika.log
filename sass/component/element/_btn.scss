@@ -9,8 +9,17 @@
     background: g.$cAccent;
     border: 2px solid g.$cAccent;
     border-radius: 10px;
-}
 
-.el_btn__sns {
-    padding: .8em;
+    &__sns {
+        padding: .8em;
+    }
+
+    &__error {
+        color: g.$cText_wh;
+
+        i {
+            font-size: g.rem(18px);
+            padding-right: 10px;
+        }
+    }
 }
