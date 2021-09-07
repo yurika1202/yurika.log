@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -34,28 +33,109 @@
                 <img src="../img/logo/logo.svg" alt="Yurika.logのロゴ">
             </a>
         </h1><!-- /.bl_header_logo -->
+
+        <button class="bl_header_navBtn" id="js_drawerBtn">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </button><!-- /.bl_header_navBtn -->
     </div><!-- /.bl_header_inner -->
+
+    <nav class="bl_header_openNav" id="js_drawerContents">
+        <div class="bl_header_navInner">
+            <div class="bl_search bl_common_blockWrap hp_mt40">
+                <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
+                    <div class="bl_search_searchDate">
+                        <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください"></input>
+                        <button type="submit" class="bl_search_searchSubmit" value=""></button>
+                    </div><!-- /.bl_search_searchDate -->
+                </form><!-- /.bl_search_searchForm -->
+
+                <div class="bl_search_tag">
+                    <ul class="bl_search_tagList">
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem" id="js_navItem">
+                            <a class="el_tag">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+                    </ul><!-- /.bl_search_tagList -->
+                </div><!-- /.bl_search_tag -->
+            </div><!-- /.bl_search -->
+
+            <div class="bl_category bl_common_blockWrap hp_mt40">
+                <p class="bl_category_title">Category</p><!-- /.bl_category_title -->
+
+                <ul class="bl_category_list">
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">HTML/CSS</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">JavaScript</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">WordPress</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">制作の記録</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item" id="js_navItem">
+                        <a href="">ひとりごと</a>
+
+                        <ul class="bl_category_list__child">
+                            <li class="bl_category_item__child" id="js_navItem">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+
+                            <li class="bl_category_item__child" id="js_navItem">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+                        </ul><!-- /.bl_category_list__child -->
+                    </li><!-- /.bl_category_item -->
+                </ul><!-- /.bl_category_list -->
+            </div><!-- /.bl_category -->
+        </div><!-- /.bl_header_navInner -->
+    </nav><!-- /.bl_header_openNav -->
 </header>
 
-<main class="ly_main">
+<main class="ly_main js_drawerFixed">
 
     <!-- message -->
     <div class="bl_contactMessage">
-        <p class="bl_contactMessage_title">ご意見・ご感想・お仕事のご依頼など、お気軽にお問合せください！</p>
+        <p class="bl_contactMessage_title"><span>ご意見・ご感想・お仕事のご依頼など</span><span>お気軽にお問合せください！</span></p>
 
-        <div class="bl_contactMessage_works">
+        <div class="bl_contactMessage_works bl_common_blockWrap hp_mt50">
             <p class="bl_contactMessage_text">制作依頼の場合、こちらの内容のご記入をお願いいたします。</p>
 
-            <ol class="bl_worksTemp_list">
-                <li class="bl_worksTemp_item">依頼内容</li>
-                <li class="bl_worksTemp_item">納期やご予算</li>
-                <li class="bl_worksTemp_item">ポートフォリオなどに実績としての掲載の可否</li>
-            </ol><!-- /.bl_worksTemp_list -->
+            <div class="bl_worksTemp_wrap">
+                <ol class="bl_worksTemp_list">
+                    <li class="bl_worksTemp_item">依頼内容</li>
+                    <li class="bl_worksTemp_item">納期やご予算</li>
+                    <li class="bl_worksTemp_item">ポートフォリオなどに実績としての掲載の可否</li>
+                </ol><!-- /.bl_worksTemp_list -->
+            </div><!-- /.bl_worksTemp_wrap -->
         </div><!-- /.bl_contactMessage_works -->
 
-        <details class="bl_contactMessage_schedule">
-            <summary>
-                <p class="el_btn">対応可能日の確認はこちら</p>
+        <details class="bl_contactMessage_schedule hp_mt40">
+            <summary class="el_btn">
+                <p>対応可能日の確認はこちら</p>
             </summary>
             <div class="bl_contactMessage_schedule_wrap">
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23cabfb9&amp;ctz=Asia%2FTokyo&amp;src=dWplcWZhOHVkMW4zMWM1OXI2Y25ydTMzdW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%239E69AF&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTabs=0&amp;showNav=1&amp;showDate=1&amp;showTz=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -64,7 +144,7 @@
     </div><!-- /.bl_contactMessage -->
 
     <!-- form -->
-    <div class="bl_contact">
+    <div class="bl_contact hp_mt30">
 
         <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="bl_contact_form" id="js-form">
 
@@ -73,17 +153,17 @@
                     <label for="name">お名前</label>
                 </dt><!-- /.bl_contact_label -->
 
-                <dd class="bl_contact_input">
-                    <div class="bl_contact_input__name">
+                <dd class="bl_contact_flexWrap">
+                    <div class="bl_contact_input bl_contact_input__name">
                         <input type="text" name="entry.1779209409" id="name" required autocomplete="family-name">
                         <p class="bl_contact_ex">例：山田</p>
-                    </div><!-- /.bl_contact_input__name -->
+                    </div><!-- /.bl_contact_input -->
 
-                    <div class="bl_contact_input__name">
+                    <div class="bl_contact_input bl_contact_input__name">
                         <input type="text" name="entry.1554881563" id="given-name" required autocomplete="given-name">
                         <p class="bl_contact_ex">例：太郎</p>
-                    </div>
-                </dd><!-- /.bl_contact_input__name -->
+                    </div><!-- /.bl_contact_input -->
+                </dd><!-- /.bl_contact_flexWrap -->
             </div><!-- /.bl_contact_item -->
 
             <div class="bl_contact_item">
@@ -91,17 +171,17 @@
                     <label for="ruby">フリガナ</label>
                 </dt><!-- /.bl_contact_label -->
 
-                <dd class="bl_contact_input">
-                    <div class="bl_contact_input__name">
+                <dd class="bl_contact_flexWrap">
+                    <div class="bl_contact_input bl_contact_input__name">
                         <input type="text" name="entry.2096985610" id="ruby" autocomplete="family-name">
                         <p class="bl_contact_ex">例：ヤマダ</p>
-                    </div><!-- /.bl_contact_input__name -->
+                    </div><!-- /.bl_contact_input -->
 
-                    <div class="bl_contact_input__name">
+                    <div class="bl_contact_input bl_contact_input__name">
                         <input type="text" name="entry.1334727094" id="given-ruby" autocomplete="given-name">
                         <p class="bl_contact_ex">例：タロウ</p>
-                    </div><!-- /.bl_contact_input__name -->
-                </dd><!-- /.bl_contact_input -->
+                    </div><!-- /.bl_contact_input -->
+                </dd><!-- /.bl_contact_flexWrap -->
             </div><!-- /.bl_contact_item -->
 
             <div class="bl_contact_item">
@@ -193,17 +273,13 @@
         <div id="js_success" class="bl_contact_sendMessage">
             <p class="bl_contact_sendTitle">お問い合わせありがとうございます。</p>
             <p class="bl_contact_sendText">対応可能日の場合は6時間以内に返信しますので、少しお待ちください。<br>お休みを頂いている場合は、対応可能日に返信いたします。<br>もし対応可能日にも関わらず1日経っても返信がない場合、こちらへ届いてない可能性がありますので、お手数ですが再度お問い合わせフォーム、または<a href="https://twitter.com/bnku212" class="el_textLink">Twitter</a>のDMからご連絡よろしくお願いいたします。</p>
-            <a href="index.html" class="el_btn bl_contact_sendLink">
-                <i class="fas fa-home"></i>
-            </a>
+            <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
         </div>
 
         <div id="js_error" class="bl_contact_sendMessage">
             <p class="bl_contact_sendTitle">送信に失敗しました。</p>
             <p class="bl_contact_sendText">ページを更新して再度送信してください。</p>
-            <a href="index.html" class="el_btn bl_contact_sendLink">
-                <i class="fas fa-home"></i>
-            </a>
+            <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
         </div>
 
     </div><!-- /.bl_contact -->
@@ -211,13 +287,13 @@
 </main>
 
 <!-- footer -->
-<footer class="ly_footer">
+<footer class="ly_footer js_drawerFixed">
     <small class="el_copy">&copy; 2021 Yurika.log</small>
-</footer><!-- /.ly_footer -->
 
-<div class="el_toTop">
-    <i class="fas fa-caret-up"></i>
-</div><!-- /.el_toTop -->
+    <div class="el_toTop" id="js_toTop">
+        <i class="fas fa-caret-up"></i>
+    </div><!-- /.el_toTop -->
+</footer><!-- /.ly_footer -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../js/script.js"></script>

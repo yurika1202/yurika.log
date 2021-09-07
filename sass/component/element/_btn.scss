@@ -9,14 +9,17 @@
     background: g.$cAccent;
     border: 2px solid g.$cAccent;
     border-radius: 10px;
+    color: g.$cText_wh;
 
     &__sns {
         padding: .8em;
+
+        i {
+            font-size: 20px;
+        }
     }
 
-    &__error {
-        color: g.$cText_wh;
-
+    &__icon {
         i {
             font-size: g.rem(18px);
             padding-right: 10px;

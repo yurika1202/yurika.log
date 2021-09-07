@@ -362,11 +362,6 @@ button, input {
           justify-content: space-between;
 }
 
-.bl_btn_profileSns i {
-  font-size: 20px;
-  color: #fff;
-}
-
 /* search
 ----------------------------------------- */
 .bl_search_searchDate {
@@ -571,14 +566,15 @@ button, input {
   background: #CABFB9;
   border: 2px solid #CABFB9;
   border-radius: 10px;
+  color: #fff;
 }
 .el_btn__sns {
   padding: 0.8em;
 }
-.el_btn__error {
-  color: #fff;
+.el_btn__sns i {
+  font-size: 20px;
 }
-.el_btn__error i {
+.el_btn__icon i {
   font-size: 1.125rem;
   padding-right: 10px;
 }
@@ -704,6 +700,161 @@ button, input {
   margin-top: 80px;
 }
 
+/* contactMessage
+----------------------------------------- */
+.bl_contactMessage_works {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.bl_contactMessage_title {
+  text-align: center;
+  max-width: 385px;
+  margin: 0 auto;
+}
+.bl_contactMessage_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #E1DCD7));
+  background: linear-gradient(transparent 60%, #E1DCD7 0%);
+  font-size: clamp(12px, 4.26vw, 18px);
+  font-weight: 600;
+  padding: 0 10px 2px;
+}
+
+.bl_worksTemp_wrap {
+  margin-top: 20px;
+}
+
+.bl_worksTemp_list {
+  padding-left: 24px;
+}
+
+.bl_worksTemp_item {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.bl_contactMessage_schedule summary {
+  display: block;
+  width: 100%;
+  max-width: 275px;
+  margin: 0 auto;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+.bl_contactMessage_schedule summary::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 1.8px solid #fff;
+  border-bottom: 1.8px solid #fff;
+  position: absolute;
+  top: 30%;
+  right: 1.714em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.bl_contactMessage_schedule summary:hover, .bl_contactMessage_schedule summary details[open] summary {
+  opacity: 0.8;
+}
+.bl_contactMessage_schedule summary::-webkit-details-marker {
+  display: none;
+}
+
+.bl_contactMessage_schedule_wrap {
+  margin-top: 20px;
+  padding-top: 90%;
+  position: relative;
+}
+.bl_contactMessage_schedule_wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 577px) {
+  .bl_contactMessage_schedule_wrap {
+    padding-top: 45%;
+  }
+}
+
+details[open] summary::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 40%;
+}
+
+details[open] .bl_contactMessage_schedule_wrap {
+  -webkit-animation: fadeIn 0.5s ease;
+          animation: fadeIn 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* contactForm
+----------------------------------------- */
+.bl_contact {
+  padding-top: 50px;
+  position: relative;
+}
+.bl_contact::before {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background: #E1DCD7;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bl_contact_label {
+  display: inline-block;
+}
+.bl_contact_label label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.bl_contact_label__must {
+  position: relative;
+  padding-right: 60px;
+}
+.bl_contact_label__must::after {
+  content: "必須";
+  font-size: 0.625rem;
+  padding: 0.3em 1em;
+  background: #AD9F9A;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 /* mt
 ----------------------------------------- */
 .hp_mt40 {
@@ -712,6 +863,10 @@ button, input {
 
 .hp_mt50 {
   margin-top: 50px;
+}
+
+.hp_mt30 {
+  margin-top: 30px;
 }
 
 /* display

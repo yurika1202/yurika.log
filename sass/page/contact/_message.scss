@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* contactMessage
+----------------------------------------- */
+.bl_contactMessage_works {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.bl_contactMessage_title {
+    text-align: center;
+    max-width: 385px;
+    margin: 0 auto;
+
+    span {
+        background: linear-gradient(transparent 60%, g.$cMain 0%);
+        font-size: clamp(12px, 4.26vw, 18px);
+        font-weight: 600;
+        padding: 0 10px 2px;
+    }
+}
+
+.bl_worksTemp_wrap {
+    margin-top: 20px;
+}
+
+.bl_worksTemp_list {
+    padding-left: 24px;
+}
+
+.bl_worksTemp_item {
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+.bl_contactMessage_schedule {
+    summary {
+        display: block;
+        width: 100%;
+        max-width: 275px;
+        margin: 0 auto;
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-right: 1.8px solid g.$cText_wh;
+            border-bottom: 1.8px solid g.$cText_wh;
+            position: absolute;
+            top: 30%;
+            right: 1.714em;
+            transform: rotate(45deg);
+            transition: transform 0.3s;
+        }
+
+        &:hover, details[open] summary {
+            opacity: .8;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+}
+
+.bl_contactMessage_schedule_wrap {
+    margin-top: 20px;
+    padding-top: 90%;
+    position: relative;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include g.mq(sm) {
+        padding-top: 45%;
+    }
+}
+
+details[open] summary::after {
+    transform: rotate(-135deg);
+    top: 40%;
+}
+
+details[open] .bl_contactMessage_schedule_wrap {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

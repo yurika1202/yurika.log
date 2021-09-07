@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* contactForm
+----------------------------------------- */
+.bl_contact {
+    padding-top: 50px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 30px;
+        background: g.$cMain;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.bl_contact_item {
+    &:not(:first-of-type) {
+        margin-top: 20px;
+    }
+}
+
+.bl_contact_label {
+    display: inline-block;
+
+    label {
+        font-weight: 500;
+        font-size: g.rem(16px);
+    }
+
+    &__must {
+        position: relative;
+        padding-right: 60px;
+
+        &::after {
+            content: "必須";
+            font-size: g.rem(10px);
+            padding: .3em 1em;
+            background: g.$cSober;
+            color: g.$cText_wh;
+            font-weight: 500;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.bl_contact_flexWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bl_contact_input {
+    margin-top: 10px;
+
+    input {
+        background: g.$cBg_contents;
+        border: 1.5px solid g.$cSober;
+        border-radius: 10px;
+    }
+
+    &__name {
+        input {
+            width: 45%;
+        }
+    }
+}
+
+.bl_contact_ex {
+    font-size: g.rem(12px);
+    opacity: .8;
+}
