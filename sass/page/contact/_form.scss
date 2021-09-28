@@ -30,9 +30,6 @@
     }
 }
 
-.bl_form {
-}
-
 .bl_form_flexWrap {
     @include g.mq(md) {
         display: flex;
