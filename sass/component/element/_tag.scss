@@ -10,4 +10,12 @@
     border-radius: 50px;
     font-size: g.rem(10px);
     color: g.$cText_wh;
+
+    &__link {
+        transition: transform .3s ease-in-out;
+
+        &:focus, &:hover {
+            transform: translateY(-4px);
+        }
+    }
 }

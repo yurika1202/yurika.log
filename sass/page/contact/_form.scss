@@ -3,8 +3,11 @@
 
 /* contactForm
 ----------------------------------------- */
-.bl_contact {
-    padding-top: 50px;
+.bl_formWrap {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 100px;
     position: relative;
 
     &::before {
@@ -17,15 +20,51 @@
         left: 50%;
         transform: translateX(-50%);
     }
-}
 
-.bl_contact_item {
-    &:not(:first-of-type) {
-        margin-top: 20px;
+    @include g.mq(sm) {
+        width: 95%;
+    }
+
+    @include g.mq(xl) {
+        width: 80%;
     }
 }
 
-.bl_contact_label {
+.bl_form {
+}
+
+.bl_form_flexWrap {
+    @include g.mq(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__radio {
+        @include g.mq(sm) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        @include g.mq(md) {
+            justify-content: space-between;
+        }
+    }
+}
+
+.bl_form_item {
+    align-items: center;
+
+    &:not(:first-of-type) {
+        margin-top: 30px;
+    }
+}
+
+.bl_form_label {
     display: inline-block;
 
     label {
@@ -51,30 +90,276 @@
             transform: translateY(-50%);
         }
     }
-}
 
-.bl_contact_flexWrap {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bl_contact_input {
-    margin-top: 10px;
-
-    input {
-        background: g.$cBg_contents;
-        border: 1.5px solid g.$cSober;
-        border-radius: 10px;
+    &__position {
+        @include g.mq(md) {
+            transform: translateY(-11px);
+        }
     }
 
-    &__name {
-        input {
-            width: 45%;
+    &__positionTextarea {
+        @include g.mq(md) {
+            transform: translateY(-125px);
         }
     }
 }
 
-.bl_contact_ex {
+.bl_form_input, .bl_form_select, .bl_form_text {
+    width: 100%;
+    margin-top: 10px;
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        background: g.$cBg_contents;
+        border: 1.5px solid g.$cSober;
+        border-radius: 10px;
+        padding: 8px 10px;
+        transition: box-shadow .3s ease-in-out;
+
+        &:focus, &:hover {
+            box-shadow: 0px 0px 5px 0px g.$cSober;
+        }
+    }
+
+    @include g.mq(md) {
+        width: 65%;
+        margin-top: 0;
+    }
+
+    &__name {
+        width: 47%;
+
+        @include g.mq(md) {
+            width: 45%;
+        }
+    }
+
+    textarea {
+        height: 150px;
+        resize: vertical;
+
+        @include g.mq(md) {
+            height: 300px;
+        }
+    }
+}
+
+.bl_form_ex {
+    margin-top: 8px;
+    padding-left: 5px;
     font-size: g.rem(12px);
     opacity: .8;
+
+    @include g.mq(md) {
+        padding-left: 20px;
+    }
+}
+
+.bl_form_selectItem {
+    position: relative;
+    padding-left: 35px;
+
+    &:not(:first-of-type) {
+        margin-top: 10px;
+
+        @include g.mq(sm) {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+
+        @include g.mq(md) {
+            margin-left: 0;
+        }
+    }
+}
+
+.bl_form_selectLabel {
+    input[type="radio"] {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+
+        &:checked + .bl_form_selectParts {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:focus + .bl_form_selectParts {
+            &::before {
+                box-shadow: 0px 0px 5px 0px g.$cSober;
+            }
+        }
+    }
+}
+
+.bl_form_selectParts {
+    &::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background: g.$cBg_contents;
+        border: 1.5px solid g.$cSober;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: box-shadow .3s ease-in-out;
+
+    }
+
+    &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: g.$cSober;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        transition: opacity .3s ease-in;
+        opacity: 0;
+        transition: box-shadow .3s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            box-shadow: 0px 0px 5px 0px g.$cSober;
+        }
+    }
+}
+
+.bl_privacy {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    background: g.$cBg_contents;
+    border: 1.5px solid g.$cSober;
+    border-radius: 10px;
+    padding: 20px 30px;
+    overflow-y: scroll;
+
+    @include g.mq(md) {
+        width: 80%;
+    }
+}
+
+.bl_privacy_title {
+    font-weight: 600;
+    font-size: g.rem(18px);
+    text-align: center;
+    line-height: 3;
+}
+
+.bl_privacy_sectionTitle {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.bl_privacy_list {
+    list-style: disc outside;
+
+    li {
+        margin-left: 20px;
+    }
+}
+
+.bl_form_check {
+    text-align: center;
+}
+
+.bl_form_checkLabel {
+    padding-left: 35px;
+    font-weight: 500;
+    position: relative;
+
+    input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+
+        &:checked + .bl_form_checkParts {
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+
+        &:focus + .bl_form_checkParts {
+            &::before {
+                box-shadow: 0px 0px 5px 0px g.$cSober;
+            }
+        }
+    }
+
+    @include g.mq(md) {
+        font-size: g.rem(16px);
+    }
+}
+
+.bl_form_checkParts {
+    &::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        border: 1.5px solid g.$cSober;
+        background: g.$cBg_contents;
+        border-radius: 5px;
+        position: absolute;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        content: "";
+        width: 18px;
+        height: 8px;
+        border-bottom: 1.5px solid g.$cSober;
+        border-left: 1.5px solid g.$cSober;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        opacity: 0;
+        transition: transform .3s ease-in-out,
+                    opacity .3s ease-in-out;
+    }
+}
+
+.bl_form_submitWrap {
+    text-align: center;
+}
+
+.bl_form_sendMessage {
+    max-width: 720px;
+    margin: 0 auto;
+    display: none;
+}
+
+.bl_form_sendTitle {
+    font-size: g.rem(18px);
+    font-weight: 600;
+}
+
+.bl_form_sendText {
+    &:not(:first-of-type) {
+        margin-top: 10px;
+    }
+}
+
+.bl_form_topLink {
+    text-align: center;
 }

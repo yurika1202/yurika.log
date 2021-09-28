@@ -20,16 +20,18 @@
 <link rel="stylesheet" type="text/css" href="../css/style.min.css">
 
 <!-- favicon -->
-<link rel="icon" type="image/x-icon" href="../favicon/favicon .ico">
+<link rel="shortcut-icon" href="favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="android-chrome" href="favicon/android-chrome-192x192.png" sizes="192x192">
 
 </head>
-<body>
+<body id="js_fixed">
 
 <!-- header -->
 <header class="ly_header">
     <div class="bl_header_inner">
         <h1 class="bl_header_logo">
-            <a href="">
+            <a href="index.php">
                 <img src="../img/logo/logo.svg" alt="Yurika.logのロゴ">
             </a>
         </h1><!-- /.bl_header_logo -->
@@ -54,23 +56,23 @@
                 <div class="bl_search_tag">
                     <ul class="bl_search_tagList">
                         <li class="bl_search_tagItem" id="js_navItem">
-                            <a class="el_tag">タグタグタグ</a>
+                            <a class="el_tag el_tag__link">タグタグタグ</a>
                         </li><!-- /.bl_search_tagItem -->
 
                         <li class="bl_search_tagItem" id="js_navItem">
-                            <a class="el_tag">タグタグ</a>
+                            <a class="el_tag el_tag__link">タグタグ</a>
                         </li><!-- /.bl_search_tagItem -->
 
                         <li class="bl_search_tagItem" id="js_navItem">
-                            <a class="el_tag">タグタグタグタグ</a>
+                            <a class="el_tag el_tag__link">タグタグタグタグ</a>
                         </li><!-- /.bl_search_tagItem -->
 
                         <li class="bl_search_tagItem" id="js_navItem">
-                            <a class="el_tag">タグタグタグ</a>
+                            <a class="el_tag el_tag__link">タグタグタグ</a>
                         </li><!-- /.bl_search_tagItem -->
 
                         <li class="bl_search_tagItem" id="js_navItem">
-                            <a class="el_tag">タグタグ</a>
+                            <a class="el_tag el_tag__link">タグタグ</a>
                         </li><!-- /.bl_search_tagItem -->
                     </ul><!-- /.bl_search_tagList -->
                 </div><!-- /.bl_search_tag -->
@@ -144,97 +146,97 @@
     </div><!-- /.bl_contactMessage -->
 
     <!-- form -->
-    <div class="bl_contact hp_mt30">
+    <div class="bl_formWrap hp_mt50">
 
-        <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="bl_contact_form" id="js-form">
+        <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="bl_form" id="js_form">
 
-            <div class="bl_contact_item">
-                <dt class="bl_contact_label bl_contact_label__must">
+            <div class="bl_form_item bl_form_flexWrap">
+                <dt class="bl_form_label bl_form_label__must bl_form_label__position">
                     <label for="name">お名前</label>
-                </dt><!-- /.bl_contact_label -->
+                </dt><!-- /.bl_form_label -->
 
-                <dd class="bl_contact_flexWrap">
-                    <div class="bl_contact_input bl_contact_input__name">
-                        <input type="text" name="entry.1779209409" id="name" required autocomplete="family-name">
-                        <p class="bl_contact_ex">例：山田</p>
-                    </div><!-- /.bl_contact_input -->
+                <dd class="bl_form_input bl_form_flexWrap__name">
+                    <div class="bl_form_input__name">
+                        <input type="text" name="entry.1779209409" id="name" class="js_input" required autocomplete="family-name">
+                        <p class="bl_form_ex">例：山田</p>
+                    </div><!-- /.bl_form_input__name -->
 
-                    <div class="bl_contact_input bl_contact_input__name">
-                        <input type="text" name="entry.1554881563" id="given-name" required autocomplete="given-name">
-                        <p class="bl_contact_ex">例：太郎</p>
-                    </div><!-- /.bl_contact_input -->
-                </dd><!-- /.bl_contact_flexWrap -->
-            </div><!-- /.bl_contact_item -->
+                    <div class="bl_form_input__name">
+                        <input type="text" name="entry.1554881563" id="given-name" class="js_input" required autocomplete="given-name">
+                        <p class="bl_form_ex">例：太郎</p>
+                    </div><!-- /.bl_form_input__name -->
+                </dd><!-- /.bl_form_input -->
+            </div><!-- /.bl_form_item -->
 
-            <div class="bl_contact_item">
-                <dt class="bl_contact_label">
+            <div class="bl_form_item bl_form_flexWrap">
+                <dt class="bl_form_label bl_form_label__position">
                     <label for="ruby">フリガナ</label>
-                </dt><!-- /.bl_contact_label -->
+                </dt><!-- /.bl_form_label -->
 
-                <dd class="bl_contact_flexWrap">
-                    <div class="bl_contact_input bl_contact_input__name">
+                <dd class="bl_form_input bl_form_flexWrap__name">
+                    <div class="bl_form_input__name">
                         <input type="text" name="entry.2096985610" id="ruby" autocomplete="family-name">
-                        <p class="bl_contact_ex">例：ヤマダ</p>
-                    </div><!-- /.bl_contact_input -->
+                        <p class="bl_form_ex">例：ヤマダ</p>
+                    </div><!-- /.bl_form_input__name -->
 
-                    <div class="bl_contact_input bl_contact_input__name">
+                    <div class="bl_form_input__name">
                         <input type="text" name="entry.1334727094" id="given-ruby" autocomplete="given-name">
-                        <p class="bl_contact_ex">例：タロウ</p>
-                    </div><!-- /.bl_contact_input -->
-                </dd><!-- /.bl_contact_flexWrap -->
-            </div><!-- /.bl_contact_item -->
+                        <p class="bl_form_ex">例：タロウ</p>
+                    </div><!-- /.bl_form_input__name -->
+                </dd><!-- /.bl_form_input -->
+            </div><!-- /.bl_form_item -->
 
-            <div class="bl_contact_item">
-                <dt class="bl_contact_label bl_contact_label__must">
+            <div class="bl_form_item bl_form_flexWrap">
+                <dt class="bl_form_label bl_form_label__must bl_form_label__position">
                     <label for="mail">ご連絡先</label>
-                </dt><!-- /.bl_contact_label -->
+                </dt><!-- /.bl_form_label -->
 
-                <dd class="bl_contact_input">
-                    <input type="email" name="entry.1827557894" id="mail" required autocomplete="email">
-                    <p class="bl_contact_ex">例：info@sample.com</p>
-                </dd><!-- /.bl_contact_input -->
-            </div><!-- /.bl_contact_item -->
+                <dd class="bl_form_input">
+                    <input type="email" name="entry.1827557894" id="mail" class="js_input" required autocomplete="email">
+                    <p class="bl_form_ex">例：info@sample.com</p>
+                </dd><!-- /.bl_form_input -->
+            </div><!-- /.bl_form_item -->
 
-            <div class="bl_contact_item">
-                <dt class="bl_contact_label bl_contact_label__must">
+            <div class="bl_form_item bl_form_flexWrap">
+                <dt class="bl_form_label bl_form_label__must">
                     <label for="type">お問合せ種別</label>
-                </dt><!-- /.bl_contact_label -->
+                </dt><!-- /.bl_form_label -->
 
-                <dd class="bl_contact_select">
-                    <div class="bl_contact_selectItem">
-                        <label for="work" class="bl_contact_selectLabel">
+                <dd class="bl_form_select bl_form_flexWrap__radio">
+                    <div class="bl_form_selectItem">
+                        <label for="work" class="bl_form_selectLabel">
                             <input type="radio" name="entry.1933523182" id="work" value="お仕事のご依頼" checked>
-                            <span class="bl_contact_selectParts"></span>お仕事のご依頼
+                            <span class="bl_form_selectParts"></span>お仕事のご依頼
                         </label>
-                    </div><!-- /.bl_contact_selectItem -->
+                    </div><!-- /.bl_form_selectItem -->
 
-                    <div class="bl_contact_selectItem">
-                        <label for="opinion" class="bl_contact_selectLabel">
+                    <div class="bl_form_selectItem">
+                        <label for="opinion" class="bl_form_selectLabel">
                             <input type="radio" name="entry.1933523182" id="opinion" value="ご意見・ご感想">
-                            <span class="bl_contact_selectParts"></span>ご意見・ご感想
+                            <span class="bl_form_selectParts"></span>ご意見・ご感想
                         </label>
-                    </div><!-- /.bl_contact_selectItem -->
+                    </div><!-- /.bl_form_selectItem -->
 
-                    <div class="bl_contact_selectItem">
-                        <label for="other" class="bl_contact_selectLabel">
+                    <div class="bl_form_selectItem">
+                        <label for="other" class="bl_form_selectLabel">
                             <input type="radio" name="entry.1933523182" id="other" value="その他">
-                            <span class="bl_contact_selectParts"></span>その他
+                            <span class="bl_form_selectParts"></span>その他
                         </label>
-                    </div><!-- /.bl_contact_selectItem -->
-                </dd><!-- /.bl_contact_select -->
-            </div><!-- /.bl_contact_item -->
+                    </div><!-- /.bl_form_selectItem -->
+                </dd><!-- /.bl_form_select -->
+            </div><!-- /.bl_form_item -->
 
-            <div class="bl_contact_item">
-                <dt class="bl_contact_label bl_contact_label__must">
+            <div class="bl_form_item bl_form_flexWrap">
+                <dt class="bl_form_label bl_form_label__must bl_form_label__positionTextarea">
                     <label for="text">お問合せ内容</label>
-                </dt><!-- /.bl_contact_label -->
+                </dt><!-- /.bl_form_label -->
 
-                <dd class="bl_contact_text">
-                    <textarea name="entry.17644278" id="text" required></textarea>
-                </dd><!-- /.bl_contact_text -->
-            </div><!-- /.bl_contact_item -->
+                <dd class="bl_form_text">
+                    <textarea name="entry.17644278" id="text" class="js_input" required></textarea>
+                </dd><!-- /.bl_form_text -->
+            </div><!-- /.bl_form_item -->
 
-            <div class="bl_contact_privacy">
+            <div class="bl_form_privacy hp_mt30">
                 <div class="bl_privacy">
                     <p class="bl_privacy_title">プライバシーポリシー</p>
                     <p class="bl_privacy_text">YURIKA.LOG、YURIKA's PORTFOLIO（以下、「当サイト」）は、ユーザーの個人情報の取扱いについて以下のとおりプライバシーポリシー（以下、「本ポリシー」）を定めます。</p>
@@ -254,35 +256,45 @@
                     <p class="bl_privacy_text">本ポリシー関するお問い合わせは、下記までお願い致します。<br>ゆりか　メールアドレス：info@yurika1202.com</p>
                 </div><!-- /.bl_privacy -->
 
-                <div class="bl_contact_check">
-                    <label for="privacy" class="bl_contact_checkLabel">
-                        <input type="checkbox" name="entry.621122530" id="privacy" value="プライバシーポリシーの同意" required>
-                        <span class="bl_contact_checkParts"></span>プライバシーポリシーの内容を確認し同意します
-                        </div><!-- /.bl_contact_checkLabel -->
-                    </label>
-                </div><!-- /.bl_contact_check -->
-            </div><!-- /.bl_contact_privacy -->
+                <div class="bl_form_check hp_mt30">
+                    <label for="privacy" class="bl_form_checkLabel">
+                        <input type="checkbox" name="entry.621122530" id="privacy" value="プライバシーポリシーの同意" class="js_input" required>
+                        <span class="bl_form_checkParts"></span>プライバシーポリシーの内容を確認し同意します
+                    </label><!-- /.bl_form_checkLabel -->
+                </div><!-- /.bl_form_check -->
+            </div><!-- /.bl_form_privacy -->
 
-            <div class="bl_contact_submitWrap">
-                <button type="submit" id="js_submit" class="el_btn bl_contact_submit" disabled>送信</button>
-            </div><!-- /.bl_contact_submitWrap -->
+            <div class="bl_form_submitWrap hp_mt50">
+                <button type="submit" id="js_submit" class="el_btn el_btn__submit is_disabled" disabled>送信</button>
+            </div><!-- /.bl_form_submitWrap -->
 
-        </form><!-- /.bl_contact_form -->
+        </form><!-- /.bl_form -->
 
         <!-- form-message -->
-        <div id="js_success" class="bl_contact_sendMessage">
-            <p class="bl_contact_sendTitle">お問い合わせありがとうございます。</p>
-            <p class="bl_contact_sendText">対応可能日の場合は6時間以内に返信しますので、少しお待ちください。<br>お休みを頂いている場合は、対応可能日に返信いたします。<br>もし対応可能日にも関わらず1日経っても返信がない場合、こちらへ届いてない可能性がありますので、お手数ですが再度お問い合わせフォーム、または<a href="https://twitter.com/bnku212" class="el_textLink">Twitter</a>のDMからご連絡よろしくお願いいたします。</p>
-            <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
+        <div id="js_success" class="bl_form_sendMessage bl_common_blockWrap">
+            <p class="bl_form_sendTitle">お問い合わせありがとうございます。</p>
+            <div class="bl_form_sendTextWrap hp_mt30">
+                <p class="bl_form_sendText">対応可能日の場合は6時間以内に返信しますので、少しお待ちください。</p>
+                <p class="bl_form_sendText">お休みを頂いている場合は、対応可能日に返信いたします。</p>
+                <p class="bl_form_sendText">もし対応可能日にも関わらず1日経っても返信がない場合、こちらへ届いてない可能性があります。</p>
+                <p class="bl_form_sendText">お手数ですが再度お問い合わせフォーム、または<a href="https://twitter.com/bnku212" class="el_textLink">Twitter</a>のDMからご連絡よろしくお願いいたします。</p>
+            </div><!-- /.bl_form_sendTextWrap -->
+            <div class="bl_form_topLink hp_mt50">
+                <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
+            </div><!-- /.bl_form_topLink -->
         </div>
 
-        <div id="js_error" class="bl_contact_sendMessage">
-            <p class="bl_contact_sendTitle">送信に失敗しました。</p>
-            <p class="bl_contact_sendText">ページを更新して再度送信してください。</p>
-            <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
+        <div id="js_error" class="bl_form_sendMessage bl_common_blockWrap">
+            <p class="bl_form_sendTitle">送信に失敗しました。</p>
+            <div class="bl_form_sendTextWrap hp_mt30">
+                <p class="bl_form_sendText">ページを更新して再度送信してください。</p>
+            </div><!-- /.bl_form_sendTextWrap -->
+            <div class="bl_form_topLink hp_mt50">
+                <a href="index.html" class="el_btn el_btn__icon"><i class="fas fa-home"></i>TOPへもどる</a>
+            </div><!-- /.bl_form_topLink -->
         </div>
 
-    </div><!-- /.bl_contact -->
+    </div><!-- /.bl_form -->
 
 </main>
 
@@ -290,12 +302,12 @@
 <footer class="ly_footer js_drawerFixed">
     <small class="el_copy">&copy; 2021 Yurika.log</small>
 
-    <div class="el_toTop" id="js_toTop">
+    <div class="el_toTop" id="js_toTopBtn">
         <i class="fas fa-caret-up"></i>
     </div><!-- /.el_toTop -->
 </footer><!-- /.ly_footer -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
     border: 2px solid g.$cAccent;
     border-radius: 10px;
     color: g.$cText_wh;
+    cursor: pointer;
 
     &__sns {
         padding: .8em;
@@ -23,6 +24,27 @@
         i {
             font-size: g.rem(18px);
             padding-right: 10px;
+        }
+    }
+
+    &__profileLink {
+        text-transform: uppercase;
+        font-family: g.$fontEn;
+        letter-spacing: .18em;
+    }
+
+    &__submit {
+        width: 100%;
+        max-width: 350px;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: .5em;
+        transition: all .3s ease;
+
+        &.is_disabled {
+            background: g.$cBg_contents;
+            color: g.$cText_br;
+            cursor: auto;
         }
     }
 }

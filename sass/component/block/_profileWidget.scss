@@ -4,7 +4,8 @@
 /* profile
 ----------------------------------------- */
 .bl_profile {
-    width: 302px;
+    width: 100%;
+    max-width: 302px;
     margin: 40px auto 0;
     background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
     position: relative;
@@ -55,13 +56,6 @@
 .bl_profile_link {
     margin-top: 20px;
     text-align: center;
-}
-
-.bl_btn_profileLink {
-    text-transform: uppercase;
-    font-family: g.$fontEn;
-    letter-spacing: .18em;
-    color: g.$cText_wh;
 }
 
 .bl_profile_snsList {
