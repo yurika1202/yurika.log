@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* entry
+----------------------------------------- */
+.bl_entry {
+    width: 100%;
+    padding: 40px 10px 45px;
+
+    @include g.mq(sm) {
+        padding: 40px 5% 80px;
+    }
+
+    @include g.mq(xl) {
+        width: calc(100% - 302px);
+    }
+}
+
+.bl_entry_title {
+    font-size: g.rem(20px);
+    font-weight: 600;
+}
+
+.bl_entry_metaWrap, .bl_entry_img {
+    margin-top: 10px;
+}
+
+.bl_entry_time {
+    font-size: g.rem(12px);
+
+    &:nth-of-type(2) {
+        margin-left: 10px;
+    }
+}
+
+.bl_entry_img {
+    width: 100%;
+}
+
+.bl_entry_body {
+    margin-top: 10px;
+
+    p, figure, h2, h3, ul, ol, .code-toolbar {
+        margin-top: 10px;
+
+        ul, ol {
+            margin-top: 0;
+        }
+    }
+}
+
+.bl_entry_infoWrap {
+    padding: 30px 10px 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 80%;
+        height: 1px;
+        background: g.$cSober;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.bl_entry_categoryWrap, .bl_entry_tagWrap {
+    i {
+        color: g.$cSober;
+        font-size: g.rem(12px);
+    }
+}

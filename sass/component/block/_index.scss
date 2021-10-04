@@ -3,8 +3,9 @@
 @use "header";
 @use "common";
 @use "article";
+@use "aside";
 @use "pagination";
-@use "profileWidget";
-@use "searchWidget";
-@use "categoryWidget";
+@use "widget";
 @use "flex";
+@use "share";
+@use "breadcrumb";

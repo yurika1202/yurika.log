@@ -14,7 +14,11 @@
 }
 
 .bl_header_logo {
-    width: 160px;
+    width: 100px;
+
+    @include g.mq(sm) {
+        width: 160px;
+    }
 }
 
 .bl_header_navBtn {
@@ -55,11 +59,11 @@
 
 .bl_header_openNav {
     width: 100%;
-    height: calc(100% - 70px);
+    height: calc(100% - 50px);
     padding-bottom: 80px;
     background: g.$cBg_main;
     position: fixed;
-    top: 70px;
+    top: 50px;
     right: -100%;
     z-index: 100;
     transition: right .5s ease-in-out;
@@ -68,6 +72,11 @@
 
     &.is_open {
         right: 0;
+    }
+
+    @include g.mq(sm) {
+        height: calc(100% - 70px);
+        top: 70px;
     }
 
     @include g.mq(md) {
@@ -79,4 +88,8 @@
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
+}
+
+.bl_header_navLink {
+    text-align: center;
 }

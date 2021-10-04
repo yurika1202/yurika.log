@@ -45,12 +45,12 @@ add_action('init', 'my_menu_init');
 // ウィジェット
 function my_widget_init() {
   register_sidebar (array (
-    'name' => '目次', 
+    'name' => '目次',
     'id' => 'table',
   ));
 
   register_sidebar (array (
-    'name' => '目次_sp', 
+    'name' => '目次_sp',
     'id' => 'table_sp',
   ));
 }
@@ -125,4 +125,10 @@ function bc_limit ($trail) {
 add_action('bcn_after_fill', 'bc_limit');
 
 
+// prism.js
+function my_prism() {
+	wp_enqueue_style( 'prism-style', get_stylesheet_directory_uri() . '/css/prism.css' ); // 第2引数には自身がファイルをアップロードしたパスを指定
+	wp_enqueue_script( 'prism-script', get_stylesheet_directory_uri() . '/js/prism.js', array('jquery'), '1.9.0', true ); // 第2引数には自身がファイルをアップロードしたパスを指定
+}
+add_action( 'wp_enqueue_scripts', 'my_prism' );
 ?>

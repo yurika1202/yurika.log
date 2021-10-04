@@ -5,11 +5,19 @@
 ----------------------------------------- */
 .ly_main{
     width: 90%;
-    margin: 120px auto 0;
+    margin: 80px auto 0;
     flex: 1;
 
     &.is_fixed {
         position: fixed;
+    }
+
+    @include g.mq(sm) {
+        margin: 120px auto 0;
+
+        &__single {
+            margin: 100px auto 0;
+        }
     }
 
     @include g.mq(md) {

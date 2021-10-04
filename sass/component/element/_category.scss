@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* category
+----------------------------------------- */
+.el_category {
+    display: inline-block;
+    font-size: g.rem(10px);
+    transition: opacity .3s ease-in-out;
+
+    &:focus, &:hover {
+        opacity: .5;
+    }
+}

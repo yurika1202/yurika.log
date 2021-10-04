@@ -4,19 +4,44 @@
 /* article
 ----------------------------------------- */
 .bl_article_wrap {
-    padding: 40px 20px;
+    width: 100%;
+    padding: 40px 5%;
+
+    @include g.mq(xl) {
+        width: calc(100% - 302px);
+    }
 }
 
 .bl_articleCard_contents {
     padding: 20px 8px;
+
+    &__related {
+        padding: 10px 8px;
+    }
 }
 
 .bl_articleCard_title {
     font-size: g.rem(16px);
     margin-top: 10px;
+
+    &__related {
+        @include g.mq(md) {
+            font-size: g.rem(16px);
+        }
+    }
 }
 
 .bl_articleCard_meta {
     margin-top: 10px;
     text-align: right;
+}
+
+.bl_articleCard_time {
+    &__related {
+        font-size: g.rem(10px);
+
+        @include g.mq(md) {
+            font-size: g.rem(12px);
+        }
+    }
 }

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* toc
+----------------------------------------- */
+.bl_toc {
+    &__main {
+        width: 25%;
+        min-width: 230px;
+        position: fixed;
+        top: 60px;
+        right: 4%;
+        transform: scale(0);
+        transform-origin: right top;
+        z-index: 200;
+        transition: transform .4s ease-in-out;
+
+        @include g.mq(sm) {
+            top: 80px;
+        }
+
+        @include g.mq(xl) {
+            display: none;
+        }
+    }
+
+    &__aside {
+        position: sticky;
+        top: 100px;
+        display: none;
+
+        @include g.mq(xl) {
+            display: block;
+        }
+    }
+
+    &.is_active {
+        transform: scale(1);
+
+    }
+}
+
+.bl_toc_list {
+    margin-top: 20px;
+}
+
+.bl_toc_item {
+    &:not(:first-of-type) {
+        margin-top: 8px;
+    }
+}
+
+.bl_toc_list__child {
+    margin-left: 0;
+
+    @include g.mq(xl) {
+        margin-left: 10px;
+    }
+}
+
+.bl_toc_item__child {
+    margin: 8px 0 0 10px;
+    padding-left: 15px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid g.$cSober;
+        border-bottom: 2px solid g.$cSober;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* related
+----------------------------------------- */
+.bl_related_wrap {
+    width: 90%;
+    margin: 40px auto 0;
+
+    @include g.mq(md) {
+        width: calc(1200 / 1440 * 100%);
+        max-width: 1200px;
+    }
+}
+
+.bl_related_title {
+    font-size: g.rem(16px);
+    font-weight: 500;
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+        content: "\f101";
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        color: g.$cAccent;
+        font-size: g.rem(16px);
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        animation: arrowRight 2s linear infinite;
+    }
+}
+
+@keyframes arrowRight {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+    40% {
+        transform: translateY(-50%) translateX(4px);
+    }
+    60% {
+        transform: translateY(-50%) translateX(4px);
+    }
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+}

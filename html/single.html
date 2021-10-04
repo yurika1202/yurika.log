@@ -13,11 +13,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
 <!-- font awesome -->
 <script src="https://kit.fontawesome.com/df603b5721.js" crossorigin="anonymous"></script>
 
 <!-- css -->
+<link rel="stylesheet" type="text/css" href="../css/plugins/prism.css">
 <link rel="stylesheet" type="text/css" href="../css/style.min.css">
 
 <!-- favicon -->
@@ -36,336 +40,520 @@
                 <img src="../img/logo/logo.svg" alt="Yurika.logのロゴ">
             </a>
         </h1><!-- /.bl_header_logo -->
+
+        <button class="bl_header_navBtn" id="js_drawerBtn">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </button><!-- /.bl_header_navBtn -->
     </div><!-- /.bl_header_inner -->
+
+    <nav class="bl_header_openNav" id="js_drawerContents">
+        <div class="bl_header_navInner">
+            <div class="bl_header_navLink hp_mt40">
+                <a href="" class="el_btn el_btn_headerNav">Contact</a>
+            </div><!-- /.bl_header_navLink -->
+
+            <div class="bl_search bl_common_blockWrap hp_mt40">
+                <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
+                    <div class="bl_search_searchDate">
+                        <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください">
+                        <button type="submit" class="bl_search_searchSubmit" value=""></button>
+                    </div><!-- /.bl_search_searchDate -->
+                </form><!-- /.bl_search_searchForm -->
+
+                <div class="bl_search_tag">
+                    <ul class="bl_search_tagList">
+                        <li class="bl_search_tagItem">
+                            <a class="el_tag el_tag__link">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem">
+                            <a class="el_tag el_tag__link">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem">
+                            <a class="el_tag el_tag__link">タグタグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem">
+                            <a class="el_tag el_tag__link">タグタグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+
+                        <li class="bl_search_tagItem">
+                            <a class="el_tag el_tag__link">タグタグ</a>
+                        </li><!-- /.bl_search_tagItem -->
+                    </ul><!-- /.bl_search_tagList -->
+                </div><!-- /.bl_search_tag -->
+            </div><!-- /.bl_search -->
+
+            <div class="bl_category bl_common_blockWrap hp_mt40">
+                <p class="bl_widget_title">Category</p><!-- /.bl_category_title -->
+
+                <ul class="bl_category_list">
+                    <li class="bl_category_item">
+                        <a href="">HTML/CSS</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item">
+                        <a href="">JavaScript</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item">
+                        <a href="">WordPress</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item">
+                        <a href="">制作の記録</a>
+                    </li><!-- /.bl_category_item -->
+
+                    <li class="bl_category_item">
+                        <a href="">ひとりごと</a>
+
+                        <ul class="bl_category_list__child">
+                            <li class="bl_category_item__child">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+
+                            <li class="bl_category_item__child">
+                                <a href="">サブカテゴリー</a>
+                            </li><!-- /.bl_category_item__child -->
+                        </ul><!-- /.bl_category_list__child -->
+                    </li><!-- /.bl_category_item -->
+                </ul><!-- /.bl_category_list -->
+            </div><!-- /.bl_category -->
+        </div><!-- /.bl_header_navInner -->
+    </nav><!-- /.bl_header_openNav -->
 </header>
 
-<nav class="bl_breadcrumb">
-    <ul class="bl_breadcrumb_list">
-        <li class="bl_breadcrumb_item">
-            <a href=""><i class="fas fa-home"></i>ホーム</a>
-        </li><!-- /.bl_breadcrumb_item -->
+<main class="ly_main ly_main__single js_drawerFixed">
+    <nav class="bl_breadcrumb">
+        <ul class="bl_breadcrumb_list">
+            <li class="bl_breadcrumb_item"><a href=""><i class="fas fa-home"></i>ホーム</a></li><!-- /.bl_breadcrumb_item -->
+            <li class="bl_breadcrumb_item"><a href="">カテゴリー</a></li><!-- /.bl_breadcrumb_item -->
+            <li class="bl_breadcrumb_item"><a href="">ページタイトルがはいります</a></li><!-- /.bl_breadcrumb_item -->
+        </ul><!-- /.bl_breadcrumb_list -->
+    </nav><!-- /.bl_breadcrumb -->
 
-        <li class="bl_breadcrumb_item">
-            <a href="">カテゴリー</a>
-        </li><!-- /.bl_breadcrumb_item -->
+    <button class="el_btn el_btn_toc" id="js_tocBtn"><span class="el_btn_toc__open">もくじ</span><span class="el_btn_toc__close"></span></button><!-- /.bl_header_tocBtn -->
 
-        <li class="bl_breadcrumb_item">
-            <a href="">タイトル</a>
-        </li><!-- /.bl_breadcrumb_item -->
-    </ul><!-- /.bl_breadcrumb_list -->
-</nav><!-- /.bl_breadcrumb -->
+    <div class="bl_toc bl_toc__main bl_common_blockWrap" id="js_toc">
+        <p class="bl_widget_title">Mokuji</p><!-- /.bl_category_title -->
 
-<main class="ly_main">
+        <ul class="bl_toc_list">
+            <li class="bl_toc_item">
+                <a href="">h2のタイトルがはいります</a>
 
-    <div class="bl_share">
-        <ul class="bl_share_list">
-            <li class=el_share_item">
-                <a href="https://twitter.com/share?url=https://example.com/archive/123/&text=記事のタイトルが入ります" class="share-twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-            </li><!-- /.el_share_item -->
+                <ul class="bl_toc_list__child">
+                    <li class="bl_toc_item__child"><a href="">h3のタイトルがはいります</a></li>
+                    <li class="bl_toc_item__child"><a href="">h3のタイトルh3のタイトルがはいります</a></li>
+                </ul><!-- /.bl_toc_list -->
+            </li><!-- /.bl_toc_item -->
+            <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
+            <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
+        </ul><!-- /.bl_toc_list -->
+    </div><!-- /.bl_toc -->
 
-            <li class="el_share_item">
-                <a href="https://www.facebook.com/share.php?u=https://example.com/archive/123/" class="share-facebook" rel="nofollow" target="_blank" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
-            </li><!-- /.el_share_item -->
+    <div class=" bl_2colUnit__main">
+        <article class="bl_entry bl_common_blockWrap hp_mt30">
 
-            <li class="el_share_item">
-                <a href="https://social-plugins.line.me/lineit/share?url=https://example.com/archive/123/" class="share-line" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a>
-            </li><!-- /.el_share_item -->
-        </ul><!-- /.bl_share_list -->
-    </div><!-- /.bl_share -->
+            <h1 class="bl_entry_title">タイトルタイトルタイトルタイトルタイトルタイトル</h1>
 
-    <article class="bl_entry">
+            <div class="bl_entry_metaWrap">
+                <div class="bl_entry_timeWrap">
+                    <time class="bl_entry_time bl_entry_time__published" datetime="2021-04-21"><i class="fas fa-calendar-alt"></i>2021.04.21</time>
+                    <time class="bl_entry_time bl_entry_time__updated" datetime="201-04-22"><i class="fas fa-history"></i>2021.04.22</time>
+                </div><!-- /.bl_entry_timeWrap -->
+            </div><!-- /.bl_entry_metaWrap -->
 
-        <h1 class="bl_entry_title">タイトルタイトルタイトルタイトルタイトルタイトル</h1>
+            <div class="bl_entry_img">
+                <img src="../img/card/noimg.png" width="226" height="340" loading="lazy" decoding="async">
+            </div><!-- /.entry-img -->
 
-        <div class="bl_entry_metaWrap">
-            <div class="bl_entry_timeWrap">
-                <time class="bl_entry_time bl_entry_time__published" datetime="2021-04-21"><i class="fas fa-calendar-alt"></i>2021.04.21</time>
-                <time class="bl_entry_time bl_entry_time__updated" datetime="201-04-22"><i class="fas fa-history"></i>2021.04.22</time>
-            </div><!-- /.bl_entry_timeWrap -->
+            <div class="bl_entry_body">
+                <p>リードリード</p>
 
-            <div class="bl_entry_tagWrap">
-                <p class="el_tag bl_entry_tag"><a href="">タグタグタグ</a></p>
-                <p class="el_tag bl_entry_tag"><a href="">タグタグタグタグ</a></p>
-            </div><!-- /.bl_entry_tagWrap -->
-        </div><!-- /.bl_entry_metaWrap -->
+                <h2 class="style_h2_default">ほにゃらら</h2>
+                <p>本文です。本文です。本文です。</p>
 
-        <div class="bl_entry_img">
-            <img src="../img/card/noimg.png" width="226" height="340" loading="lazy" decoding="async">
-        </div><!-- /.entry-img -->
+                <h3 class="style_h3_default">ほにゃほにゃほにゃらら</h3>
+                <p>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
 
-        <div class="bl_entry_body">
-            <h2>ほにゃらら</h2>
-            <p>本文です。本文です。本文です。</p>
+                <h2 class="style_h2_default">ほにゃほにゃほんにゃららら</h2>
+                <p>本文です。本文です。本文です。<a class="style_link_default" href="">本文です。本文です。</a>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
 
-            <h3>ほにゃほにゃほにゃらら</h3>
-            <p>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
+                <ul class="style_ul_default">
+                    <li>リストリストリストリストリストリストリストリストリストリストリストリスト</li>
+                    <li>リストリスト</li>
+                    <li>リストリスト
+                        <ol class="style_ol_default">
+                            <li>リストリスト</li>
+                            <li>リストリストリストリスト</li>
+                        </ol>
+                    </li>
+                </ul>
 
-            <h4>ほにゃほにゃほんにゃららら</h4>
-            <p>本文です。本文です。本文です。<a href="">本文です。本文です。</a>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
+                <ol class="style_ol_default">
+                    <li>リストリスト</li>
+                    <li>リストリスト
+                        <ul class="style_ul_default">
+                            <li>リストリスト</li>
+                            <li>リストリストリストリスト</li>
+                        </ul>
+                    </li>
+                    <li>リストリスト</li>
+                </ol>
 
-            <ul>
-                <li>リストリスト</li>
-                <li>リストリスト</li>
-                <li>リストリスト</li>
-            </ul>
+                <blockquote class="style_blockquote_default">
+                    <p>引用文です。引用文です。引用文です。引用文です。引用文です。引用文です。引用文です。引用文です。引用文です。引用文です。</p>
+                    <cite>
+                        <a href="http://example.com" data-type="URL" data-id="http://example.com">引用元表記</a>
+                    </cite>
+                </blockquote>
 
-            <ol>
-                <li>リストリスト</li>
-                <li>リストリスト</li>
-                <li>リストリスト</li>
-            </ol>
+                ここは<pre class="style_code_default"><code>100%</code></pre>です。
 
-            <blockquote>
-                <p>引用文です。</p>
-                <cite>
-                    <a href="http://example.com" data-type="URL" data-id="http://example.com">引用元表記</a>
-                </cite>
-            </blockquote>
+                <pre><code class="language-js">document.getElementIds.('html');</code></pre>
 
-            <pre>
-                <code>
-                    <ol>
-                        <li>リストリスト</li>
-                        <li>リストリスト</li>
-                        <li>リストリスト</li>
-                    </ol>
-                </code>
-            </pre>
-        </div><!-- /.bl_entry_body -->
+                <div class="style_accordion">
+                    <div class="style_accordion_titleWrap js_accordion">
+                        <p>ここにアコーディオンのタイトルが入ります</p>
+                    </div><!-- /.style_accordion_titleWrap -->
+                    <div class="style_accordion_contents js_accordion_contents">
+                        <p>ここにアコーディオンの内容が入ります。ここにアコーディオンの内容が入ります。ここにアコーディオンの内容が入ります。</p>
+                        <pre><code class="language-js">document.getElementIds.('html');</code></pre>
+                        <img src="../img/card/noimg.png">
+                    </div><!-- /.style_accordion_contents -->
+                </div><!-- /.style_accordion -->
 
-        <div class="bl_entry_share">
-            <p class="bl_entry_share_title">Share</p>
+                <div class="style_balloons style_balloons__left">
+                    <figure class="style_balloons_img">
+                        <img src="../img/profile/profile.png" alt="吹き出し風ブロックのイメージ画像" width="60" height="60" loading="lazy" decoding="async">
+                        <figcaption>おなまえだよ</figcaption>
+                    </figure><!-- /.style_balloons_img -->
+                    <p class="style_balloons_text style_balloons_text__left">ここに吹き出しの内容が入ります。ここに吹き出しの内容が入ります。ここに吹き出しの内容が入ります。</p>
+                </div><!-- /.style_balloons -->
 
-            <ul class="bl_entry_share_list">
-                <li class=el_share_item">
-                    <a href="https://twitter.com/share?url=https://example.com/archive/123/&text=記事のタイトルが入ります" class="share-twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
-                </li><!-- /.el_share_item -->
+                <div class="style_balloons style_balloons__right">
+                    <figure class="style_balloons_img">
+                        <img src="../img/profile/profile.png" alt="吹き出し風ブロックのイメージ画像" width="60" height="60" loading="lazy" decoding="async">
+                        <figcaption>おなまえだよ</figcaption>
+                    </figure><!-- /.style_balloons_img -->
+                    <p class="style_balloons_text style_balloons_text__right">ここに吹き出しの内容が入ります。ここに吹き出しの内容が入ります。ここに吹き出しの内容が入ります。</p>
+                </div><!-- /.style_balloons -->
 
-                <li class="el_share_item">
-                    <a href="https://www.facebook.com/share.php?u=https://example.com/archive/123/" class="share-facebook" rel="nofollow" target="_blank" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
-                </li><!-- /.el_share_item -->
+                <div class="style_step">
+                    <ul class="style_step_list">
+                        <li class="style_step_item">
+                            <p class="style_step_title">STEP1</p>
+                            <p class="style_step_text">ここにステップテキストがはいります。</p>
+                        </li><!-- /.style_step_item -->
+                        <li class="style_step_item">
+                            <p class="style_step_title">STEP2</p>
+                            <p class="style_step_text">ここにステップテキストがはいります。ここにステップテキストがはいります。</p>
+                        </li><!-- /.style_step_item -->
+                        <li class="style_step_item">
+                            <p class="style_step_title"></p>
+                            <p class="style_step_text">ここにステップテキストがはいります。</p>
+                        </li><!-- /.style_step_item -->
+                    </ul><!-- /.style_step_list -->
+                </div><!-- /.style_step -->
 
-                <li class="el_share_item">
-                    <a href="https://social-plugins.line.me/lineit/share?url=https://example.com/archive/123/" class="share-line" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a>
-                </li><!-- /.el_share_item -->
-            </ul><!-- /.bl_entry_share_list -->
-        </div><!-- /.share-wrapper -->
+                <div class="style_btn style_btn__default">
+                    <a href="" class="el_btn">デフォルトボタン</a>
+                </div><!-- /.style_btn -->
 
-    </article><!-- /.bl_entry -->
+                <div class="style_btn style_btn__default style_btn__center">
+                    <a href="" class="el_btn">デフォルトボタン</a>
+                    <a href="" class="el_btn">デフォルトボタン</a>
+                    <a href="" class="el_btn">デフォルトボタン</a>
+                </div><!-- /.style_btn -->
 
-    <!-- widget -->
-    <aside class="bl_aside_wrap">
+                <div class="style_btn style_btn_outline">
+                    <a href="" class="el_btn_outline">デフォルトボタン</a>
+                </div><!-- /.style_btn -->
 
-        <div class="bl_profile">
-            <div class="bl_profile_img">
-                <img src="../img/profile/profile.png" alt="プロフィール画像" width="136" height="136" loading="lazy" decoding="async">
-            </div><!-- /.bl_profile_img -->
+                <div class="style_btn style_btn_outline style_btn__center">
+                    <a href="" class="el_btn_outline">デフォルトボタン</a>
+                </div><!-- /.style_btn -->
 
-            <div class="bl_profile_contents">
-                <p class="bl_profile_name">ゆりか</p>
-                <p class="bl_profile_text">2歳男の子の育児に格闘しながら、Webを勉強しています。<br>もくもくとコードを書くことがすき。</p>
-            </div><!-- /.bl_profile_contents -->
+            </div><!-- /.bl_entry_body -->
 
-            <a href="" class="el_btn bl_profileLink">Portfolio</a>
+            <div class="bl_entry_infoWrap hp_mt50">
+                <div class="bl_entry_categoryWrap">
+                    <i class="fas fa-folder-open"></i>
+                    <a class="el_category" href="">カテゴリー名</a>
+                    <a class="el_category" href="">カテゴリー名</a>
+                </div><!-- /.bl_entry_tagWrap -->
 
-            <ul class="bl_profile_snsList">
-                <li class="bl_profile_snsItem">
-                    <a href="https://twitter.com/bnku212" class="el_btn bl_profile_snsItem__twitter"><i class="fab fa-twitter"></i></a>
-                </li><!-- /.bl_profile_snsItem -->
+                <div class="bl_entry_tagWrap">
+                    <i class="fas fa-tags"></i>
+                    <a class="el_tag__entry" href="">タグタグタグ</a>
+                    <a class="el_tag__entry" href="">タグタグタグタグ</a>
+                </div><!-- /.bl_entry_tagWrap -->
 
-                <li class="bl_profile_snsItem">
-                    <a href="https://github.com/yurika1202" class="el_btn bl_profile_snsItem__github"><i class="fab fa-github"></i></a>
-                </li><!-- /.bl_profile_snsItem -->
+                <div class="bl_share">
+                    <p class="bl_share_title">Share</p>
 
-                <li class="bl_profile_snsItem">
-                    <a href="" class="el_btn bl_profile_snsItem__mail"><i class="fas fa-envelope"></i></a>
-                </li><!-- /.bl_profile_snsItem -->
-            </ul><!-- /.bl_profile_snsList -->
-        </div><!-- /.bl_profile -->
+                    <ul class="bl_share_list">
+                        <li class="bl_share_item">
+                            <a href="https://twitter.com/share?url=https://example.com/archive/123/&text=記事のタイトルが入ります" class="bl_share_twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+                        </li><!-- /.bl_share_item -->
 
-        <div class="bl_search">
-            <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
-                <div class="bl_search_searchDate">
-                    <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください"></input>
-                    <button type="submit" class="el_btn bl_search_searchSubmit" value=""></button>
-                </div><!-- /.bl_search_searchDate -->
-            </form><!-- /.bl_search_searchForm -->
+                        <li class="bl_share_item">
+                            <a href="https://www.facebook.com/share.php?u=https://example.com/archive/123/" class="bl_share_facebook" rel="nofollow" target="_blank" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
+                        </li><!-- /.bl_share_item -->
 
-            <div class="bl_search_tag">
-                <ul class="bl_search_tagList">
-                    <li class="bl_search_tagItem">
-                        <a class="el_tag">タグタグタグ</a>
-                    </li><!-- /.bl_search_tagItem -->
+                        <li class="bl_share_item">
+                            <a href="https://social-plugins.line.me/lineit/share?url=https://example.com/archive/123/" class="bl_share_line" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a>
+                        </li><!-- /.bl_share_item -->
 
-                    <li class="bl_search_tagItem">
-                        <a class="el_tag">タグタグ</a>
-                    </li><!-- /.bl_search_tagItem -->
+                        <li class="bl_share_item bl_share_item__copy js_copy">
+                            <button><i class="fas fa-copy bl_share_copy"></i></button>
+                        </li><!-- /.bl_share_item -->
+                    </ul><!-- /.bl_share__list -->
+                </div><!-- /.bl_shareWrap -->
+            </div><!-- /.bl_entry_infoWrap -->
+        </article><!-- /.bl_entry -->
 
-                    <li class="bl_search_tagItem">
-                        <a class="el_tag">タグタグタグタグ</a>
-                    </li><!-- /.bl_search_tagItem -->
+        <!-- widget -->
+        <aside class="bl_aside_wrap bl_2colUnit_rightItem__main">
 
-                    <li class="bl_search_tagItem">
-                        <a class="el_tag">タグタグタグ</a>
-                    </li><!-- /.bl_search_tagItem -->
+            <div class="bl_profile bl_common_blockWrap bl_2colUnit__profile">
+                <div class="bl_profile_img bl_2colUnit_leftItem__profile">
+                    <img src="../img/profile/profile.png" alt="プロフィール画像" width="136" height="136" loading="lazy" decoding="async">
+                </div><!-- /.bl_profile_img -->
 
-                    <li class="bl_search_tagItem">
-                        <a class="el_tag">タグタグ</a>
-                    </li><!-- /.bl_search_tagItem -->
-                </ul><!-- /.bl_search_tagList -->
-            </div><!-- /.bl_search_tag -->
-        </div><!-- /.bl_search -->
+                <div class="bl_2colUnit_rightItem__profile">
+                    <div class="bl_profile_contents">
+                        <p class="bl_profile_name">ゆりか</p>
+                        <p class="bl_profile_text">2歳男の子の育児に格闘しながら、Webを勉強しています。<br>もくもくとコードを書くことがすき。</p>
+                    </div><!-- /.bl_profile_contents -->
 
-        <div class="bl_category">
-            <p class="bl_category_title">Category</p>
+                    <div class="bl_profile_link">
+                        <a href="" class="el_btn el_btn__profileLink">Portfolio</a>
 
-            <ul class="bl_category_list">
-                <li class="bl_category_item">
-                    <a href="">HTML/CSS</a>
-                </li><!-- /.bl_category_item -->
+                        <ul class="bl_profile_snsList">
+                            <li class="bl_profile_snsItem">
+                                <a href="https://twitter.com/bnku212" class="el_btn el_btn__sns"><i class="fab fa-twitter"></i></a>
+                            </li><!-- /.bl_profile_snsItem -->
 
-                <li class="bl_category_item">
-                    <a href="">JavaScript</a>
-                </li><!-- /.bl_category_item -->
+                            <li class="bl_profile_snsItem">
+                                <a href="https://github.com/yurika1202" class="el_btn el_btn__sns"><i class="fab fa-github"></i></a>
+                            </li><!-- /.bl_profile_snsItem -->
 
-                <li class="bl_category_item">
-                    <a href="">WordPress</a>
-                </li><!-- /.bl_category_item -->
+                            <li class="bl_profile_snsItem">
+                                <a href="contact.php" class="el_btn el_btn__sns"><i class="fas fa-envelope"></i></a>
+                            </li><!-- /.bl_profile_snsItem -->
+                        </ul><!-- /.bl_profile_snsList -->
+                    </div><!-- /.bl_profile_link -->
+                </div><!-- /.bl_2colUnit_rightItem__profile -->
+            </div><!-- /.bl_profile -->
 
-                <li class="bl_category_item">
-                    <a href="">制作の記録</a>
-                </li><!-- /.bl_category_item -->
+            <div class="bl_2colUnit__widget">
+                <div class="bl_search bl_common_blockWrap hp_mt40 hp_display__widget">
+                    <form role="search" method="get" value="post" class="bl_search_searchForm" action="">
+                        <div class="bl_search_searchDate">
+                            <input type="search" name="s" class="bl_search_searchWindow" placeholder="キーワードを入れてください">
+                            <button type="submit" class="bl_search_searchSubmit" value=""></button>
+                        </div><!-- /.bl_search_searchDate -->
+                    </form><!-- /.bl_search_searchForm -->
 
-                <li class="bl_category_item">
-                    <a href="">ひとりごと</a>
+                    <div class="bl_search_tag">
+                        <ul class="bl_search_tagList">
+                            <li class="bl_search_tagItem">
+                                <a class="el_tag el_tag__link">タグタグタグ</a>
+                            </li><!-- /.bl_search_tagItem -->
 
-                    <ul class="bl_category_list__child">
-                        <li class="bl_category_item__child">
-                            <a href="">サブカテゴリー</a>
-                        </li><!-- /.bl_category_item__child -->
+                            <li class="bl_search_tagItem">
+                                <a class="el_tag el_tag__link">タグタグ</a>
+                            </li><!-- /.bl_search_tagItem -->
 
-                        <li class="bl_category_item__child">
-                            <a href="">サブカテゴリー</a>
-                        </li><!-- /.bl_category_item__child -->
-                    </ul><!-- /.bl_category_list__child -->
-                </li><!-- /.bl_category_item -->
-            </ul><!-- /.bl_category_list -->
-        </div><!-- /.bl_category -->
+                            <li class="bl_search_tagItem">
+                                <a class="el_tag el_tag__link">タグタグタグタグ</a>
+                            </li><!-- /.bl_search_tagItem -->
 
-        <div class="bl_toc">
-            <p class="bl_toc_title">目次</p>
+                            <li class="bl_search_tagItem">
+                                <a class="el_tag el_tag__link">タグタグタグ</a>
+                            </li><!-- /.bl_search_tagItem -->
 
-            <ul class="bl_toc_list">
-                <li class="bl_toc_item">
-                    <a href="">h2タイトル</a>
+                            <li class="bl_search_tagItem">
+                                <a class="el_tag el_tag__link">タグタグ</a>
+                            </li><!-- /.bl_search_tagItem -->
+                        </ul><!-- /.bl_search_tagList -->
+                    </div><!-- /.bl_search_tag -->
+                </div><!-- /.bl_search -->
 
-                    <ul class="bl_toc_list__child">
-                        <li class="bl_toc_item__child">
-                            <a href="">h3のタイトル</a>
-                        </li><!-- /.bl_toc_item__child -->
+                <div class="bl_category bl_common_blockWrap hp_mt40 hp_display__widget">
+                    <p class="bl_widget_title">Category</p><!-- /.bl_category_title -->
 
-                        <li class="bl_toc_item__child">
-                            <a href="">h3のタイトルh3のタイトル</a>
-                        </li><!-- /.bl_toc_item__child -->
+                    <ul class="bl_category_list">
+                        <li class="bl_category_item">
+                            <a href="">HTML/CSS</a>
+                        </li><!-- /.bl_category_item -->
 
-                        <li class="bl_toc_item__child">
-                            <a href="">h3のタイトルh3のタイトルh3のタイトル</a>
+                        <li class="bl_category_item">
+                            <a href="">JavaScript</a>
+                        </li><!-- /.bl_category_item -->
 
-                            <ul class="bl_toc_list__child">
-                                <li class="bl_toc_item__child">
-                                    <a href="">h4のタイトル</a>
-                                </li><!-- /.bl_toc_item__child -->
+                        <li class="bl_category_item">
+                            <a href="">WordPress</a>
+                        </li><!-- /.bl_category_item -->
 
-                                <li class="bl_toc_item__child">
-                                    <a href="">h4のタイトルh4のタイトルh4のタイトル</a>
-                                </li><!-- /.bl_toc_item__child -->
-                            </ul><!-- /.bl_toc_list__child -->
-                        </li><!-- /.bl_toc_item__child -->
-                    </ul><!-- /.bl_toc_list__child -->
-                </li><!-- /.bl_toc_item -->
-            </ul><!-- /.bl_toc_list -->
-        </div><!-- /.bl_toc -->
+                        <li class="bl_category_item">
+                            <a href="">制作の記録</a>
+                        </li><!-- /.bl_category_item -->
 
-    </aside><!-- /.bl_aside_wrap -->
+                        <li class="bl_category_item">
+                            <a href="">ひとりごと</a>
+
+                            <ul class="bl_category_list__child">
+                                <li class="bl_category_item__child">
+                                    <a href="">サブカテゴリー</a>
+                                </li><!-- /.bl_category_item__child -->
+
+                                <li class="bl_category_item__child">
+                                    <a href="">サブカテゴリー</a>
+                                </li><!-- /.bl_category_item__child -->
+                            </ul><!-- /.bl_category_list__child -->
+                        </li><!-- /.bl_category_item -->
+                    </ul><!-- /.bl_category_list -->
+                </div><!-- /.bl_category -->
+            </div><!-- /.bl_widget__2col -->
+
+            <div class="bl_toc bl_toc__aside bl_common_blockWrap hp_mt40">
+                <p class="bl_widget_title">Mokuji</p><!-- /.bl_category_title -->
+
+                <ul class="bl_toc_list">
+                    <li class="bl_toc_item">
+                        <a href="">h2のタイトルがはいります</a>
+
+                        <ul class="bl_toc_list__child">
+                            <li class="bl_toc_item__child"><a href="">h3のタイトルがはいります</a></li>
+                            <li class="bl_toc_item__child"><a href="">h3のタイトルh3のタイトルがはいります</a></li>
+                        </ul><!-- /.bl_toc_list -->
+                    </li><!-- /.bl_toc_item -->
+                    <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
+                    <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
+                </ul><!-- /.bl_toc_list -->
+            </div><!-- /.bl_toc -->
+        </aside><!-- /.bl_aside_wrap -->
+    </div><!-- /. bl_2colUnit__main -->
 
 </main>
 
-<div class="bl_related_wrap">
+<div class="bl_related_wrap bl_common_blockWrap">
     <p class="bl_related_title">関連記事</p>
 
-    <div class="bl_3colCard_wrap">
-        <article class="bl_articleCard_main">
+    <div class="bl_3colCard_wrap hp_mt30">
+        <article class="bl_3colUnit_item__card">
             <a href="">
                 <div class="bl_articleCard_thumbnail">
                     <img src="../img/card/noimg.png" alt="">
                 </div><!-- /.bl_articleCard_thumbnail -->
 
-                <div class="bl_articleCard_contents">
-                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
 
-                    <div class="bl_articleCard_tag">
-                        <p class="el_tag">タグタグタグ</p>
-                        <p class="el_tag">タグタグ</p>
-                        <p class="el_tag">タグタグタグタグ</p>
-                    </div><!-- /.bl_articleCard_tag -->
-
-                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
-                </div><!-- /.bl_articleCard_contents -->
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
             </a>
-        </article><!-- /.bl_articleCard_main -->
+        </article><!-- /.bl_3colUnit_item__card -->
 
-        <article class="bl_articleCard_main">
+        <article class="bl_3colUnit_item__card">
             <a href="">
                 <div class="bl_articleCard_thumbnail">
                     <img src="../img/card/noimg.png" alt="">
                 </div><!-- /.bl_articleCard_thumbnail -->
 
-                <div class="bl_articleCard_contents">
-                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
 
-                    <div class="bl_articleCard_tag">
-                        <p class="el_tag">タグタグタグ</p>
-                        <p class="el_tag">タグタグ</p>
-                        <p class="el_tag">タグタグタグタグ</p>
-                    </div><!-- /.bl_articleCard_tag -->
-
-                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
-                </div><!-- /.bl_articleCard_contents -->
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
             </a>
-        </article><!-- /.bl_articleCard_main -->
+        </article><!-- /.bl_3colUnit_item__card -->
 
-        <article class="bl_articleCard_main">
+        <article class="bl_3colUnit_item__card">
             <a href="">
                 <div class="bl_articleCard_thumbnail">
                     <img src="../img/card/noimg.png" alt="">
                 </div><!-- /.bl_articleCard_thumbnail -->
 
-                <div class="bl_articleCard_contents">
-                    <h2 class="bl_articleCard_title">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
 
-                    <div class="bl_articleCard_tag">
-                        <p class="el_tag">タグタグタグ</p>
-                        <p class="el_tag">タグタグ</p>
-                        <p class="el_tag">タグタグタグタグ</p>
-                    </div><!-- /.bl_articleCard_tag -->
-
-                    <time class="bl_articleCard_time" datetime="2021-04-21">2021.04.21</time>
-                </div><!-- /.bl_articleCard_contents -->
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
             </a>
-        </article><!-- /.bl_articleCard_main -->
+        </article><!-- /.bl_3colUnit_item__card -->
+
+        <article class="bl_3colUnit_item__card">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
+            </a>
+        </article><!-- /.bl_3colUnit_item__card -->
+
+        <article class="bl_3colUnit_item__card">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
+            </a>
+        </article><!-- /.bl_3colUnit_item__card -->
+
+        <article class="bl_3colUnit_item__card">
+            <a href="">
+                <div class="bl_articleCard_thumbnail">
+                    <img src="../img/card/noimg.png" alt="">
+                </div><!-- /.bl_articleCard_thumbnail -->
+
+                <div class="bl_articleCard_contents__related">
+                    <h2 class="bl_articleCard_title__related">タイトルタイトルタイトルタイトルタイトルタイトル</h2>
+
+                    <div class="bl_articleCard_meta">
+                        <time class="bl_articleCard_time__related" datetime="2021-04-21">2021.04.21</time>
+                    </div><!-- /.bl_articleCard_meta -->
+                </div><!-- /.bl_articleCard_contents__related -->
+            </a>
+        </article><!-- /.bl_3colUnit_item__card -->
     </div><!-- /.bl_3colCard_wrap -->
 </div><!-- /.bl_related_wrap -->
 
 <!-- footer -->
-<footer class="ly_footer">
+<footer class="ly_footer js_drawerFixed">
     <small class="el_copy">&copy; 2021 Yurika.log</small>
+
+    <div class="el_toTop" id="js_toTopBtn">
+        <i class="fas fa-caret-up"></i>
+    </div><!-- /.el_toTop -->
 </footer><!-- /.ly_footer -->
 
-<div class="el_toTop">
-    <i class="fas fa-caret-up"></i>
-</div><!-- /.el_toTop -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/plugins/prism.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>

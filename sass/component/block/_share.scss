@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* share
+----------------------------------------- */
+.bl_share {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bl_share_title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: g.rem(16px);
+    font-weight: 600;
+    padding: 0 20px;
+    position: relative;
+
+    &::before, &::after {
+        content: "";
+        width: 1px;
+        height: 50%;
+        background: g.$cAccent;
+        position: absolute;
+        top: 50%;
+    }
+
+    &::before {
+        left: 0;
+        transform: translateY(-50%) rotate(-30deg);
+    }
+
+    &::after {
+        right: 0;
+        transform: translateY(-50%) rotate(30deg);
+    }
+
+    @include g.mq(sm) {
+        font-size: g.rem(18px);
+    }
+}
+
+.bl_share_list {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.bl_share_item {
+    transition: transform .3s ease-in-out;
+
+    &:not(:first-of-type) {
+        margin-left: 18px;
+
+        @include g.mq(sm) {
+            margin-left: 30px;
+        }
+    }
+
+    i {
+        font-size: g.rem(30px);
+
+        @include g.mq(sm) {
+            font-size: g.rem(40px);
+        }
+    }
+
+    &:focus, &:hover {
+        transform: translateY(-3px);
+    }
+
+    &__copy {
+        position: relative;
+
+        &::before {
+            content: "URLcopied!";
+            font-size: g.rem(10px);
+            color: g.$cText_wh;
+            background: g.$cSober;
+            border-radius: 10px;
+            padding: .1em 1em;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+
+        &.is_copied {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.bl_share {
+    &_twitter {
+        color: #1DA1F2;
+    }
+
+    &_facebook {
+        color: #1877f2;
+    }
+
+    &_line {
+        color: #00B900;
+    }
+
+    &_copy {
+        font-size: g.rem(25px) !important;
+        color: rgba(g.$cText_bk, .5);
+
+        @include g.mq(sm) {
+            font-size: g.rem(35px) !important;
+        }
+    }
+}

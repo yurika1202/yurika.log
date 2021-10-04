@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@use "../../global" as g;
+@use "../../../global" as g;
 
-/* search
+/* widget search
 ----------------------------------------- */
 .bl_search_searchDate {
     border-bottom: 3px solid g.$cSober;
@@ -28,8 +28,8 @@
         border-radius: 50%;
         border: 2px solid g.$cSober;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 8px;
+        left: 3px;
     }
 
     &::after {
@@ -38,7 +38,7 @@
         height: 2px;
         background: g.$cSober;
         position: absolute;
-        top: 18px;
+        top: 22px;
         right: 10px;
         transform: rotate(40deg);
     }

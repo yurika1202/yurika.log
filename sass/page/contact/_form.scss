@@ -328,11 +328,15 @@
         border-bottom: 1.5px solid g.$cSober;
         border-left: 1.5px solid g.$cSober;
         position: absolute;
-        top: 4px;
+        top: 13px;
         left: 4px;
         opacity: 0;
         transition: transform .3s ease-in-out,
                     opacity .3s ease-in-out;
+
+        @include g.mq(sm) {
+            top: 4px;
+        }
     }
 }
 

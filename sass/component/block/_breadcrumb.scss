@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* breadcrumb
+----------------------------------------- */
+.bl_breadcrumb_item {
+    display: inline;
+
+    &:not(:first-of-type) {
+        padding-left: 11px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-right: 1px solid g.$cText_bk;
+            border-bottom: 1px solid g.$cText_bk;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    a {
+        display: inline;
+        font-size: g.rem(10px);
+        vertical-align: text-bottom;
+
+        i {
+            margin-right: 3px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use "../global" as g;
+
+/* br
+----------------------------------------- */
+.hp_br {
+    display: none;
+
+    &__sp {
+        display: block;
+        
+        @include g.mq(sm) {
+            display: none;
+        }
+    }
+}

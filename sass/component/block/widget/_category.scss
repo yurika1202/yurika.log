@@ -1,15 +1,16 @@
 @charset "UTF-8";
-@use "../../global" as g;
+@use "../../../global" as g;
 
-/* category
+/* widget category
 ----------------------------------------- */
-.bl_category_title {
-    text-transform: uppercase;
-    font-family: g.$fontEn;
-    letter-spacing: .18em;
-    color: g.$cText_br;
-    font-size: g.rem(20px);
-    text-align: center;
+.bl_category {
+    @include g.mq(md) {
+        margin-left: 30px;
+    }
+
+    @include g.mq(xl) {
+        margin-left: 0;
+    }
 }
 
 .bl_category_list {
@@ -25,13 +26,13 @@
 }
 
 .bl_category_item__child {
-    padding-left: 28px;
+    padding-left: 20px;
     line-height: 2;
     position: relative;
 
     &::before {
         content: "";
-        width: 20px;
+        width: 13px;
         height: 2px;
         background: g.$cSober;
         position: absolute;

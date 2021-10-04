@@ -4,8 +4,10 @@
 /* aside
 ----------------------------------------- */
 .bl_aside_wrap {
-    @include g.mq(md) {
-        display: flex;
-        align-items: flex-start;
+    width: 100%;
+
+    @include g.mq(xl) {
+        width: 302px;
+        margin-left: 32px;
     }
 }

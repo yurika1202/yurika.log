@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@use "../../../global" as g;
+
+/* widget profile
+----------------------------------------- */
+.bl_profile {
+    width: 100%;
+    max-width: 302px;
+    background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
+    margin: 40px auto 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 101%;
+        height: 30%;
+        background: url(../../../img/profile/profile_bg.png) no-repeat center center / contain;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include g.mq(sm) {
+        max-width: 640px;
+        height: 260px;
+        background: linear-gradient(to right, g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
+
+        &::before {
+            width: 260px;
+            height: 100%;
+            top: 0;
+            left: -40px;
+            transform: rotate(-90deg);
+        }
+    }
+
+    @include g.mq(xl) {
+        max-width: 302px;
+        height: auto;
+        background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
+
+        &::before {
+            width: 101%;
+            height: 30%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.bl_profile_img {
+    width: 136px;
+    height: 136px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.bl_profile_contents {
+    margin-top: 8px;
+}
+
+.bl_profile_name {
+    text-align: center;
+    font-size: g.rem(20px);
+    font-weight: 500;
+}
+
+.bl_profile_text {
+    margin-top: 15px;
+}
+
+.bl_profile_link {
+    margin-top: 20px;
+    text-align: center;
+
+    @include g.mq(sm) {
+        display: flex;
+    }
+
+    @include g.mq(xl) {
+        display: block;
+    }
+}
+
+.bl_profile_snsList {
+    width: 58%;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+
+    @include g.mq(sm) {
+        justify-content: flex-start;
+        margin: 0 0 0 20px;
+    }
+
+    @include g.mq(xl) {
+        justify-content: center;
+        margin: 25px auto 0;
+    }
+}
+
+.bl_profile_snsItem {
+    &:not(:first-of-type) {
+        margin-left: 20px;
+    }
+}
