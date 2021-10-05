@@ -12,10 +12,31 @@
     top: -50%;
     right: 6%;
     cursor: pointer;
+    transition: transform .3s ease-in-out;
 
     i {
         color: g.$cMain;
         font-size: g.rem(40px);
         padding: 12px 0 0 2px;
+        animation: toTop 1.5s ease-in-out infinite;
+    }
+
+    &:focus, &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes toTop {
+    0% {
+        transform: translateY(3px);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(3px);
     }
 }

@@ -28,9 +28,14 @@
         display: inline;
         font-size: g.rem(10px);
         vertical-align: text-bottom;
+        transition: opacity .3s ease;
 
         i {
             margin-right: 3px;
+        }
+
+        &:focus, &:hover {
+            opacity: .5;
         }
     }
 }
