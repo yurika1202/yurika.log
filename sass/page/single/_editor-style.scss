@@ -93,17 +93,24 @@
     counter-reset: count 0;
 
     > li {
-        padding-left: 15px;
+        padding-left: 25px;
         position: relative;
 
         &::before {
             content: "";
             content: counter(count) "";
             counter-increment: count 1;
-            color: g.$cSober;
+            background: g.$cSober;
+            color: g.$cText_wh;
+            font-size: 12px;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 18px;
             font-weight: 600;
             position: absolute;
-            top: 0;
+            top: 2px;
             left: 0;
         }
     }
@@ -114,7 +121,7 @@
     width: 100%;
     max-width: 600px;
     margin: 20px auto 0;
-    padding: 20px 15px 10px;
+    padding: 30px 15px 10px;
     border-radius: 10px;
     font-style: italic;
     background: g.$cBg_main;
@@ -258,6 +265,10 @@
     visibility: hidden;
     transition: all .2s ease;
 
+    > p, img {
+        margin-top: 10px;
+    }
+
     &.is_open {
         height: auto;
         opacity: 1;
@@ -289,7 +300,6 @@
 
 .style_balloons_img {
     width: 60px;
-    margin-top: 0 !important;
 
     > img {
         width: 60px;
@@ -308,7 +318,6 @@
 
 .style_balloons_text {
     width: calc(100% - 85px);
-    margin-top: 0 !important;
     padding: 15px;
     background: g.$cBg_main;
     border-radius: 10px;
@@ -379,9 +388,6 @@
     font-weight: 600;
 }
 
-.style_step_title, .style_step_text {
-    margin-top: 0 !important;
-}
 
 /* ボタン */
 .style_btn {
@@ -438,7 +444,6 @@
 }
 
 .style_relatedBlock_label {
-    margin-top: 0 !important;
     font-size: g.rem(10px);
     color: g.$cText_wh;
     background: g.$cAccent;
@@ -482,10 +487,6 @@
     }
 }
 
-.style_relatedBlock_title {
-    margin-top: 0px !important;
-}
-
 .style_relatedBlock_text {
     display: none;
     font-size: g.rem(12px);
@@ -498,7 +499,7 @@
 /* テキストブロック */
 .style_textBlock {
     margin-top: 40px;
-    padding: 20px;
+    padding: 30px 20px 20px;
     width: 100%;
     position: relative;
 
@@ -528,7 +529,6 @@
 .style_textBlock_label {
     width: 40px;
     height: 40px;
-    margin-top: 0 !important;
     font-weight: 600;
     border-radius: 50%;
     position: relative;

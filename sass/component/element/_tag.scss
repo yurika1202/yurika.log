@@ -12,10 +12,10 @@
     color: g.$cText_wh;
 
     &__link {
-        transition: opacity .3s ease-in-out;
+        transition: transform .3s ease-in-out;
 
         &:focus, &:hover {
-            opacity: .7;
+            transform: translateY(-3px);
         }
     }
 }

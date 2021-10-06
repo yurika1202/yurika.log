@@ -95,12 +95,15 @@
             }
 
         }
+    }
+}
 
-        a {
-            transition: transform .3s ease;
-            &:focus, &:hover {
-                transform: translateY(-5px);
-            }
+.bl_2colUnit_item__card, .bl_3colUnit_item__card {
+    a {
+        transition: transform .3s ease;
+
+        &:focus, &:hover {
+            transform: translateY(-5px);
         }
     }
 }

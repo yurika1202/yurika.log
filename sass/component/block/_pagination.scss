@@ -14,7 +14,7 @@
     height: 40px;
     background: g.$cBg_contents;
     border: 2px solid g.$cSober;
-    border-radius: 999px;
+    border-radius: 50%;
     text-align: center;
 
     &:not(:first-of-type) {
@@ -22,9 +22,35 @@
     }
 
     a {
+        width: 100%;
+        height: 100%;
         font-family: g.$fontEn;
         font-size: g.rem(20px);
         color: g.$cText_br;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: g.$cSober;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0, 0);
+            z-index: -1;
+            transition: transform .3s ease;
+        }
+
+        &:focus, &:hover {
+            color: g.$cText_wh;
+
+            &::after {
+                transform: scale(1, 1);
+            }
+        }
     }
 
     &__active {

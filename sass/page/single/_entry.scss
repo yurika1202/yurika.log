@@ -41,12 +41,16 @@
 .bl_entry_body {
     margin-top: 10px;
 
-    p, figure, h2, h3, ul, ol, .code-toolbar {
+    > p, figure, ul, ol, .code-toolbar {
         margin-top: 10px;
 
         ul, ol {
             margin-top: 0;
         }
+    }
+
+    > h2, h3 {
+        margin-top: 30px;
     }
 }
 
