@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 302px;
     background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     position: relative;
 
     &::before {
@@ -38,6 +38,7 @@
     @include g.mq(xl) {
         max-width: 302px;
         height: auto;
+        margin: 0 auto;
         background: linear-gradient(g.$cMain 0%, g.$cMain 10%, g.$cBg_contents 10%, g.$cBg_contents 90%);
 
         &::before {

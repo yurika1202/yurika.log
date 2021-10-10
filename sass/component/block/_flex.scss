@@ -70,7 +70,7 @@
     }
 }
 
-.bl_3colCard_wrap {
+.bl_3colUnit {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -10px;
@@ -94,16 +94,6 @@
                 margin-left: 10px;
             }
 
-        }
-    }
-}
-
-.bl_2colUnit_item__card, .bl_3colUnit_item__card {
-    a {
-        transition: transform .3s ease;
-
-        &:focus, &:hover {
-            transform: translateY(-5px);
         }
     }
 }

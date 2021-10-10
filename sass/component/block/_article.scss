@@ -12,6 +12,16 @@
     }
 }
 
+.bl_articleCard {
+    a {
+        transition: transform .3s ease;
+
+        &:focus, &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
 .bl_articleCard_contents {
     padding: 20px 8px;
 

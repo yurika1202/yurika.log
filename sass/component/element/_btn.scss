@@ -21,12 +21,6 @@
         font-weight: 600;
         height: 50px;
         line-height: 46px;
-
-        @include g.mq(sm) {
-        }
-
-        @include g.mq(xl) {
-        }
     }
 
     &__sns {
@@ -237,5 +231,22 @@
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+.el_btn_footerNav {
+    display: inline-block;
+    padding: .3em 1em;
+    font-size: g.rem(10px);
+    color: g.$cText_wh;
+    background: g.$cAccent;
+    border: 2px solid g.$cAccent;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: opacity .3s ease;
+
+    &:focus, &:hover {
+        opacity: .7;
     }
 }
