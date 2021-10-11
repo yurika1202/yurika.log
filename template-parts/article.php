@@ -37,6 +37,9 @@
         </article><!-- /.bl_articleCard -->
 
         <?php endwhile; ?>
+
+        <?php else: ?>
+            <p>記事がありません</p>
         <?php endif; ?>
 
     </div><!-- /.bl_cardWrap__2col -->

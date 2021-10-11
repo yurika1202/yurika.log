@@ -1,48 +1,43 @@
-<?php
-    locate_template( 'header/header.php', true );
-?>
+<?php get_header(); ?>
 
-<main class="inner">
+<main class="ly_main js_drawerFixed">
 
-    <h1 class="archive-title">「<?php the_search_query(); ?>」の検索結果</h1>
+    <div class="el_title_wrap">
+        <p class="el_title__mainTitle">Search</p>
+        <p class="el_title__contentsTitle">
+            <?php
+                if(isset($_GET['s']) && empty($_GET['s'])) {
+                    echo 'No Word';
+                } else {
+                    echo $_GET['s'];
+                }
+            ?>
+        </p>
+    </div><!-- /.bl_archiveTitle_wrap -->
 
-    <!-- search-input -->
-    <div class="archive-search">
+    <div class="bl_2colUnit__archive">
 
-        <div class="search-date _archive">
-            <?php get_search_form(); ?>
-        </div><!-- /.search-date -->
+        <!-- articleList -->
+        <?php get_template_part('template-parts/article'); ?>
 
-        <div class="search-tag">
-            <ul class="search-tag_item">
-                <?php
-                    $option = array(
-                        'hide_empty' => '0',  
-                    );
-                    $tags = get_tags($option);
-                    foreach ($tags as $tag) {
-                        echo '<li class="tag"><a href="' . get_tag_link($tag -> term_id) . '">#' . $tag -> name . '</a></li>';
-                    }
-                ?>
-            </ul><!-- /.search-tag_item -->      
-        </div><!-- /.search-tag -->
-</div><!-- /.search-wrapper-->
+        <!-- widget -->
+        <aside class="bl_aside_wrap bl_2colUnit_rightItem__main">
 
-    <!-- search-breadcrumb -->
-    <nav class="breadcrumb _search">
-        <div class="breadcrumb-item _search">
-            <?php bcn_display(); ?>
-        </div>
-    </nav><!-- /.breadcrumb -->
+            <?php get_template_part('template-parts/widget/profile-widget'); ?>
 
-    <!-- article-card -->
-    <?php get_template_part('template-parts/card'); ?>
+            <div class="bl_2colUnit__widget">
+                <div class="bl_search bl_common_blockWrap hp_mt40 hp_display__widget">
+                    <?php get_template_part('template-parts/widget/search-widget'); ?>
+                </div><!-- /.bl_search -->
 
-    <?php get_template_part('template-parts/pagination'); ?>
-    
+                <div class="bl_category bl_common_blockWrap hp_mt40 hp_display__widget">
+                    <?php get_template_part('template-parts/widget/category-widget'); ?>
+                </div><!-- /.bl_category -->
+            </div><!-- /.bl_widget__2col -->
+        </aside><!-- /.bl_aside_wrap -->
+
+    </div><!-- /.bl_2colUnit__archive -->
+
 </main>
 
-<!-- footer -->
-<?php
-    locate_template( 'footer/footer.php', true );
-?>
+<?php get_footer(); ?>
