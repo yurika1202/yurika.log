@@ -10,7 +10,7 @@
         </div><!-- /.bl_profile_contents -->
 
         <div class="bl_profile_link">
-            <a href="<?php home_url('/works'); ?>" class="el_btn el_btn__profileLink">Portfolio</a>
+            <a href="<?php echo esc_url(home_url('/works')); ?>" class="el_btn el_btn__profileLink">Portfolio</a>
 
             <ul class="bl_profile_snsList">
                 <li class="bl_profile_snsItem">
@@ -22,7 +22,7 @@
                 </li><!-- /.bl_profile_snsItem -->
 
                 <li class="bl_profile_snsItem">
-                    <a href="<?php home_url('/contact'); ?>" class="el_btn el_btn__sns"><i class="fas fa-envelope"></i></a>
+                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="el_btn el_btn__sns"><i class="fas fa-envelope"></i></a>
                 </li><!-- /.bl_profile_snsItem -->
             </ul><!-- /.bl_profile_snsList -->
         </div><!-- /.bl_profile_link -->

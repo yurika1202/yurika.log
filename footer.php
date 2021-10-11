@@ -1,7 +1,7 @@
 <!-- footer -->
 <footer class="ly_footer js_drawerFixed">
     <nav class="bl_footerNav">
-        <a href="<?php home_url('/privacy')?>" class="el_btn_footerNav">プライバシーポリシー</a>
+        <a href="<?php echo esc_url(home_url('/privacy')); ?>" class="el_btn_footerNav">プライバシーポリシー</a>
     </nav><!-- /.bl_footerNav -->
 
     <div class="bl_footer_copyWrap">

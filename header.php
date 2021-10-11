@@ -5,7 +5,7 @@
 
 <title><?php bloginfo('name'); ?></title>
 
-<meta name="description"  content="<?php bloginfo('discription'); ?>">
+<meta name="description"  content="<?php bloginfo('description'); ?>">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
