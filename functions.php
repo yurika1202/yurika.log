@@ -38,6 +38,7 @@ function my_favicon() {
 }
 add_action('wp_head', 'my_favicon');
 
+
 //親カテゴリーのテンプレートを子カテゴリーに適用
 function my_category_template( $template ) {
 	$category = get_queried_object();
@@ -104,6 +105,18 @@ function bc_limit ($trail) {
 
 add_action('bcn_after_fill', 'bc_limit');
 
+// アーカイブページでカテゴリーとタグ情報の取得
+function get_current_term() {
+  if(is_category()) {
+    $tax_slug = "category";
+    $id = get_query_var('cat');
+  } else if (is_tag()) {
+    $tax_slug = "post_tag";
+    $id = get_query_var('tag_id');
+  }
+  return get_term($id,$tax_slug);
+}
+
 
 // prism.js
 function my_prism() {
@@ -111,4 +124,5 @@ function my_prism() {
 	wp_enqueue_script( 'prism-script', get_stylesheet_directory_uri() . '/js/prism.js', array('jquery'), '1.9.0', true ); // 第2引数には自身がファイルをアップロードしたパスを指定
 }
 add_action( 'wp_enqueue_scripts', 'my_prism' );
+
 ?>
