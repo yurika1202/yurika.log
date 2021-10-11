@@ -6,6 +6,8 @@ function my_setup() {
   add_theme_support ('automatic-feed-links'); // 投稿とコメントのRSSフィードのリンクを有効化
   add_theme_support ('title-tag'); // タイトルタグ自動生成
   add_theme_support ('html5', array ( //HTML5でマークアップ
+    'script',
+    'style',
     'search-form',
     'comment-form',
     'comment-list',
@@ -13,50 +15,28 @@ function my_setup() {
     'caption',
   ));
 }
-
 add_action('after_setup_theme', 'my_setup');
 
 
 // CSSとJavaScriptの読み込み
 function my_script_init() {
-  wp_enqueue_style ('font', 'https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-  wp_enqueue_style ('fontawesome', 'https://use.fontawesome.com/releases/v5.15.1/css/all.css', array(), '5.15.1', 'all');
-  wp_enqueue_style ('css', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all');
-  wp_enqueue_script ('js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0.0', true);
+  wp_enqueue_style ('font', 'https://fonts.googleapis.com/css2?family=Raleway&display=swap', array(), '', 'all');
+  wp_enqueue_script ('font-awesome', 'https://kit.fontawesome.com/df603b5721.js', array(), '', false);
+  wp_enqueue_style ('css', get_template_directory_uri() . '/css/style.min.css', array(), '2.0.0', 'all');
+  wp_enqueue_script ('js', get_template_directory_uri() . '/js/script.js', array(), '2.0.0', true);
+  wp_enqueue_style ('prism-style', get_template_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
+  wp_enqueue_script ('prism-script', get_template_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
 }
-
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
-// メニューの登録
-function my_menu_init() {
-register_nav_menus (array (
-  'global' => 'ヘッダーメニュー',
-  'category' => 'カテゴリーメニュー',
-  'drawer' => 'ドロワーメニュー',
-  'drawer-category' => 'ドロワーカテゴリーメニュー',
-  'side-category' => 'サイトバーカテゴリーメニュー',
-));
+// ファビコン
+function my_favicon() {
+  echo '<link rel="shortcut-icon" href="' . get_template_directory_uri() . '/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/favicon/apple-touch-icon.png" sizes="180x180">
+        <link rel="android-chrome" type="image/png" href="' . get_template_directory_uri() . '/favicon/android-chrome-192x192.png" sizes="192x192">';
 }
-
-add_action('init', 'my_menu_init');
-
-
-// ウィジェット
-function my_widget_init() {
-  register_sidebar (array (
-    'name' => '目次',
-    'id' => 'table',
-  ));
-
-  register_sidebar (array (
-    'name' => '目次_sp',
-    'id' => 'table_sp',
-  ));
-}
-
-add_action( 'widgets_init', 'my_widget_init' );
-
+add_action('wp_head', 'my_favicon');
 
 //親カテゴリーのテンプレートを子カテゴリーに適用
 function my_category_template( $template ) {
