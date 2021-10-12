@@ -1210,8 +1210,18 @@ a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+.el_btn_icon__home {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
 .el_btn_icon__home::before {
   content: "";
+}
+.el_btn_icon__home:focus, .el_btn_icon__home:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 .el_btn_icon__headerNav {
   text-transform: uppercase;

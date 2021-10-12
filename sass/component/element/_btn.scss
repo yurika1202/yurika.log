@@ -108,8 +108,14 @@
     }
 
     &__home {
+        transition: transform .3s ease-in-out;
+
         &::before {
             content: "\f015";
+        }
+
+        &:focus, &:hover {
+            transform: translateY(-5px);
         }
     }
 
