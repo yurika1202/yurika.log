@@ -2055,9 +2055,28 @@ details[open] .bl_contactMessage_schedule_wrap {
 
 .bl_entry_time {
   font-size: 0.75rem;
+  padding-left: 18px;
+  position: relative;
 }
 .bl_entry_time:nth-of-type(2) {
   margin-left: 10px;
+}
+.bl_entry_time::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.bl_entry_time__published::before {
+  content: "";
+}
+.bl_entry_time__updated::before {
+  content: "";
 }
 
 .bl_entry_thumbnails {
@@ -2067,6 +2086,8 @@ details[open] .bl_contactMessage_schedule_wrap {
 
 .bl_entry_body {
   margin-top: 10px;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 .bl_entry_body > p, .bl_entry_body figure, .bl_entry_body ul, .bl_entry_body ol, .bl_entry_body .code-toolbar {
   margin-top: 10px;
@@ -2094,9 +2115,27 @@ details[open] .bl_contactMessage_schedule_wrap {
           transform: translateX(-50%);
 }
 
-.bl_entry_categoryWrap i, .bl_entry_tagWrap i {
-  color: #AD9F9A;
+.bl_entry_categoryWrap, .bl_entry_tagWrap {
+  margin-left: -5px;
+  position: relative;
+}
+.bl_entry_categoryWrap::before, .bl_entry_tagWrap::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-size: 0.75rem;
+  color: #AD9F9A;
+}
+.bl_entry_categoryWrap a, .bl_entry_tagWrap a {
+  margin-left: 5px;
+}
+
+.bl_entry_categoryWrap::before {
+  content: "";
+}
+
+.bl_entry_tagWrap::before {
+  content: "";
 }
 
 /* editor-style

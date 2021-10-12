@@ -27,9 +27,34 @@
 
 .bl_entry_time {
     font-size: g.rem(12px);
+    padding-left: 18px;
+    position: relative;
 
     &:nth-of-type(2) {
         margin-left: 10px;
+    }
+
+    &::before {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: g.rem(12px);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &__published {
+        &::before {
+            content: "\f073";
+        }
+    }
+
+    &__updated {
+        &::before {
+            content: "\f1da";
+        }
     }
 }
 
@@ -40,6 +65,8 @@
 
 .bl_entry_body {
     margin-top: 10px;
+    width: 100%;
+    overflow-wrap: break-word;
 
     > p, figure, ul, ol, .code-toolbar {
         margin-top: 10px;
@@ -71,8 +98,30 @@
 }
 
 .bl_entry_categoryWrap, .bl_entry_tagWrap {
-    i {
-        color: g.$cSober;
+    margin-left: -5px;
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
         font-size: g.rem(12px);
+        color: g.$cSober;
+    }
+
+    a {
+        margin-left: 5px;
+    }
+}
+
+.bl_entry_categoryWrap {
+    &::before {
+        content: "\f07c";
+    }
+}
+
+.bl_entry_tagWrap {
+    &::before {
+        content: "\f02c";
     }
 }
