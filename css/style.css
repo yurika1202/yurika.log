@@ -1168,10 +1168,6 @@ a {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
-.el_btn__icon i {
-  font-size: 1.125rem;
-  padding-right: 10px;
-}
 .el_btn__submit {
   width: 100%;
   max-width: 350px;
@@ -1197,20 +1193,13 @@ a {
   cursor: pointer;
 }
 
-.el_btn_headerNav {
-  padding: 0.714em 1.714em 0.714em 3em;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+.el_btn_icon {
+  padding-left: 2.7em;
   font-size: 1.25rem;
   font-weight: 600;
   position: relative;
-  z-index: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
-.el_btn_headerNav::before {
-  content: "";
+.el_btn_icon::before {
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -1221,7 +1210,21 @@ a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.el_btn_headerNav::after {
+.el_btn_icon__home::before {
+  content: "";
+}
+.el_btn_icon__headerNav {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.el_btn_icon__headerNav::before {
+  content: "";
+}
+.el_btn_icon__headerNav::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -1238,10 +1241,10 @@ a {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.el_btn_headerNav:focus, .el_btn_headerNav:hover {
+.el_btn_icon__headerNav:focus, .el_btn_icon__headerNav:hover {
   color: #CABFB9;
 }
-.el_btn_headerNav:focus::after, .el_btn_headerNav:hover::after {
+.el_btn_icon__headerNav:focus::after, .el_btn_icon__headerNav:hover::after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
@@ -1540,20 +1543,21 @@ a {
 /* error
 ----------------------------------------- */
 .bl_error_wrap {
-  max-width: 570px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .bl_error_title {
-  text-align: center;
   color: #AD9F9A;
-  padding-top: 145px;
+  padding-top: 140px;
   font-size: 1.875rem;
   font-weight: 600;
   position: relative;
+  z-index: 0;
 }
 .bl_error_title span {
-  font-size: 9.375rem;
+  font-size: 8.75rem;
   font-weight: 600;
   color: #E1DCD7;
   opacity: 0.8;
@@ -1566,12 +1570,10 @@ a {
 }
 
 .bl_error_text {
-  text-align: left;
   margin-top: 50px;
 }
 
 .bl_error_link {
-  text-align: center;
   margin-top: 80px;
 }
 
