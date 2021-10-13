@@ -1,13 +1,7 @@
 <?php get_header(); ?>
 
 <main class="ly_main ly_main__single js_drawerFixed">
-    <nav class="bl_breadcrumb">
-        <ul class="bl_breadcrumb_list">
-            <li class="bl_breadcrumb_item"><a href=""><i class="fas fa-home"></i>ホーム</a></li><!-- /.bl_breadcrumb_item -->
-            <li class="bl_breadcrumb_item"><a href="">カテゴリー</a></li><!-- /.bl_breadcrumb_item -->
-            <li class="bl_breadcrumb_item"><a href="">ページタイトルがはいります</a></li><!-- /.bl_breadcrumb_item -->
-        </ul><!-- /.bl_breadcrumb_list -->
-    </nav><!-- /.bl_breadcrumb -->
+    <?php breadcrumb(); ?>
 
     <button class="el_btn el_btn_toc" id="js_tocBtn"><span class="el_btn_toc__open">もくじ</span><span class="el_btn_toc__close"></span></button><!-- /.bl_header_tocBtn -->
 

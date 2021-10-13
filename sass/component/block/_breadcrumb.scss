@@ -5,6 +5,24 @@
 ----------------------------------------- */
 .bl_breadcrumb_item {
     display: inline;
+    font-size: g.rem(10px);
+
+    &__home {
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+            content: "\f015";
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 10px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
 
     &:not(:first-of-type) {
         padding-left: 11px;
@@ -18,21 +36,16 @@
             border-right: 1px solid g.$cText_bk;
             border-bottom: 1px solid g.$cText_bk;
             position: absolute;
-            top: 8px;
-            left: 0;
-            transform: rotate(-45deg);
+            top: 50%;
+            left: 2px;
+            transform: translateY(-50%) rotate(-45deg);
         }
     }
 
     a {
         display: inline;
         font-size: g.rem(10px);
-        vertical-align: text-bottom;
         transition: opacity .3s ease;
-
-        i {
-            margin-right: 3px;
-        }
 
         &:focus, &:hover {
             opacity: .5;

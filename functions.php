@@ -75,22 +75,31 @@ add_filter( 'category_template', 'my_category_template' );
 
 // パンくずリスト
 function breadcrumb() {
-  $wp_obj = get_queried_object();
+  $home = '<li class="bl_breadcrumb_item bl_breadcrumb_item__home"><a href="' . esc_url(home_url('/')) . '">ホーム</a></li><!-- /.bl_breadcrumb_item -->';
+  echo '<nav class="bl_breadcrumb">';
 
-  echo '<nav class="breadcrumb _category">' . '<ul class="breadcrumb-item _category">' . '<li><a href="' . esc_url(home_url('/')) . '"><i class="fas fa-home"></i>ホーム</a></li>';
+  if (is_single()) {
+    $cat = get_the_category();
+    $cat_list = array();
 
-  if (is_category()) {
-    $cat = get_queried_object();
-
-    if ($cat -> parent != 0) {
-      $ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
-
-      foreach ($ancestors as $ancestor) {
-        $str ='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'. get_category_link($ancestor) .'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor) .'</span></a> &gt;</div>';
-      }
+    if(isset($cat[0] -> cat_ID)) {
+      $cat_id = $cat[0] -> cat_ID;
     }
-    $str ='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a></div>';
+    while ($cat_id != 0) {
+      $cat = get_category($cat_id);
+      $cat_link = get_category_link($cat_id);
+      array_unshift($cat_list, '<li class="bl_breadcrumb_item"><a href="' . $cat_link . '">' . $cat -> name . '</a></li><!-- /.bl_breadcrumb_item -->');
+      $cat_id = $cat->parent;
+    }
+
+    echo $home;
+    foreach($cat_list as $val) {
+      echo $val;
+    }
+    the_title('<li class="bl_breadcrumb_item">', '</li><!-- /.bl_breadcrumb_item -->');
   }
+
+  echo '</nav><!-- /.bl_breadcrumb -->';
 }
 
 
