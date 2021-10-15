@@ -20,7 +20,7 @@
     <header class="ly_header">
         <div class="bl_header_inner">
             <h1 class="bl_header_logo">
-                <a href="index.php">
+                <a href="<?php echo esc_url(home_url()); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo/logo.svg" alt="Yurika.logのロゴ">
                 </a>
             </h1><!-- /.bl_header_logo -->
