@@ -2,11 +2,11 @@
 
     <div class="bl_2colUnit__card">
 
-        <?php if(have_posts()): ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('template-parts/card'); ?>
-        <?php endwhile; ?>
-        <?php else: ?>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <?php get_template_part('template-parts/card'); ?>
+            <?php endwhile; ?>
+        <?php else : ?>
             <p>記事がありません</p>
         <?php endif; ?>
 

@@ -2,8 +2,8 @@
 yurika's blog. → [Go!](https://yurika1202.com)
 
 ## Coding rules
-PRECSS notation  
-Sass  
+PRECSS notation
+Sass
 WordPress
 
 ## Production

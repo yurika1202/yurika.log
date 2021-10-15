@@ -138,5 +138,3 @@ function get_current_term() {
   }
   return get_term($id,$tax_slug);
 }
-
-?>

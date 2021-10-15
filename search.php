@@ -6,11 +6,11 @@
         <p class="el_title__mainTitle">Search</p>
         <p class="el_title__contentsTitle">
             <?php
-                if(isset($_GET['s']) && empty($_GET['s'])) {
-                    echo 'No Word';
-                } else {
-                    echo $_GET['s'];
-                }
+            if (isset($_GET['s']) && empty($_GET['s'])) {
+                echo 'No Word';
+            } else {
+                echo $_GET['s'];
+            }
             ?>
         </p>
     </div><!-- /.bl_archiveTitle_wrap -->

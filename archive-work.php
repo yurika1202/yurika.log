@@ -14,12 +14,12 @@
                 'posts_per_page' => 10,
             );
             $work_query = new WP_Query( $args );
-            
-            if ($work_query->have_posts()): 
-            while ($work_query->have_posts()): 
-            $work_query->the_post(); 
+
+            if ($work_query->have_posts()):
+            while ($work_query->have_posts()):
+            $work_query->the_post();
         ?>
-  
+
         <li class="card-item">
             <a href="<?php the_permalink(); ?>" class="card-wrapper">
                     <div class="card-thumbnail">
@@ -33,7 +33,7 @@
                     </div>
                 <div class="card-text">
                     <h3 class="works-card_title"><?php the_title(); ?></h3>
-                    <?php 
+                    <?php
                         $terms = get_the_terms($post->ID, 'area');
                         if (!empty($terms)):
                     ?>
@@ -46,7 +46,7 @@
                     </ul><!-- /.works-info_area -->
                     <?php endif; ?>
                 </div><!-- /.card-text -->
-            </a>  
+            </a>
         </li>
 
         <?php endwhile; ?>
