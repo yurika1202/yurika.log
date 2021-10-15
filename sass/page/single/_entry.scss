@@ -3,16 +3,19 @@
 
 /* entry
 ----------------------------------------- */
-.bl_entry {
+.bl_entry_wrap {
     width: 100%;
+
+    @include g.mq(xl) {
+        width: calc(100% - 302px);
+    }
+}
+
+.bl_entry {
     padding: 40px 10px 45px;
 
     @include g.mq(sm) {
         padding: 40px 5% 80px;
-    }
-
-    @include g.mq(xl) {
-        width: calc(100% - 302px);
     }
 }
 
@@ -78,6 +81,34 @@
 
     > h2, h3 {
         margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 8px;
+        line-height: 2;
+        background: g.$cBg_main;
+        border-bottom: 2px solid g.$cAccent;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 10px;
+        line-height: 2;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 3px;
+            height: 100%;
+            background: g.$cSober;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
     }
 }
 

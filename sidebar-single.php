@@ -13,18 +13,9 @@
 
     <div class="bl_toc bl_toc__aside bl_common_blockWrap hp_mt40">
         <p class="bl_widget_title">Mokuji</p><!-- /.bl_category_title -->
-
-        <ul class="bl_toc_list">
-            <li class="bl_toc_item">
-                <a href="">h2のタイトルがはいります</a>
-
-                <ul class="bl_toc_list__child">
-                    <li class="bl_toc_item__child"><a href="">h3のタイトルがはいります</a></li>
-                    <li class="bl_toc_item__child"><a href="">h3のタイトルh3のタイトルがはいります</a></li>
-                </ul><!-- /.bl_toc_list -->
-            </li><!-- /.bl_toc_item -->
-            <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
-            <li class="bl_toc_item"><a href="">h2のタイトルがはいります</a></li><!-- /.bl_toc_item -->
-        </ul><!-- /.bl_toc_list -->
+        <?php if (is_active_sidebar('toc')) {
+            dynamic_sidebar('toc');
+        }
+        ?>
     </div><!-- /.bl_toc -->
 </aside><!-- /.bl_aside_wrap -->

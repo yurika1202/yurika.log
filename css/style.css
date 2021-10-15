@@ -291,12 +291,15 @@ a {
 ----------------------------------------- */
 .bl_article_wrap {
   width: 100%;
-  padding: 40px 5%;
 }
 @media screen and (min-width: 1201px) {
   .bl_article_wrap {
     width: calc(100% - 302px);
   }
+}
+
+.bl_article {
+  padding: 40px 5%;
 }
 
 .bl_articleCard a {
@@ -745,9 +748,6 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
 }
 .bl_2colUnit__archive {
@@ -2054,18 +2054,21 @@ details[open] .bl_contactMessage_schedule_wrap {
 
 /* entry
 ----------------------------------------- */
-.bl_entry {
+.bl_entry_wrap {
   width: 100%;
+}
+@media screen and (min-width: 1201px) {
+  .bl_entry_wrap {
+    width: calc(100% - 302px);
+  }
+}
+
+.bl_entry {
   padding: 40px 10px 45px;
 }
 @media screen and (min-width: 577px) {
   .bl_entry {
     padding: 40px 5% 80px;
-  }
-}
-@media screen and (min-width: 1201px) {
-  .bl_entry {
-    width: calc(100% - 302px);
   }
 }
 
@@ -2123,6 +2126,32 @@ details[open] .bl_contactMessage_schedule_wrap {
 .bl_entry_body > h2, .bl_entry_body h3 {
   margin-top: 30px;
 }
+.bl_entry_body h2 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 8px;
+  line-height: 2;
+  background: #F6F4F3;
+  border-bottom: 2px solid #CABFB9;
+}
+.bl_entry_body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+  line-height: 2;
+  position: relative;
+}
+.bl_entry_body h3::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #AD9F9A;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 
 .bl_entry_infoWrap {
   padding: 30px 10px 0;
@@ -2165,35 +2194,6 @@ details[open] .bl_contactMessage_schedule_wrap {
 
 /* editor-style
 ----------------------------------------- */
-/* セクションタイトル */
-.style_h2_default {
-  font-size: 18px;
-  font-weight: 600;
-  padding-left: 8px;
-  line-height: 2;
-  background: #F6F4F3;
-  border-bottom: 2px solid #CABFB9;
-}
-
-.style_h3_default {
-  font-size: 16px;
-  font-weight: 600;
-  padding-left: 10px;
-  line-height: 2;
-  position: relative;
-}
-.style_h3_default::before {
-  content: "";
-  width: 3px;
-  height: 100%;
-  background: #AD9F9A;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 /* テキストリンク */
 .style_link_default {
   padding: 0 5px;
@@ -2865,29 +2865,34 @@ details[open] .bl_contactMessage_schedule_wrap {
           transform: scale(1);
 }
 
-.bl_toc_list {
+.toc_widget {
+  list-style: none;
+}
+
+.widgettitle {
+  display: none;
+}
+
+.toc_widget_list {
   margin-top: 20px;
 }
-
-.bl_toc_item:not(:first-of-type) {
+.toc_widget_list li:not(:first-of-type) {
   margin-top: 8px;
 }
-
-.bl_toc_list__child {
+.toc_widget_list li ul {
   margin-left: 0;
 }
 @media screen and (min-width: 1201px) {
-  .bl_toc_list__child {
+  .toc_widget_list li ul {
     margin-left: 10px;
   }
 }
-
-.bl_toc_item__child {
+.toc_widget_list li ul li {
   margin: 8px 0 0 10px;
   padding-left: 15px;
   position: relative;
 }
-.bl_toc_item__child::before {
+.toc_widget_list li ul li::before {
   content: "";
   width: 8px;
   height: 8px;

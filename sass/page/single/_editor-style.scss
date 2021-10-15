@@ -3,35 +3,6 @@
 
 /* editor-style
 ----------------------------------------- */
-/* セクションタイトル */
-.style_h2_default {
-    font-size: 18px;
-    font-weight: 600;
-    padding-left: 8px;
-    line-height: 2;
-    background: g.$cBg_main;
-    border-bottom: 2px solid g.$cAccent;
-}
-
-.style_h3_default {
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
-    line-height: 2;
-    position: relative;
-
-    &::before {
-        content: "";
-        width: 3px;
-        height: 100%;
-        background: g.$cSober;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-}
-
 /* テキストリンク */
 .style_link_default {
     padding: 0 5px;

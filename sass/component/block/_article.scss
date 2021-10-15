@@ -5,11 +5,14 @@
 ----------------------------------------- */
 .bl_article_wrap {
     width: 100%;
-    padding: 40px 5%;
 
     @include g.mq(xl) {
         width: calc(100% - 302px);
     }
+}
+
+.bl_article {
+    padding: 40px 5%;
 }
 
 .bl_articleCard {
