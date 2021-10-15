@@ -286,31 +286,36 @@
     <div class="bl_3colUnit hp_mt30">
 
         <?php
-        if (has_category()) {
-            $post_cats = get_the_category();
-            $cat_ids = array();
+        $post_cats = get_the_category($post->ID);
+        $cat_ids = array();
 
-            foreach ($post_cats as $cat) {
-                $cat_ids[] = $cat->term_id;
-            }
+        foreach ($post_cats as $cat) {
+            array_push($cat_ids, $cat->cat_ID);
         }
 
-        $my_posts = get_posts(array(
+        $args = array(
             'post_type' => 'post',
-            'post_per_page' => '6',
+            'post_per_page' => 6,
             'post__not_in' => array($post->ID),
             'category__in' => $cat_ids,
             'orderby' => 'rand',
-        ));
+        );
 
-        if ($my_posts) :
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            $i = 0;
+            while ($query->have_posts()) : $query->the_post();
+                if ($i > 5) : break;
+                endif;
         ?>
-
-            <?php foreach ($myposts as $post) : setup_postdata($post); ?>
                 <?php get_template_part('template-parts/card'); ?>
-            <?php endforeach;
-            wp_reset_postdata(); ?>
-        <?php endif; ?>
+        <?php
+                $i++;
+            endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
 
     </div><!-- /.bl_3colCard_wrap -->
 </div><!-- /.bl_related_wrap -->
