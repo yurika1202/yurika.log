@@ -24,17 +24,19 @@ function my_script_init()
 {
   wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Raleway&display=swap', array(), NULL, 'all');
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/df603b5721.js', array(), NULL, false);
-  wp_enqueue_style('base', get_template_directory_uri() . '/css/style.min.css', array(), date("YmdHi"), 'all');
-  wp_enqueue_script('base', get_template_directory_uri() . '/js/script.js', array(), date("YmdHi"), true);
-  wp_enqueue_style('prism', get_template_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
-  wp_enqueue_script('prism', get_template_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
-  wp_enqueue_script('contact', get_template_directory_uri() . '/js/contact.js', array('jquery'), date("YmdHi"), true);
+  wp_enqueue_style('base', get_stylesheet_directory_uri() . '/css/style.min.css', array(), date("YmdHi"), 'all');
+  wp_enqueue_script('base', get_stylesheet_directory_uri() . '/js/script.js', array(), date("YmdHi"), true);
+  wp_enqueue_style('prism', get_stylesheet_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
+  wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
+  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), date("YmdHi"), 'all');
+  wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), date("YmdHi"), true);
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
 
   if (!is_single()) {
     wp_deregister_style('prism');
     wp_deregister_script('prism');
+    wp_deregister_style('block');
   }
 
   if (!is_page('contact')) {
@@ -43,6 +45,20 @@ function my_script_init()
   }
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
+
+
+// 管理画面ブロックスタイル追加
+function my_editor_style()
+{
+  $timestamp = date('YmdHi');
+  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), $timestamp, 'all');
+  wp_enqueue_script('block', get_stylesheet_directory_uri() . '/js/editor.js', array(
+    'wp-element',
+    'wp-rich-text',
+    'wp-editor',
+  ), $timestamp, true);
+}
+add_action('enqueue_block_editor_assets', 'my_editor_style');
 
 
 // ファビコン
@@ -86,7 +102,6 @@ function my_category_template($template)
   }
   return $template;
 }
-
 add_filter('category_template', 'my_category_template');
 
 
@@ -132,20 +147,8 @@ function my_posts_search($search, $wp_query)
   }
   return $search;
 }
-
 add_filter('posts_search', 'my_posts_search', 10, 2);
 
-
-// シングルページのパンくず
-function bc_limit($trail)
-{
-  $max = count($trail->breadcrumbs);
-  for ($i = 2; $i < $max - 1; $i++) {
-    unset($trail->trail[$i]);
-  }
-}
-
-add_action('bcn_after_fill', 'bc_limit');
 
 // アーカイブページでカテゴリーとタグ情報の取得
 function get_current_term()

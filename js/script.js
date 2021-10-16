@@ -44,6 +44,30 @@ window.onscroll = () => {
 })();
 
 
+/* スクロール
+--------------------------------- */
+(function scroll() {
+    const scrollLink = document.querySelectorAll('a[href^="#"]');
+
+    for(let i = 0; i < scrollLink.length; i++) {
+        scrollLink[i].addEventListener('click', (e) => {
+            e.preventDefault();
+            let elHash = scrollLink[i].getAttribute('href');
+            let el = document.getElementById(elHash.replace('#', ''));
+            const rect = el.getBoundingClientRect().top;
+            const offset = window.pageYOffset;
+            const gap = 100;
+            const target = rect + offset - gap;
+
+            window.scrollTo({
+                top: target,
+                behavior: 'smooth'
+            });
+        });
+    }
+})();
+
+
 /* アコーディオン
 --------------------------------- */
 (function accordion() {
