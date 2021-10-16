@@ -310,7 +310,7 @@
 }
 
 /* ボタン */
-.style_btn {
+.is-style-btn_flex_left, .is-style-btn_flex_center {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -320,20 +320,20 @@
           flex-direction: column;
   margin-top: 10px;
 }
-.style_btn > a {
+.is-style-btn_flex_left > a, .is-style-btn_flex_center > a {
   font-weight: 600;
 }
-.style_btn > a:not(:last-of-type) {
+.is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
   margin-bottom: 10px;
 }
 @media screen and (min-width: 577px) {
-  .style_btn > a:not(:last-of-type) {
+  .is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
     margin-bottom: 0;
     margin-right: 5px;
   }
 }
 @media screen and (min-width: 577px) {
-  .style_btn {
+  .is-style-btn_flex_left, .is-style-btn_flex_center {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -341,7 +341,7 @@
   }
 }
 
-.style_btn__center {
+.is-style-btn_flex_center {
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -351,15 +351,27 @@
           justify-content: center;
 }
 
-.style_btn__default > a, .style_btn_outline > a {
+.is-style-btn_default a, .is-style-btn_outline a {
+  display: inline-block;
+  padding: 0.714em 1.714em;
+  background: #CABFB9;
+  border: 2px solid #CABFB9;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
-.style_btn__default > a:focus, .style_btn__default > a:hover, .style_btn_outline > a:focus, .style_btn_outline > a:hover {
+.is-style-btn_default a:focus, .is-style-btn_outline a:focus, .is-style-btn_default a:hover, .is-style-btn_outline a:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
+}
+
+.is-style-btn_outline a {
+  background: #fff;
+  color: #AD9F9A;
 }
 
 /* ブロック */

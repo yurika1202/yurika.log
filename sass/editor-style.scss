@@ -330,7 +330,7 @@
 
 
 /* ボタン */
-.style_btn {
+.is-style-btn_flex_left {
     display: inline-flex;
     flex-direction: column;
     margin-top: 10px;
@@ -353,19 +353,36 @@
     }
 }
 
-.style_btn__center {
+.is-style-btn_flex_center {
+    @extend .is-style-btn_flex_left;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.style_btn__default, .style_btn_outline {
-    > a {
+.is-style-btn_default {
+    a {
+        display: inline-block;
+        padding: 0.714em 1.714em;
+        background: g.$cAccent;
+        border: 2px solid g.$cAccent;
+        border-radius: 30px;
+        color: g.$cText_wh;
+        cursor: pointer;
         transition: transform .3s ease-in-out;
 
         &:focus, &:hover {
             transform: translateY(-3px);
         }
+    }
+}
+
+.is-style-btn_outline {
+    @extend .is-style-btn_default;
+
+    a {
+        background: g.$cBg_contents;
+        color: g.$cText_br;
     }
 }
 

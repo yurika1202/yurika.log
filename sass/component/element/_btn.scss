@@ -80,16 +80,6 @@
     }
 }
 
-.el_btn_outline {
-    display: inline-block;
-    padding: 0.714em 1.714em;
-    background: g.$cBg_contents;
-    border: 2px solid g.$cAccent;
-    border-radius: 10px;
-    color: g.$cText_br;
-    cursor: pointer;
-}
-
 .el_btn_icon {
     padding-left: 2.7em;
     font-size: g.rem(20px);

@@ -1196,16 +1196,6 @@ a {
   cursor: auto;
 }
 
-.el_btn_outline {
-  display: inline-block;
-  padding: 0.714em 1.714em;
-  background: #fff;
-  border: 2px solid #CABFB9;
-  border-radius: 10px;
-  color: #AD9F9A;
-  cursor: pointer;
-}
-
 .el_btn_icon {
   padding-left: 2.7em;
   font-size: 1.25rem;
