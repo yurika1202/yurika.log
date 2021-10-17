@@ -8,6 +8,10 @@
 		name: "ol_default",
 		label: "茶数字リスト",
 	});
+	wp.blocks.registerBlockStyle("core/list", {
+		name: "step_default",
+		label: "ステップ",
+	});
 
 	// 引用
 	wp.blocks.registerBlockStyle("core/quote", {

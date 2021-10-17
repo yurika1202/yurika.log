@@ -45,18 +45,14 @@ function sc_related($atts)
         'excerpt' => ""
     ), $atts));
 
-    $id = url_to_postid($url); //URLから投稿IDを取得
+    $id = url_to_postid($url);
 
-    //タイトルを取得
     if (empty($title)) {
         $title = esc_html(get_the_title($id));
     }
-    //抜粋文を取得
     if (empty($excerpt)) {
         $excerpt = esc_html(get_related_excerpt($id));
     }
-
-    //アイキャッチ画像を取得
     if (has_post_thumbnail($id)) {
         $img = wp_get_attachment_image_src(get_post_thumbnail_id($id));
         $img_tag = '<img src="' . $img[0] . '" alt="' . $title . '" width="150" height="150" />';
@@ -76,34 +72,34 @@ add_shortcode('link', 'sc_related');
 function sc_textBlock_point($atts)
 {
     return '<div class="style_textBlock style_textBlock__point"><div class="style_textBlock_labelWrap"><p class="style_textBlock_label style_textBlock_label__point"></p></div><!-- /.style_textBlock_labelWrap -->
-    <div class="style_textBlock_textWrap"><p>'. $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
+    <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_point', 'sc_textBlock_point');
 
 function sc_textBlock_exclamation($atts)
 {
     return '<div class="style_textBlock style_textBlock__exclamation"><div class="style_textBlock_labelWrap"><p class="style_textBlock_label style_textBlock_label__exclamation"></p></div><!-- /.style_textBlock_labelWrap -->
-    <div class="style_textBlock_textWrap"><p>'. $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
+    <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_ex', 'sc_textBlock_exclamation');
 
 function sc_textBlock_question($atts)
 {
     return '<div class="style_textBlock style_textBlock__question"><div class="style_textBlock_labelWrap"><p class="style_textBlock_label style_textBlock_label__question"></p></div><!-- /.style_textBlock_labelWrap -->
-    <div class="style_textBlock_textWrap"><p>'. $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
+    <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_q', 'sc_textBlock_question');
 
 function sc_textBlock_info($atts)
 {
     return '<div class="style_textBlock style_textBlock__info"><div class="style_textBlock_labelWrap"><p class="style_textBlock_label style_textBlock_label__info"></p></div><!-- /.style_textBlock_labelWrap -->
-    <div class="style_textBlock_textWrap"><p>'. $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
+    <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_info', 'sc_textBlock_info');
 
 function sc_textBlock_caution($atts)
 {
     return '<div class="style_textBlock style_textBlock__caution"><div class="style_textBlock_labelWrap"><p class="style_textBlock_label style_textBlock_label__caution"></p></div><!-- /.style_textBlock_labelWrap -->
-    <div class="style_textBlock_textWrap"><p>'. $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
+    <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_cau', 'sc_textBlock_caution');

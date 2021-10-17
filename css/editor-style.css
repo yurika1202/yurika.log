@@ -350,16 +350,16 @@
 }
 
 /* ステップ */
-.style_step {
+.is-style-step_default {
   margin-top: 10px;
 }
-.style_step > li {
+.is-style-step_default > li {
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0 0 20px 20px;
   position: relative;
 }
-.style_step > li::before {
+.is-style-step_default > li::before {
   content: "";
   width: 13px;
   height: 13px;
@@ -369,7 +369,7 @@
   top: 3px;
   left: 0;
 }
-.style_step > li:not(:last-of-type)::after {
+.is-style-step_default > li:not(:last-of-type)::after {
   content: "";
   width: 2px;
   height: calc(100% - 25px);
@@ -378,7 +378,7 @@
   bottom: 2px;
   left: 5.5px;
 }
-.style_step > li > ul > li {
+.is-style-step_default > li > ul > li {
   font-size: 0.875rem;
 }
 
