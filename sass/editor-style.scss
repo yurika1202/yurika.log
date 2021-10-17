@@ -470,8 +470,12 @@
 }
 
 .style_relatedBlock_title {
-    font-size: g.rem(18px);
+    font-size: g.rem(16px);
     font-weight: 500;
+
+    @include g.mq(sm) {
+        font-size: g.rem(18px);
+    }
 }
 
 .style_relatedBlock_text {

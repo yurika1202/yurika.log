@@ -72,21 +72,6 @@ function my_editor_style()
 add_action('enqueue_block_editor_assets', 'my_editor_style');
 
 
-// ブロックパターン
-function my_editor_pattern()
-{
-  $pattern = [
-    "title" => "btn_default",
-    "categories" => ["original"],
-    "descripiton" => "",
-    "content" => '<div class="style_btn style_btn__default"><a href="" class="el_btn">デフォルトボタン</a></div><!-- /.style_btn -->',
-  ];
-  register_block_pattern($pattern["title"], $pattern);
-  register_block_pattern_category('original', ['label' => 'オリジナル']);
-}
-add_action('admin_init', 'my_editor_pattern');
-
-
 //ショートコード
 require get_template_directory() . '/functions/shortcode.php';
 
