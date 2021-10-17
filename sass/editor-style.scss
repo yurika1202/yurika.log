@@ -5,7 +5,7 @@
 ----------------------------------------- */
 /* リスト */
 .is-style-ul_default {
-    > li {
+    >li {
         padding-left: 10px;
         position: relative;
 
@@ -33,7 +33,7 @@
 .is-style-ol_default {
     counter-reset: count 0;
 
-    > li {
+    >li {
         padding-left: 25px;
         position: relative;
 
@@ -113,7 +113,7 @@
         font-style: italic;
         line-height: 2;
 
-        > a {
+        >a {
             font-size: 10px;
             font-style: italic;
             line-height: 2;
@@ -141,6 +141,69 @@
                     transform: scale(1, 1);
                 }
             }
+        }
+    }
+}
+
+/* ボタン */
+.is-style-btn_flex_left {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    >a {
+        font-weight: 600;
+
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+
+            @include g.mq(sm) {
+                margin-bottom: 0;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    @include g.mq(sm) {
+        flex-direction: row;
+    }
+}
+
+.is-style-btn_flex_center {
+    @extend .is-style-btn_flex_left;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-style-btn_default {
+    a {
+        display: inline-block;
+        padding: 0.714em 1.714em;
+        background: g.$cAccent;
+        border: 2px solid g.$cAccent;
+        border-radius: 10px;
+        color: g.$cText_wh;
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+
+        &:focus, &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.is-style-btn_outline {
+    @extend .is-style-btn_default;
+
+    a {
+        background: g.$cBg_contents;
+        color: g.$cText_br;
+        transition: transform .3s ease-in-out;
+
+        &:focus, &:hover {
+            color: g.$cText_br;
+            transform: translateY(-3px);
         }
     }
 }
@@ -183,7 +246,7 @@
         transition: transform .3s ease;
     }
 
-    > p {
+    >p {
         margin-top: 0;
     }
 
@@ -241,7 +304,7 @@
 .style_balloons_img {
     width: 60px;
 
-    > img {
+    >img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -249,7 +312,7 @@
         object-fit: cover;
     }
 
-    > figcaption {
+    >figcaption {
         margin-top: 5px;
         font-size: 12px;
         text-align: center;
@@ -293,96 +356,39 @@
 /* ステップ */
 .style_step {
     margin-top: 10px;
-}
 
-.style_step_item {
-    padding: 0 0 20px 20px;
-    position: relative;
-
-    &::before {
-        content: "";
-        width: 13px;
-        height: 13px;
-        border-radius: 50%;
-        background: g.$cSober;
-        position: absolute;
-        top: 3px;
-        left: 0;
-    }
-
-    &:not(:last-of-type) {
-        &::after {
-            content: "";
-            width: 2px;
-            height: calc(100% - 25px);
-            background: g.$cMain;
-            position: absolute;
-            bottom: 2px;
-            left: 5.5px;
-        }
-    }
-}
-
-.style_step_title {
-    font-size: g.rem(12px);
-    font-weight: 600;
-}
-
-
-/* ボタン */
-.is-style-btn_flex_left {
-    display: inline-flex;
-    flex-direction: column;
-    margin-top: 10px;
-
-    > a {
+    > li {
+        font-size: g.rem(12px);
         font-weight: 600;
+        padding: 0 0 20px 20px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: g.$cSober;
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
 
         &:not(:last-of-type) {
-            margin-bottom: 10px;
-
-            @include g.mq(sm) {
-                margin-bottom: 0;
-                margin-right: 5px;
+            &::after {
+                content: "";
+                width: 2px;
+                height: calc(100% - 25px);
+                background: g.$cMain;
+                position: absolute;
+                bottom: 2px;
+                left: 5.5px;
             }
         }
-    }
 
-    @include g.mq(sm) {
-        flex-direction: row;
-    }
-}
-
-.is-style-btn_flex_center {
-    @extend .is-style-btn_flex_left;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.is-style-btn_default {
-    a {
-        display: inline-block;
-        padding: 0.714em 1.714em;
-        background: g.$cAccent;
-        border: 2px solid g.$cAccent;
-        border-radius: 30px;
-        color: g.$cText_wh;
-        cursor: pointer;
-        transition: transform .3s ease-in-out;
-
-        &:focus, &:hover {
-            transform: translateY(-3px);
+        >ul>li {
+            font-size: g.rem(14px);
         }
-    }
-}
-
-.is-style-btn_outline {
-    @extend .is-style-btn_default;
-
-    a {
-        background: g.$cBg_contents;
-        color: g.$cText_br;
     }
 }
 
@@ -392,6 +398,20 @@
     width: 100%;
     border: 1px solid g.$cSober;
     position: relative;
+
+    >a {
+        width: inherit;
+
+        &:focus, &:hover {
+            .style_relatedBlock_contents {
+                opacity: .7;
+            }
+
+            .style_relatedBlock_thumbnail>img {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 .style_relatedBlock_labelWrap {
@@ -431,21 +451,32 @@
 }
 
 .style_relatedBlock_thumbnail {
-    width: 40%;
-    max-width: 200px;
-    flex-shrink: 0;
+    flex: 1;
+    overflow: hidden;
+
+    >img {
+        transition: transform .3s ease-in-out;
+    }
 }
 
 .style_relatedBlock_contents {
+    flex: 2.5;
     margin-left: 10px;
+    transition: opacity .3s ease-in-out;
 
     @include g.mq(sm) {
         margin-left: 20px;
     }
 }
 
+.style_relatedBlock_title {
+    font-size: g.rem(18px);
+    font-weight: 500;
+}
+
 .style_relatedBlock_text {
     display: none;
+    margin-top: 10px;
     font-size: g.rem(12px);
 
     @include g.mq(sm) {

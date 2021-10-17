@@ -123,6 +123,80 @@
           transform: scale(1, 1);
 }
 
+/* ボタン */
+.is-style-btn_flex_left, .is-style-btn_flex_center {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+.is-style-btn_flex_left > a, .is-style-btn_flex_center > a {
+  font-weight: 600;
+}
+.is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 577px) {
+  .is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 577px) {
+  .is-style-btn_flex_left, .is-style-btn_flex_center {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.is-style-btn_flex_center {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.is-style-btn_default a, .is-style-btn_outline a {
+  display: inline-block;
+  padding: 0.714em 1.714em;
+  background: #CABFB9;
+  border: 2px solid #CABFB9;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.is-style-btn_default a:focus, .is-style-btn_outline a:focus, .is-style-btn_default a:hover, .is-style-btn_outline a:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.is-style-btn_outline a {
+  background: #fff;
+  color: #AD9F9A;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.is-style-btn_outline a:focus, .is-style-btn_outline a:hover {
+  color: #AD9F9A;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 /* アコーディオン */
 .style_accordion {
   margin-top: 10px;
@@ -279,12 +353,13 @@
 .style_step {
   margin-top: 10px;
 }
-
-.style_step_item {
+.style_step > li {
+  font-size: 0.75rem;
+  font-weight: 600;
   padding: 0 0 20px 20px;
   position: relative;
 }
-.style_step_item::before {
+.style_step > li::before {
   content: "";
   width: 13px;
   height: 13px;
@@ -294,7 +369,7 @@
   top: 3px;
   left: 0;
 }
-.style_step_item:not(:last-of-type)::after {
+.style_step > li:not(:last-of-type)::after {
   content: "";
   width: 2px;
   height: calc(100% - 25px);
@@ -303,75 +378,8 @@
   bottom: 2px;
   left: 5.5px;
 }
-
-.style_step_title {
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-/* ボタン */
-.is-style-btn_flex_left, .is-style-btn_flex_center {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 10px;
-}
-.is-style-btn_flex_left > a, .is-style-btn_flex_center > a {
-  font-weight: 600;
-}
-.is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
-  margin-bottom: 10px;
-}
-@media screen and (min-width: 577px) {
-  .is-style-btn_flex_left > a:not(:last-of-type), .is-style-btn_flex_center > a:not(:last-of-type) {
-    margin-bottom: 0;
-    margin-right: 5px;
-  }
-}
-@media screen and (min-width: 577px) {
-  .is-style-btn_flex_left, .is-style-btn_flex_center {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.is-style-btn_flex_center {
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.is-style-btn_default a, .is-style-btn_outline a {
-  display: inline-block;
-  padding: 0.714em 1.714em;
-  background: #CABFB9;
-  border: 2px solid #CABFB9;
-  border-radius: 30px;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-.is-style-btn_default a:focus, .is-style-btn_outline a:focus, .is-style-btn_default a:hover, .is-style-btn_outline a:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-.is-style-btn_outline a {
-  background: #fff;
-  color: #AD9F9A;
+.style_step > li > ul > li {
+  font-size: 0.875rem;
 }
 
 /* ブロック */
@@ -380,6 +388,16 @@
   width: 100%;
   border: 1px solid #AD9F9A;
   position: relative;
+}
+.style_relatedBlock > a {
+  width: inherit;
+}
+.style_relatedBlock > a:focus .style_relatedBlock_contents, .style_relatedBlock > a:hover .style_relatedBlock_contents {
+  opacity: 0.7;
+}
+.style_relatedBlock > a:focus .style_relatedBlock_thumbnail > img, .style_relatedBlock > a:hover .style_relatedBlock_thumbnail > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .style_relatedBlock_labelWrap {
@@ -425,14 +443,25 @@
 }
 
 .style_relatedBlock_thumbnail {
-  width: 40%;
-  max-width: 200px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+.style_relatedBlock_thumbnail > img {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .style_relatedBlock_contents {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
   margin-left: 10px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 @media screen and (min-width: 577px) {
   .style_relatedBlock_contents {
@@ -440,8 +469,14 @@
   }
 }
 
+.style_relatedBlock_title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
 .style_relatedBlock_text {
   display: none;
+  margin-top: 10px;
   font-size: 0.75rem;
 }
 @media screen and (min-width: 577px) {

@@ -22,14 +22,15 @@ add_action('after_setup_theme', 'my_setup');
 // CSSとJavaScriptの読み込み
 function my_script_init()
 {
+  $timestamp = date('YmdHi');
   wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Raleway&display=swap', array(), NULL, 'all');
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/df603b5721.js', array(), NULL, false);
-  wp_enqueue_style('base', get_stylesheet_directory_uri() . '/css/style.min.css', array(), date("YmdHi"), 'all');
-  wp_enqueue_script('base', get_stylesheet_directory_uri() . '/js/script.js', array(), date("YmdHi"), true);
+  wp_enqueue_style('base', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $timestamp, 'all');
+  wp_enqueue_script('base', get_stylesheet_directory_uri() . '/js/script.js', array(), $timestamp, true);
   wp_enqueue_style('prism', get_stylesheet_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
   wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
-  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), date("YmdHi"), 'all');
-  wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), date("YmdHi"), true);
+  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), $timestamp, 'all');
+  wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), $timestamp, true);
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
 
@@ -47,6 +48,16 @@ function my_script_init()
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+// ファビコン
+function my_favicon()
+{
+  echo '<link rel="shortcut-icon" href="' . get_template_directory_uri() . '/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/favicon/apple-touch-icon.png" sizes="180x180">
+        <link rel="android-chrome" type="image/png" href="' . get_template_directory_uri() . '/favicon/android-chrome-192x192.png" sizes="192x192">';
+}
+add_action('wp_head', 'my_favicon');
+
+
 // 管理画面ブロックスタイル追加
 function my_editor_style()
 {
@@ -62,7 +73,8 @@ add_action('enqueue_block_editor_assets', 'my_editor_style');
 
 
 // ブロックパターン
-function my_editor_pattern() {
+function my_editor_pattern()
+{
   $pattern = [
     "title" => "btn_default",
     "categories" => ["original"],
@@ -75,14 +87,8 @@ function my_editor_pattern() {
 add_action('admin_init', 'my_editor_pattern');
 
 
-// ファビコン
-function my_favicon()
-{
-  echo '<link rel="shortcut-icon" href="' . get_template_directory_uri() . '/favicon/favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" href="' . get_template_directory_uri() . '/favicon/apple-touch-icon.png" sizes="180x180">
-        <link rel="android-chrome" type="image/png" href="' . get_template_directory_uri() . '/favicon/android-chrome-192x192.png" sizes="192x192">';
-}
-add_action('wp_head', 'my_favicon');
+//ショートコード
+require get_template_directory() . '/functions/shortcode.php';
 
 
 // ウィジェット
