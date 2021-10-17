@@ -21,7 +21,21 @@
 
         &:focus, &:hover {
             transform: translateY(-5px);
+
+            .bl_articleCard_thumbnail>img {
+                transform: scale(1.05)
+            }
         }
+    }
+}
+
+.bl_articleCard_thumbnail {
+    overflow: hidden;
+
+    >img {
+        aspect-ratio: 1.773 / 1;
+        object-fit: cover;
+        transition: transform .3s ease-in-out;
     }
 }
 

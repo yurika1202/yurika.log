@@ -312,6 +312,23 @@ a {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
+.bl_articleCard a:focus .bl_articleCard_thumbnail > img, .bl_articleCard a:hover .bl_articleCard_thumbnail > img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.bl_articleCard_thumbnail {
+  overflow: hidden;
+}
+.bl_articleCard_thumbnail > img {
+  aspect-ratio: 1.773/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
 
 .bl_articleCard_contents {
   padding: 20px 8px;
