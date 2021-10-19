@@ -251,3 +251,54 @@
         opacity: .7;
     }
 }
+
+.el_btn_copy {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: g.$cAccent;
+    position: relative;
+    transition: transform .3s ease-in-out;
+
+    &::before {
+        content: "\f0c5";
+        display: inline-block;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 15px;
+        color: g.$cText_wh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    &::after {
+        content: "コピーしました";
+        width: max-content;
+        font-size: g.rem(10px);
+        color: g.$cText_wh;
+        background: g.$cAccent;
+        border-radius: 10px;
+        padding: .1em 1em;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    &.is_copied {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+
+    &:focus, &:hover {
+        transform: scale(1.1);
+    }
+}

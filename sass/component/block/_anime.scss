@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@use "../../global" as g;
+
+/* anime
+----------------------------------------- */
+.bl_anime {
+    opacity: 0;
+
+    &__in {
+        &.is_scrollIn {
+            animation: fadeIn .3s forwards ease-in;
+        }
+    }
+
+    &__up {
+        &.is_scrollIn {
+            animation: fadeInUp .5s forwards ease-in-out;
+        }
+    }
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+        opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+        opacity: 0;
+        transform: translateY(30px);
+        transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -13,7 +13,7 @@
         ?>
     </div><!-- /.bl_toc -->
 
-    <div class="bl_2colUnit__main">
+    <div class="bl_2colUnit__main bl_anime bl_anime__up js_anime">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
 
@@ -81,7 +81,7 @@
                                     </li><!-- /.bl_share_item -->
 
                                     <li class="bl_share_item bl_share_item__copy js_copy">
-                                        <button><i class="fas fa-copy bl_share_copy"></i></button>
+                                        <button type="button"><i class="fas fa-copy bl_share_copy"></i></button>
                                     </li><!-- /.bl_share_item -->
                                 </ul><!-- /.bl_share__list -->
                             </div><!-- /.bl_shareWrap -->
@@ -98,7 +98,7 @@
 
 </main>
 
-<div class="bl_related_wrap bl_common_blockWrap">
+<div class="bl_related_wrap bl_common_blockWrap bl_anime bl_anime__up js_anime">
     <p class="bl_related_title">関連記事</p>
 
     <div class="bl_3colUnit hp_mt30">

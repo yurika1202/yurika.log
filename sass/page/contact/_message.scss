@@ -23,6 +23,8 @@
 
 .bl_worksTemp_wrap {
     margin-top: 20px;
+    padding-top: 20px;
+    position: relative;
 }
 
 .bl_worksTemp_list {
@@ -32,6 +34,17 @@
 .bl_worksTemp_item {
     list-style-type: decimal;
     list-style-position: outside;
+}
+
+.bl_worksTemp_copyBtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    >input {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .bl_contactMessage_schedule {

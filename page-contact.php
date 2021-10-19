@@ -3,13 +3,18 @@
 <main class="ly_main js_drawerFixed">
 
     <!-- message -->
-    <div class="bl_contactMessage">
+    <div class="bl_contactMessage bl_anime bl_anime__up js_anime">
         <p class="bl_contactMessage_title"><span>ご意見・ご感想・お仕事のご依頼など</span><span>お気軽にお問合せください！</span></p>
 
         <div class="bl_contactMessage_works bl_common_blockWrap hp_mt50">
             <p class="bl_contactMessage_text">制作依頼の場合、こちらの内容のご記入をお願いいたします。</p>
 
             <div class="bl_worksTemp_wrap">
+                <div class="bl_worksTemp_copyBtn">
+                    <input type="text" id="js_copy" value="1.依頼内容/2.納期やご予算/3.ポートフォリオなどに実績としての掲載の可否" readonly>
+                    <button type="button" class="el_btn_copy" id="js_copyBtn" onclick="copy()"></button>
+                </div><!-- /.bl_worksTemp_copyBtn -->
+
                 <ol class="bl_worksTemp_list">
                     <li class="bl_worksTemp_item">依頼内容</li>
                     <li class="bl_worksTemp_item">納期やご予算</li>
@@ -29,7 +34,7 @@
     </div><!-- /.bl_contactMessage -->
 
     <!-- form -->
-    <div class="bl_formWrap hp_mt50">
+    <div class="bl_formWrap hp_mt50 bl_anime bl_anime__up js_anime">
 
         <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="bl_form" id="js_form">
 

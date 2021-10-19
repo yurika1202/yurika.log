@@ -1123,6 +1123,65 @@ a {
   margin-top: 10px;
 }
 
+/* anime
+----------------------------------------- */
+.bl_anime {
+  opacity: 0;
+}
+.bl_anime__in.is_scrollIn {
+  -webkit-animation: fadeIn 0.3s forwards ease-in;
+          animation: fadeIn 0.3s forwards ease-in;
+}
+.bl_anime__up.is_scrollIn {
+  -webkit-animation: fadeInUp 0.5s forwards ease-in-out;
+          animation: fadeInUp 0.5s forwards ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 /* tag
 ----------------------------------------- */
 .el_tag {
@@ -1415,6 +1474,58 @@ a {
   opacity: 0.7;
 }
 
+.el_btn_copy {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #CABFB9;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.el_btn_copy::before {
+  content: "";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.el_btn_copy::after {
+  content: "コピーしました";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.625rem;
+  color: #fff;
+  background: #CABFB9;
+  border-radius: 10px;
+  padding: 0.1em 1em;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.el_btn_copy.is_copied::after {
+  opacity: 1;
+}
+.el_btn_copy:focus, .el_btn_copy:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /* copy
 ----------------------------------------- */
 .el_copy {
@@ -1647,6 +1758,8 @@ a {
 
 .bl_worksTemp_wrap {
   margin-top: 20px;
+  padding-top: 20px;
+  position: relative;
 }
 
 .bl_worksTemp_list {
@@ -1656,6 +1769,16 @@ a {
 .bl_worksTemp_item {
   list-style-type: decimal;
   list-style-position: outside;
+}
+
+.bl_worksTemp_copyBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.bl_worksTemp_copyBtn > input {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .bl_contactMessage_schedule summary {
@@ -1717,15 +1840,6 @@ details[open] summary::after {
 details[open] .bl_contactMessage_schedule_wrap {
   -webkit-animation: fadeIn 0.5s ease;
           animation: fadeIn 0.5s ease;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeIn {

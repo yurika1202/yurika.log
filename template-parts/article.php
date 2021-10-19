@@ -1,4 +1,4 @@
-<div class="bl_article_wrap">
+<div class="bl_article_wrap  bl_anime bl_anime__up js_anime">
     <div class="bl_article bl_common_blockWrap bl_2colUnit_leftItem__main">
 
         <div class="bl_2colUnit__card">

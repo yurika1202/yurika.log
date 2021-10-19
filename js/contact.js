@@ -1,3 +1,18 @@
+/* コピー
+--------------------------------- */
+function copy() {
+    const text = document.getElementById('js_copy');
+    const clipboard = text.value;
+    navigator.clipboard.writeText(clipboard);
+
+    const copyBtn = document.getElementById('js_copyBtn');
+    copyBtn.classList.add('is_copied');
+    setTimeout(() => {
+        copyBtn.classList.remove('is_copied');
+    }, 2000)
+}
+
+
 /* 送信ボタンの有効無効の切り替え
 --------------------------------- */
 (function disabled() {

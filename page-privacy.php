@@ -2,7 +2,7 @@
 
 <main class="ly_main js_drawerFixed">
 
-    <div class="bl_privacy bl_common_blockWrap">
+    <div class="bl_privacy bl_common_blockWrap bl_anime bl_anime__up js_anime">
         <div class="bl_privacy_titleWrap">
             <h1 class="bl_privacy_title">Privacy Policy</h1>
             <p class="bl_privacy_title__ruby">プライバシーポリシー</p>

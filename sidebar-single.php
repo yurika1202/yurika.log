@@ -1,4 +1,4 @@
-<aside class="bl_aside_wrap bl_2colUnit_rightItem__main">
+<aside class="bl_aside_wrap bl_2colUnit_rightItem__main  bl_anime bl_anime__up js_anime">
     <?php get_template_part('template-parts/widget/profile-widget'); ?>
 
     <div class="bl_2colUnit__widget">

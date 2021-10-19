@@ -31,6 +31,7 @@ function my_script_init()
   wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
   wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), $timestamp, 'all');
   wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), $timestamp, true);
+  wp_enqueue_script('anime', get_stylesheet_directory_uri() . '/js/animation.js', array(), $timestamp, true);
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
 
@@ -114,7 +115,7 @@ add_filter('category_template', 'my_category_template');
 function breadcrumb()
 {
   $home = '<li class="bl_breadcrumb_item bl_breadcrumb_item__home"><a href="' . esc_url(home_url('/')) . '">ホーム</a></li><!-- /.bl_breadcrumb_item -->';
-  echo '<nav class="bl_breadcrumb">';
+  echo '<nav class="bl_breadcrumb bl_anime bl_anime__in js_anime">';
 
   if (is_single()) {
     $cat = get_the_category();
