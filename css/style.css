@@ -303,6 +303,8 @@ a {
 }
 
 .bl_articleCard a {
+  display: block;
+  word-wrap: break-word;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -452,6 +454,22 @@ a {
 }
 .bl_pagination li .next i {
   padding: 8px 0 0 6px;
+}
+.bl_pagination li .dots {
+  font-size: 0;
+  position: relative;
+}
+.bl_pagination li .dots::before {
+  content: "";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 36px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* widget category
@@ -1011,10 +1029,10 @@ a {
   border-right: 1px solid #333;
   border-bottom: 1px solid #333;
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 2px;
-  -webkit-transform: translateY(-50%) rotate(-45deg);
-          transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .bl_breadcrumb_item a {
   display: inline;
@@ -2207,6 +2225,25 @@ details[open] .bl_contactMessage_schedule_wrap {
   background: #F6F4F3;
   border: 1px solid #AD9F9A;
   border-radius: 5px;
+}
+.bl_entry_body figure, .bl_entry_body img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.bl_entry_body figcaption {
+  margin-top: 5px;
+  font-size: 0.75rem;
+}
+.bl_entry_body iframe {
+  width: 100%;
+}
+.bl_entry_body a > img {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.bl_entry_body a:focus > img, .bl_entry_body a:hover > img {
+  opacity: 0.7;
 }
 
 .bl_entry_infoWrap {

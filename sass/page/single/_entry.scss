@@ -163,6 +163,33 @@
             border-radius: 5px;
         }
     }
+
+    figure, img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        margin-top: 5px;
+        font-size: g.rem(12px);
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    a {
+        >img {
+            transition: opacity .3s ease;
+        }
+
+        &:focus, &:hover {
+            >img {
+                opacity: .7;
+            }
+        }
+    }
 }
 
 .bl_entry_infoWrap {

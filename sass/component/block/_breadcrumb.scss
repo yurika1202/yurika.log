@@ -36,9 +36,9 @@
             border-right: 1px solid g.$cText_bk;
             border-bottom: 1px solid g.$cText_bk;
             position: absolute;
-            top: 50%;
+            top: 5px;
             left: 2px;
-            transform: translateY(-50%) rotate(-45deg);
+            transform: rotate(-45deg);
         }
     }
 

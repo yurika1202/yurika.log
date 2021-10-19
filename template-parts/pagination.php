@@ -3,14 +3,12 @@
 
     <div class="bl_pagination hp_mt50">
         <?php
-        echo paginate_links(array(
-            'end_size' => 1,
-            'mid_size' => 1,
-            'total' => 3,
+        the_posts_pagination(array(
+            'mid_size' => 2,
             'prev_next' => true,
             'prev_text' => '<i class="fas fa-caret-left"></i>',
             'next_text' => '<i class="fas fa-caret-right"></i>',
-            'type' => 'list',
+            'type' => 'list'
         ));
         ?>
     </div><!-- /.bl_pagination -->
