@@ -10,7 +10,7 @@
         </div><!-- /.bl_profile_contents -->
 
         <div class="bl_profile_link">
-            <a href="<?php echo esc_url(home_url('/works')); ?>" class="el_btn el_btn__profileLink">Portfolio</a>
+            <a href="<?php echo esc_url(home_url('/portfolio')); ?>" class="el_btn el_btn__profileLink">Portfolio</a>
 
             <ul class="bl_profile_snsList">
                 <li class="bl_profile_snsItem">

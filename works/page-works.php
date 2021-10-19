@@ -17,12 +17,12 @@
                 <div class="profile-title">
                     <div class="profile-name">
                         <h4 class="name profile-name_en">YURIKA</h4>
-                        <h4 class="name">コーダー</h4>    
+                        <h4 class="name">コーダー</h4>
                     </div><!-- /.profile-name -->
                     <div class="profile-link">
                         <p><a href="<?php echo home_url('/'); ?>" class="blog"><i class="far fa-file-alt"></i></a></p>
                         <p><a href="https://twitter.com/bnku212" class="twitter"><i class="fab fa-twitter"></i></a></p>
-                        <p><a href="" class="github"><i class="fab fa-github"></i></a></p>    
+                        <p><a href="" class="github"><i class="fab fa-github"></i></a></p>
                     </div><!-- /.profile-link -->
                 </div><!-- /.profile-title -->
 
@@ -34,7 +34,7 @@
                         <li class="about-skill_icon"><img src="<?php echo get_template_directory_uri() ?>./img/jquery-logo.png" alt="jQueryのアイコン"></li><!-- /.about-skill_icon -->
                         <li><i class="fab fa-sass"></i></li>
                         <li><i class="fab fa-wordpress"></i></li>
-                    </ul><!-- /.about-skill -->    
+                    </ul><!-- /.about-skill -->
                 </div><!-- /.profile-text -->
 
             </div><!-- /.profile-content -->
@@ -45,7 +45,7 @@
     <!-- service -->
     <section class="service portfolio-section" id="service">
         <h3 class="section-title">SERVICE<span class="section-title_ruby">できること</span></h3>
-        
+
         <div class="portfolio-container">
 
             <ul class="service-item">
@@ -56,12 +56,12 @@
                     <div class="service-item_text">
                         <h4 class="service-item_title">コーディング</h4>
                         <p class="service-item_message">CSS設計の知識を元に、だれが見ても読みやすく、育てやすいコードを書くことを心がけています。</p>
-                        
+
                         <p><a href="" class="btn modal-btn js_modal-open">コーディングポリシー</a></p>
-                        
+
                     </div><!-- /.service-item_text -->
                 </li><!-- /.service-item_coding -->
-    
+
                 <li class="_cms">
                     <div class="service-item_icon">
                         <i class="fas fa-cogs"></i>
@@ -71,17 +71,17 @@
                         <p class="service-item_message">WordPressを中心に、CMS導入も可能です。ご希望のCMSをお伝えください。</p>
                     </div><!-- /.service-item_text -->
                 </li><!-- /.service-item -->
-    
+
                 <li class="_seo">
                     <div class="service-item_icon">
-                        <i class="fas fa-chart-line"></i> 
+                        <i class="fas fa-chart-line"></i>
                     </div><!-- /.service-item_icon -->
                     <div class="service-item_text">
                         <h4 class="service-item_title">SEO対策</h4>
                         <p class="service-item_message">より多くのユーザーに見てもらえるよう、SEO対策もいたします。</p>
                     </div><!-- /.service-item_text -->
                 </li><!-- /.service-item -->
-    
+
                 <li class="_maintenance">
                     <div class="service-item_icon">
                         <i class="fas fa-hand-holding-heart"></i>
@@ -91,7 +91,7 @@
                         <p class="service-item_message">お客様自身での運営がしやすいよう制作いたしますが、時間に制限のある方やPCが苦手な方など、ご希望の方には保守・運営もいたします。</p>
                     </div><!-- /.service-item_text -->
                 </li><!-- /.service-item -->
-    
+
             </ul><!-- /.service-item -->
         </div><!-- /.service-container -->
 
@@ -103,7 +103,7 @@
 
         <div class="js_modal modal">
             <div class="modal-bg js_modal-close"></div>
-            
+
             <div class="modal-content">
 
                 <div class="policy-title">
@@ -141,9 +141,9 @@
                     </ul><!-- /.policy-item -->
                 </div><!-- /.policy-wrapper -->
             </div><!-- /.modal-content -->
-            <a class="js-modal-close btn modal-btn_close" href=""></a>                      
+            <a class="js-modal-close btn modal-btn_close" href=""></a>
         </div>
-    
+
     </section><!-- /.service -->
 
     <!-- works -->
@@ -160,11 +160,11 @@
                 );
                 $work_query = new WP_Query( $args );
 
-                if ($work_query->have_posts()): 
-                while ($work_query->have_posts()): 
-                $work_query->the_post(); 
+                if ($work_query->have_posts()):
+                while ($work_query->have_posts()):
+                $work_query->the_post();
             ?>
-    
+
             <li class="works-card_item">
                 <a href="<?php the_permalink(); ?>" class="card-wrapper">
                         <div class="card-thumbnail">
@@ -178,7 +178,7 @@
                         </div>
                     <div class="card-text">
                         <h4 class="works-card_title"><?php the_title(); ?></h4>
-                        <?php 
+                        <?php
                             $terms = get_the_terms($post->ID, 'area');
                             if (!empty($terms)):
                         ?>
@@ -191,7 +191,7 @@
                         </ul><!-- /.works-info_area -->
                         <?php endif; ?>
                     </div><!-- /.card-text -->
-                </a>  
+                </a>
             </li>
 
             <?php endwhile; ?>
@@ -225,7 +225,7 @@
                     </div><!-- /.schedule-wrapper -->
                 </details><!-- /.schedule-container -->
             </div><!-- /.contact-message -->
-        
+
             <!-- form -->
             <div class="contact-content contact-inner">
                 <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="contact-form" id="js-form">
@@ -242,7 +242,7 @@
                             </div>
                         </dd><!-- /.name-wrapper -->
                     </div><!-- /.form-item -->
-            
+
                     <div class="form-item">
                         <dt class="contact-label"><label for="ruby">フリガナ</label></dt>
                         <dd class="name-wrapper">
@@ -256,7 +256,7 @@
                             </div>
                         </dd><!-- /.name-wrapper -->
                     </div><!-- /.form-item -->
-            
+
                     <div class="form-item">
                         <dt class="contact-label"><label for="mail" class="is_must">ご連絡先</label></dt>
                         <dd class="contact-input">
@@ -264,7 +264,7 @@
                             <p class="input-ex">例：info@sample.com</p><!-- /.input-ex -->
                         </dd>
                     </div><!-- /.form-item -->
-            
+
                     <div class="form-item">
                         <dt class="contact-label"><label for="type" class="is_must">お問合せ種別</label></dt>
                         <dd class="contact-select _radio">
@@ -288,14 +288,14 @@
                             </div>
                         </dd>
                     </div><!-- /.form-item -->
-            
+
                     <div class="form-item">
                         <dt class="contact-label _textarea"><label for="text" class="is_must _textarea">お問合せ内容</label></dt>
                         <dd class="contact-input-text">
                             <textarea name="entry.17644278" id="text" required></textarea>
                         </dd>
                     </div><!-- /.form-item -->
-            
+
                     <div class="form-item_check">
                         <div class="privacy-text">
                             <h4 class="privacy-title">プライバシーポリシー</h4>
@@ -318,16 +318,16 @@
                         <div class="privacy-check">
                             <label for="privacy" class="privacy-label">
                                 <input type="checkbox" name="entry.621122530" id="privacy" value="プライバシーポリシーの同意" required>
-                                <span class="check-item-parts"></span>プライバシーポリシーの内容を確認し同意します                    
-                            </label>    
+                                <span class="check-item-parts"></span>プライバシーポリシーの内容を確認し同意します
+                            </label>
                         </div><!-- /.privacy-check -->
                     </div>
-            
+
                     <div class="form-item_btn">
                         <button type="submit" id="js-submit" disabled>送信</button>
                     </div>
                 </form><!-- /.contact-form -->
-            
+
                 <!-- form-message -->
                 <div id="js-success" class="send-message inner">
                     <p class="send-message_title">お問い合わせありがとうございます。</p>
@@ -339,7 +339,7 @@
                     <p class="send-message_text">ページを更新して再度送信してください。</p>
                     <p class="to-home"><a href="index.html"><i class="fas fa-home"></i></a></p>
                 </div>
-            
+
             </div><!-- /.contact-content contact-inner -->
         </div><!-- /.portfolio-container -->
     </section><!-- /.contact -->
