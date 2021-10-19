@@ -196,6 +196,8 @@
 }
 
 .bl_form_selectParts {
+    cursor: pointer;
+
     &::before {
         content: "";
         width: 25px;
@@ -272,6 +274,8 @@
 }
 
 .bl_form_checkParts {
+    cursor: pointer;
+
     &::before {
         content: "";
         width: 25px;

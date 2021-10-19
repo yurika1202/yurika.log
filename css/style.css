@@ -2057,6 +2057,9 @@ details[open] .bl_contactMessage_schedule_wrap {
           box-shadow: 0px 0px 5px 0px #AD9F9A;
 }
 
+.bl_form_selectParts {
+  cursor: pointer;
+}
 .bl_form_selectParts::before {
   content: "";
   width: 25px;
@@ -2133,6 +2136,9 @@ details[open] .bl_contactMessage_schedule_wrap {
   }
 }
 
+.bl_form_checkParts {
+  cursor: pointer;
+}
 .bl_form_checkParts::before {
   content: "";
   width: 25px;
