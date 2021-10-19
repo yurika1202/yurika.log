@@ -35,14 +35,14 @@
         <nav class="bl_header_openNav" id="js_drawerContents">
             <div class="bl_header_navInner">
                 <div class="bl_header_navLink hp_mt40">
-                    <a href="<?php echo esc_url(home_url('/page-contact/')) ?>" class="el_btn el_btn_icon el_btn_icon__headerNav">Contact</a>
+                    <a href="<?php echo esc_url(home_url('/contact/')) ?>" class="el_btn el_btn_icon el_btn_icon__headerNav">Contact</a>
                 </div><!-- /.bl_header_navLink -->
 
-                <div class="bl_search bl_common_blockWrap hp_mt40 hp_display__widget">
+                <div class="bl_search bl_common_blockWrap hp_mt40">
                     <?php get_template_part('template-parts/widget/search-widget'); ?>
                 </div><!-- /.bl_search -->
 
-                <div class="bl_category bl_common_blockWrap hp_mt40 hp_display__widget">
+                <div class="bl_category bl_common_blockWrap hp_mt40">
                     <?php get_template_part('template-parts/widget/category-widget'); ?>
                 </div><!-- /.bl_category -->
             </div><!-- /.bl_header_navInner -->
