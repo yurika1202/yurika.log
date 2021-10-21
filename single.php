@@ -58,8 +58,10 @@
                             <div class="bl_entry_tagWrap">
                                 <?php
                                 $tags = get_the_tags();
-                                foreach ($tags as $tag) {
-                                    echo '<a class="el_tag__entry" href="' . esc_url(get_category_link(($tag->term_id))) . '">' . $tag->name . '</a>';
+                                if($tags > 0) {
+                                    foreach ($tags as $tag) {
+                                        echo '<a class="el_tag__entry" href="' . esc_url(get_category_link(($tag->term_id))) . '">' . $tag->name . '</a>';
+                                    }
                                 }
                                 ?>
                             </div><!-- /.bl_entry_tagWrap -->

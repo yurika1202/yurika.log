@@ -14,6 +14,10 @@
 .bl_entry {
     padding: 40px 10px 45px;
 
+    img {
+        border-radius: 10px;
+    }
+
     @include g.mq(sm) {
         padding: 40px 5% 80px;
     }
@@ -71,7 +75,15 @@
     width: 100%;
     overflow-wrap: break-word;
 
-    > p, figure, ul, ol, .code-toolbar {
+    >p, figure, h4, .code-toolbar {
+        margin-top: 30px;
+
+        ul, ol {
+            margin-top: 0;
+        }
+    }
+
+    >ul, ol {
         margin-top: 10px;
 
         ul, ol {
@@ -79,8 +91,8 @@
         }
     }
 
-    > h2, h3 {
-        margin-top: 30px;
+    >h2, h3 {
+        margin-top: 50px;
     }
 
     h2 {
@@ -109,6 +121,24 @@
             content: "";
             width: 3px;
             height: 100%;
+            background: g.$cSober;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    h4 {
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 2px;
             background: g.$cSober;
             position: absolute;
             top: 50%;
