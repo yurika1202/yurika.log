@@ -29,7 +29,7 @@ function my_script_init()
   wp_enqueue_script('base', get_stylesheet_directory_uri() . '/js/script.js', array(), $timestamp, true);
   wp_enqueue_style('prism', get_stylesheet_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
   wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
-  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), $timestamp, 'all');
+  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.min.css', array(), $timestamp, 'all');
   wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), $timestamp, true);
   wp_enqueue_script('anime', get_stylesheet_directory_uri() . '/js/animation.js', array(), $timestamp, true);
   wp_deregister_script('jquery');
