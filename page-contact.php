@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="ly_main js_drawerFixed">
+<main class="ly_main js_drawerFixed hp_anime">
 
     <!-- message -->
     <div class="bl_contactMessage bl_anime bl_anime__up js_anime">

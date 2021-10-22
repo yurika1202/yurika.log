@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/* anime
+----------------------------------------- */
+.hp_anime {
+    perspective: 1000px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}

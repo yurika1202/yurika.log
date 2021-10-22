@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="hp_anime">
 
 <head>
     <meta charset="utf-8">
@@ -14,11 +14,11 @@
 
 </head>
 
-<body id="js_fixed">
+<body id="js_fixed" class="hp_anime">
 
     <!-- header -->
-    <header class="ly_header">
-        <div class="bl_header_inner">
+    <header class="ly_header hp_anime">
+        <div class="bl_header_inner hp_anime">
             <h1 class="bl_header_logo">
                 <a href="<?php echo esc_url(home_url()); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo/logo.svg" alt="Yurika.logのロゴ">

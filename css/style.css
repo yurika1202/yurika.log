@@ -114,6 +114,65 @@ a {
   color: #333;
 }
 
+/* anime
+----------------------------------------- */
+.bl_anime {
+  opacity: 0;
+}
+.bl_anime__in.is_scrollIn {
+  -webkit-animation: fadeIn 0.3s forwards ease-in;
+          animation: fadeIn 0.3s forwards ease-in;
+}
+.bl_anime__up.is_scrollIn {
+  -webkit-animation: fadeInUp 0.5s forwards ease-in-out;
+          animation: fadeInUp 0.5s forwards ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 /* header
 ----------------------------------------- */
 .ly_header {
@@ -1136,65 +1195,6 @@ a {
   margin-top: 10px;
 }
 
-/* anime
------------------------------------------ */
-.bl_anime {
-  opacity: 0;
-}
-.bl_anime__in.is_scrollIn {
-  -webkit-animation: fadeIn 0.3s forwards ease-in;
-          animation: fadeIn 0.3s forwards ease-in;
-}
-.bl_anime__up.is_scrollIn {
-  -webkit-animation: fadeInUp 0.5s forwards ease-in-out;
-          animation: fadeInUp 0.5s forwards ease-in-out;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    -webkit-transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-            transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 /* tag
 ----------------------------------------- */
 .el_tag {
@@ -2634,5 +2634,14 @@ details[open] .bl_contactMessage_schedule_wrap {
   .hp_br__sp {
     display: none;
   }
+}
+
+/* anime
+----------------------------------------- */
+.hp_anime {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

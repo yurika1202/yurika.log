@@ -1,5 +1,5 @@
 <!-- footer -->
-<footer class="ly_footer js_drawerFixed">
+<footer class="ly_footer js_drawerFixed hp_anime">
     <nav class="bl_footerNav">
         <a href="<?php echo esc_url(home_url('/privacy')); ?>" class="el_btn_footerNav">プライバシーポリシー</a>
     </nav><!-- /.bl_footerNav -->

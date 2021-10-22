@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="ly_main ly_main__single js_drawerFixed">
+<main class="ly_main ly_main__single js_drawerFixed hp_anime">
     <?php breadcrumb(); ?>
 
     <button class="el_btn el_btn_toc" id="js_tocBtn"><span class="el_btn_toc__open">もくじ</span><span class="el_btn_toc__close"></span></button><!-- /.bl_header_tocBtn -->

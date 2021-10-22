@@ -25,13 +25,13 @@ function my_script_init()
   $timestamp = date('YmdHi');
   wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Raleway&display=swap', array(), NULL, 'all');
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/df603b5721.js', array(), NULL, false);
-  wp_enqueue_style('base', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $timestamp, 'all');
-  wp_enqueue_script('base', get_stylesheet_directory_uri() . '/js/script.js', array(), $timestamp, true);
-  wp_enqueue_style('prism', get_stylesheet_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
-  wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
-  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.min.css', array(), $timestamp, 'all');
-  wp_enqueue_script('contact', get_stylesheet_directory_uri() . '/js/contact.js', array('jquery'), $timestamp, true);
-  wp_enqueue_script('anime', get_stylesheet_directory_uri() . '/js/animation.js', array(), $timestamp, true);
+  wp_enqueue_style('base', get_template_directory_uri() . '/css/style.min.css', array(), 2.0, 'all');
+  wp_enqueue_script('base', get_template_directory_uri() . '/js/script.js', array(), 2.0, true);
+  wp_enqueue_style('prism', get_template_directory_uri() . '/css/plugins/prism.css', array(), NULL, 'all');
+  wp_enqueue_script('prism', get_template_directory_uri() . '/js/plugins/prism.js', array(), NULL, true);
+  wp_enqueue_style('block', get_template_directory_uri() . '/css/editor-style.min.css', array(), 2.0, 'all');
+  wp_enqueue_script('contact', get_template_directory_uri() . '/js/contact.js', array('jquery'), NULL, true);
+  wp_enqueue_script('anime', get_template_directory_uri() . '/js/animation.js', array(), NULL, true);
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
 
@@ -63,12 +63,12 @@ add_action('wp_head', 'my_favicon');
 function my_editor_style()
 {
   $timestamp = date('YmdHi');
-  wp_enqueue_style('block', get_stylesheet_directory_uri() . '/css/editor-style.css', array(), $timestamp, 'all');
-  wp_enqueue_script('block', get_stylesheet_directory_uri() . '/js/editor.js', array(
+  wp_enqueue_style('block', get_template_directory_uri() . '/css/editor-style.css', array(), 1.0, 'all');
+  wp_enqueue_script('block', get_template_directory_uri() . '/js/editor.js', array(
     'wp-element',
     'wp-rich-text',
     'wp-editor',
-  ), $timestamp, true);
+  ), NULL, true);
 }
 add_action('enqueue_block_editor_assets', 'my_editor_style');
 

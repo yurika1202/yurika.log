@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="ly_main js_drawerFixed">
+<main class="ly_main js_drawerFixed hp_anime">
 
     <div class="bl_privacy bl_common_blockWrap bl_anime bl_anime__up js_anime">
         <div class="bl_privacy_titleWrap">
