@@ -84,6 +84,10 @@ function my_widget_init()
     'name' => '目次',
     'id' => 'toc'
   ));
+  register_sidebar(array(
+    'name' => 'カテゴリー',
+    'id' => 'cat'
+  ));
 }
 add_action('widgets_init', 'my_widget_init');
 

@@ -15,49 +15,51 @@
 
 .bl_category_list {
     margin-top: 20px;
+}
 
-    > * + * {
+.menu-item {
+    &:not(:first-of-type) {
         margin-top: 10px;
-    }
-
-    &__child {
-        margin-left: 30px;
     }
 }
 
-.bl_category_item__child {
-    padding-left: 20px;
-    line-height: 2;
-    position: relative;
+.sub-menu {
+    margin-left: 30px;
 
-    &::before {
-        content: "";
-        width: 13px;
-        height: 2px;
-        background: g.$cSober;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
+    >li {
+        padding-left: 20px;
+        line-height: 2;
+        position: relative;
 
-    &::after {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background: g.$cSober;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+        &::before {
+            content: "";
+            width: 13px;
+            height: 2px;
+            background: g.$cSober;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
 
-    &:first-of-type {
-        margin-top: 5px;
-    }
-
-    &:last-of-type {
         &::after {
-            height: 50%;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: g.$cSober;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:first-of-type {
+            margin-top: 5px;
+        }
+
+        &:last-of-type {
+            &::after {
+                height: 50%;
+            }
         }
     }
 }
