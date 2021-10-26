@@ -2279,16 +2279,10 @@ details[open] .bl_contactMessage_schedule_wrap {
   width: 100%;
   overflow-wrap: break-word;
 }
-.bl_entry_body > p, .bl_entry_body figure, .bl_entry_body h4, .bl_entry_body .code-toolbar {
+.bl_entry_body > p, .bl_entry_body figure, .bl_entry_body h4, .bl_entry_body ul, .bl_entry_body ol, .bl_entry_body .code-toolbar {
   margin-top: 30px;
 }
-.bl_entry_body > p ul, .bl_entry_body > p ol, .bl_entry_body figure ul, .bl_entry_body figure ol, .bl_entry_body h4 ul, .bl_entry_body h4 ol, .bl_entry_body .code-toolbar ul, .bl_entry_body .code-toolbar ol {
-  margin-top: 0;
-}
-.bl_entry_body > ul, .bl_entry_body ol {
-  margin-top: 10px;
-}
-.bl_entry_body > ul ul, .bl_entry_body > ul ol, .bl_entry_body ol ul, .bl_entry_body ol ol {
+.bl_entry_body > p ul, .bl_entry_body > p ol, .bl_entry_body figure ul, .bl_entry_body figure ol, .bl_entry_body h4 ul, .bl_entry_body h4 ol, .bl_entry_body ul ul, .bl_entry_body ul ol, .bl_entry_body ol ul, .bl_entry_body ol ol, .bl_entry_body .code-toolbar ul, .bl_entry_body .code-toolbar ol {
   margin-top: 0;
 }
 .bl_entry_body > h2, .bl_entry_body h3 {
@@ -2379,7 +2373,7 @@ details[open] .bl_contactMessage_schedule_wrap {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
-.bl_entry_body p code {
+.bl_entry_body p > code, .bl_entry_body li > code {
   font-family: "Source Code Pro", monospace;
   padding: 3px 5px;
   background: #F6F4F3;

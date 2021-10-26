@@ -71,15 +71,15 @@
 
                                 <ul class="bl_share_list">
                                     <li class="bl_share_item">
-                                        <a href="https://twitter.com/share?url=https://example.com/archive/123/&text=記事のタイトルが入ります" class="bl_share_twitter" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://twitter.com/share?url=<?php echo get_the_permalink();?>&text=<?php echo get_the_title();?>" target="_blank" rel="nofollow noopener" class="bl_share_twitter"><i class="fab fa-twitter"></i></a>
                                     </li><!-- /.bl_share_item -->
 
                                     <li class="bl_share_item">
-                                        <a href="https://www.facebook.com/share.php?u=https://example.com/archive/123/" class="bl_share_facebook" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
+                                        <a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener" class="bl_share_facebook"><i class="fab fa-facebook"></i></a>
                                     </li><!-- /.bl_share_item -->
 
                                     <li class="bl_share_item">
-                                        <a href="https://social-plugins.line.me/lineit/share?url=https://example.com/archive/123/" class="bl_share_line" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a>
+                                        <a href="https://social-plugins.line.me/lineit/share?url=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener" class="bl_share_line"><i class="fab fa-line"></i></a>
                                     </li><!-- /.bl_share_item -->
 
                                     <li class="bl_share_item bl_share_item__copy js_copy">

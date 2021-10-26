@@ -5,10 +5,10 @@
 ----------------------------------------- */
 /* リスト */
 .is-style-ul_default {
-    >li {
+    > li {
         padding-left: 10px;
         position: relative;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
 
         &::before {
             content: "";
@@ -21,9 +21,14 @@
             left: 0;
         }
 
+        &:not(:first-of-type) {
+            margin-top: 5px;
+        }
+
         a {
-            &:focus, &:hover {
-                opacity: .7;
+            &:focus,
+            &:hover {
+                opacity: 0.7;
             }
         }
 
@@ -40,10 +45,10 @@
 .is-style-ol_default {
     counter-reset: count 0;
 
-    >li {
+    > li {
         padding-left: 25px;
         position: relative;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
 
         &::before {
             content: "";
@@ -65,8 +70,9 @@
         }
 
         a {
-            &:focus, &:hover {
-                opacity: .7;
+            &:focus,
+            &:hover {
+                opacity: 0.7;
             }
         }
     }
@@ -84,7 +90,7 @@
 .is-style-blockquote_default {
     width: 100%;
     max-width: 600px;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     padding: 30px 15px 10px;
     border-radius: 10px;
     font-style: italic;
@@ -109,7 +115,7 @@
         left: 9px;
     }
 
-    &::after{
+    &::after {
         content: "";
         border: none;
         border-bottom: solid 8px g.$cSober;
@@ -119,7 +125,7 @@
         left: 49px;
     }
 
-    >cite {
+    > cite {
         display: block;
         margin-top: 5px;
         text-align: right;
@@ -127,17 +133,18 @@
         font-style: italic;
         line-height: 2;
 
-        >a {
+        > a {
             font-size: 10px;
             font-style: italic;
             line-height: 2;
             padding: 0 5px;
             position: relative;
             z-index: 0;
-            transition: opacity .3s ease;
+            transition: opacity 0.3s ease;
 
-            &:focus, &:hover {
-                opacity: .7;
+            &:focus,
+            &:hover {
+                opacity: 0.7;
             }
         }
     }
@@ -149,7 +156,7 @@
     flex-direction: column;
     margin-top: 10px;
 
-    >a {
+    > a {
         font-weight: 600;
 
         &:not(:last-of-type) {
@@ -185,9 +192,10 @@
         border-radius: 10px;
         color: g.$cText_wh;
         cursor: pointer;
-        transition: transform .3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             transform: translateY(-3px);
         }
     }
@@ -199,9 +207,10 @@
     a {
         background: g.$cBg_contents;
         color: g.$cText_br;
-        transition: transform .3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             color: g.$cText_br;
             transform: translateY(-3px);
         }
@@ -221,7 +230,7 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 
     &::before {
         content: "";
@@ -243,14 +252,15 @@
         top: 50%;
         right: 24px;
         transform: translateY(-50%);
-        transition: transform .3s ease;
+        transition: transform 0.3s ease;
     }
 
-    >p {
+    > p {
         margin-top: 0;
     }
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
         background: g.$cMain;
     }
 
@@ -266,9 +276,10 @@
     height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
-    > p, img {
+    > p,
+    img {
         margin-top: 10px;
     }
 
@@ -304,7 +315,7 @@
 .style_balloons_img {
     width: 60px;
 
-    >img {
+    > img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -312,7 +323,7 @@
         object-fit: cover;
     }
 
-    >figcaption {
+    > figcaption {
         margin-top: 5px;
         font-size: 12px;
         text-align: center;
@@ -386,7 +397,7 @@
             }
         }
 
-        >ul>li {
+        > ul > li {
             font-size: g.rem(14px);
         }
     }
@@ -399,15 +410,16 @@
     border: 1px solid g.$cSober;
     position: relative;
 
-    >a {
+    > a {
         width: inherit;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             .style_relatedBlock_contents {
-                opacity: .7;
+                opacity: 0.7;
             }
 
-            .style_relatedBlock_thumbnail>img {
+            .style_relatedBlock_thumbnail > img {
                 transform: scale(1.1);
             }
         }
@@ -455,19 +467,19 @@
     flex: 1;
     overflow: hidden;
 
-    >img {
-        transition: transform .3s ease-in-out;
+    > img {
+        transition: transform 0.3s ease-in-out;
     }
 
     @include g.mq(sm) {
-        flex: .6;
+        flex: 0.6;
     }
 }
 
 .style_relatedBlock_contents {
     flex: 2.5;
     margin-left: 10px;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 
     @include g.mq(sm) {
         margin-left: 20px;
@@ -495,7 +507,7 @@
 
 /* テキストブロック */
 .style_textBlock {
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 30px 20px 20px;
     width: 100%;
     position: relative;
@@ -504,7 +516,8 @@
         border: 2px solid g.$cBlock_yel;
     }
 
-    &__exclamation, &__question {
+    &__exclamation,
+    &__question {
         border: 2px solid g.$cBlock_bl;
     }
 
@@ -543,15 +556,16 @@
     }
 
     &__point {
-        background:  g.$cBlock_yel;
+        background: g.$cBlock_yel;
 
         &::before {
             content: "\f0eb";
         }
     }
 
-    &__exclamation, &__question {
-        background:  g.$cBlock_bl;
+    &__exclamation,
+    &__question {
+        background: g.$cBlock_bl;
     }
 
     &__exclamation {
@@ -567,7 +581,7 @@
     }
 
     &__info {
-        background:  g.$cBlock_gr;
+        background: g.$cBlock_gr;
 
         &::before {
             content: "\f129";
@@ -575,7 +589,7 @@
     }
 
     &__caution {
-        background:  g.$cBlock_red;
+        background: g.$cBlock_red;
 
         &::before {
             content: "\f071";

@@ -22,6 +22,9 @@
   top: 8px;
   left: 0;
 }
+.is-style-ul_default > li:not(:first-of-type), .is-style-ol_default ul > li:not(:first-of-type), .is-style-ol_default ol ul > li:not(:first-of-type), .is-style-ul_default > li ol ol ul > li:not(:first-of-type), .is-style-ol_default ol ol ul > li:not(:first-of-type), .is-style-ul_default > li ol ol ol ul > li:not(:first-of-type), .is-style-ol_default ul > li ol ol ol ul > li:not(:first-of-type), .is-style-ul_default > li ol ol ul > li ol ol ul > li:not(:first-of-type), .is-style-ul_default > li ol ul > li:not(:first-of-type), .is-style-ol_default ul > li ul > li:not(:first-of-type), .is-style-ul_default > li ol ul > li ul > li:not(:first-of-type), .is-style-ul_default > li ul > li:not(:first-of-type), .is-style-ol_default ul > li ul > li ul > li:not(:first-of-type), .is-style-ol_default ol ul > li ol ul > li ul > li ul > li:not(:first-of-type), .is-style-ul_default > li ol ol ul > li ol ul > li ul > li ul > li:not(:first-of-type), .is-style-ul_default > li ol ul > li ul > li ul > li:not(:first-of-type) {
+  margin-top: 5px;
+}
 .is-style-ul_default > li a:focus, .is-style-ol_default ul > li a:focus, .is-style-ul_default > li a:hover, .is-style-ol_default ul > li a:hover {
   opacity: 0.7;
 }
@@ -59,7 +62,7 @@
 .is-style-blockquote_default {
   width: 100%;
   max-width: 600px;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   padding: 30px 15px 10px;
   border-radius: 10px;
   font-style: italic;
@@ -256,7 +259,8 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.style_accordion_contents > p, .style_accordion_contents img {
+.style_accordion_contents > p,
+.style_accordion_contents img {
   margin-top: 10px;
 }
 .style_accordion_contents.is_open {
@@ -494,7 +498,7 @@
 
 /* テキストブロック */
 .style_textBlock {
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 30px 20px 20px;
   width: 100%;
   position: relative;

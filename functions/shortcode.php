@@ -103,9 +103,3 @@ function sc_textBlock_caution($atts)
     <div class="style_textBlock_textWrap"><p>' . $atts['text'] . '</p></div><!-- /.style_textBlock_textWrap --></div><!-- /.style_textBlock -->';
 }
 add_shortcode('tb_cau', 'sc_textBlock_caution');
-
-function sc_prism($atts)
-{
-    return '&lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language' . $atts['lang'] . '&quot;&gt;' . $atts['code'] . '&lt;/code&gt;&lt;/pre&gt;';
-}
-add_shortcode('prism', 'sc_prism');
