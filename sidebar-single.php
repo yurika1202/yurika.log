@@ -12,7 +12,7 @@
     </div><!-- /.bl_widget__2col -->
 
     <div class="bl_toc bl_toc__aside bl_common_blockWrap hp_mt40">
-        <p class="bl_widget_title">Mokuji</p><!-- /.bl_category_title -->
+        <p class="el_title__widget">Mokuji</p><!-- /.bl_category_title -->
         <?php if (is_active_sidebar('toc')) {
             dynamic_sidebar('toc');
         }

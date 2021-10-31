@@ -1,4 +1,4 @@
-<p class="bl_widget_title">Category</p><!-- /.bl_category_title -->
+<p class="el_title__widget">Category</p><!-- /.bl_category_title -->
 
 <ul class="bl_category_list">
     <?php

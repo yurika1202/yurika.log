@@ -6,7 +6,7 @@
     <button class="el_btn el_btn_toc" id="js_tocBtn"><span class="el_btn_toc__open">もくじ</span><span class="el_btn_toc__close"></span></button><!-- /.bl_header_tocBtn -->
 
     <div class="bl_toc bl_toc__main bl_common_blockWrap" id="js_toc">
-        <p class="bl_widget_title">Mokuji</p><!-- /.bl_category_title -->
+        <p class="el_title__widget">Mokuji</p><!-- /.bl_category_title -->
         <?php if (is_active_sidebar('toc')) {
             dynamic_sidebar('toc');
         }

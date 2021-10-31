@@ -3,15 +3,6 @@
 
 /* widget common
 ----------------------------------------- */
-.bl_widget_title {
-    text-transform: uppercase;
-    font-family: g.$fontEn;
-    letter-spacing: .18em;
-    color: g.$cText_br;
-    font-size: g.rem(20px);
-    text-align: center;
-}
-
 .bl_category_list, .toc_widget_list li {
     margin-top: 20px;
 

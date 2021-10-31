@@ -3,451 +3,379 @@
 <head>
 <meta charset="utf-8">
 
-<title>Yurika.portfolio</title>
+<title>Yurika.log</title>
 
-<meta name="description"  content="コーダーyurikaのポートフォリオ">
+<meta name="description"  content="コーダーゆりかの学習記録ブログ">
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!--Google Font-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
 <!-- font awesome -->
-<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/df603b5721.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../css/style.min.css">
 
-<link rel="icon" type="image/x-icon" href="/favicon .ico">
+<!-- favicon -->
+<link rel="shortcut-icon" href="favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
 
 </head>
-<body>
+<body id="js_fixed">
 
 <!-- header -->
-<header>
-    <div class="header-bg">
-        <img src="img/header-line.svg" class="header-bg _line" alt="ヘッダーの背景">
-        <img src="img/circle.png" class="header-bg _circle" alt="ヘッダーの背景">
-    </div><!-- /.header-bg -->
-
-    <div class="inner">
-
-        <div class="header-top">
-            <h1 class="header-logo _portfolio">
-                <img src="img/portfolio.png" alt="Yurika.portfolioのロゴ">
-            </h1><!-- /.header-logo -->
-
-            <div class="header-message">
-                <h2 class="header-message_title">デザインに忠実に、<br class="is_sp">ユーザーに寄り添うプラスαを。</h2>
-                <p class="header-message_text">お客様の想いが詰まったデザインカンプをピクセルパーフェクトでコーディングすることはもちろん、すべてのユーザーがストレスなく快適な閲覧環境を得られるよう、UI/UXを意識した実装を重視します。<br>またCSS設計の知識を元に、保守性が高くメンテナンスがしやすいコードを書くことを心がけ、他のコーダーさんが触ってもスムーズにリニューアル等できるようにしています。</p>
-            </div><!-- /.header-message -->
-        </div><!-- /.header-top -->
-
-        <nav class="header-nav_portfolio">
-            <ul class="header-nav_item">
-                <li><a href="#about"><span class="is_ruby">私について</span>ABOUT</a></li>
-                <li><a href="#service"><span class="is_ruby">できること</span>SERVICE</a></li>
-                <li><a href="#works"><span class="is_ruby">制作実績</span>WORKS</a></li>
-                <li><a href="#contact"><span class="is_ruby">お問い合わせ</span>CONTACT</a></li>
-            </ul><!-- /.header-nav _items -->
-        </nav><!-- /.header-nav -->
-
-        <div class="section-line _portfolio"><img src="/img/section-line.png" alt="セクションの区切り" loading="lazy" decoding="async"></div><!-- /.section__line -->
-
-    <!-- sp-menu -->
-        <div class="sp-btn">
+<header class="ly_header">
+    <div class="bl_header_inner">
+        <button class="bl_header_navBtn" id="js_drawerBtn">
             <span></span><span></span><span></span>
-        </div><!-- /.sp-btn -->
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </button><!-- /.bl_header_navBtn -->
+    </div><!-- /.bl_header_inner -->
 
-        <nav class="sp-nav _portfolio">
-            <div class="sp-nav_items inner">
-                <ul class="sp-menu">
-                    <li><a href="#about">ABOUT<span class="is_ruby">私について</span></a></li>
-                    <li><a href="#service">SERVICE<span class="is_ruby">できること</span></a></li>
-                    <li><a href="#works">WORKS<span class="is_ruby">制作実績</span></a></li>
-                    <li><a href="#contact">CONTACT<span class="is_ruby">お問い合わせ</span></a></li>
-                </ul><!-- /.sp-menu -->
-            </div><!-- /.sp-nav_items -->
-        </nav><!-- /.sp-nav -->
+    <nav class="bl_header_openNav" id="js_drawerContents">
+        <div class="bl_header_navInner">
+            <ul class="bl_profile_snsList hp_mt40">
+                <li class="bl_profile_snsItem">
+                    <a href="https://twitter.com/bnku212" class="el_btn el_btn__sns"><i class="fab fa-twitter"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
 
-    </div><!-- /.inner -->
+                <li class="bl_profile_snsItem">
+                    <a href="https://github.com/yurika1202" class="el_btn el_btn__sns"><i class="fab fa-github"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
+
+                <li class="bl_profile_snsItem">
+                    <a href="index.php" class="el_btn el_btn__sns"><i class="far fa-file-alt"></i></a>
+                </li><!-- /.bl_profile_snsItem -->
+            </ul><!-- /.bl_profile_snsList -->
+
+            <div class="bl_header_navLink">
+                <a href="contact.php" class="el_btn el_btn_headerNav">Contact</a>
+            </div><!-- /.bl_header_navLink -->
+        </div><!-- /.bl_header_navInner -->
+    </nav><!-- /.bl_header_openNav -->
 </header>
-<!-- ./header -->
 
-<main class="inner">
+<main class="ly_main js_drawerFixed">
+    <!-- lead -->
+    <div class="bl_lead">
+        <div class="bl_leadBg_wrap">
+            <div class="bl_leadBg_01"></div><!-- /.bl_leadBg_01 -->
+            <div class="bl_leadBg_02"></div><!-- /.bl_leadBg_02 -->
+        </div><!-- /.bl_leadBg_wrap -->
+
+        <div class="bl_lead_inner">
+            <p class="bl_lead_title">はじめまして<br>コーダーのゆりかと申します。</p>
+            <p class="bl_lead_message">
+                Webページまで足を運んでくださりありがとうございます。<br>
+                ぜひ最後までお付き合いいただければ幸いです。
+            </p>
+        </div><!-- /.bl_lead_inner -->
+    </div><!-- /.bl_lead -->
 
     <!-- about -->
-    <section class="about" id="about">
-        <h3 class="section-title">ABOUT<span class="section-title_ruby">私について</span></h3>
+    <section class="bl_about">
+        <div class="bl_about_inner">
+            <h1 class="el_title__section">わたしはこんな人です</h1>
 
-        <div class="profile">
-            <figure class="profile-img"><img src="/img/profile.jpg" alt="プロフィール画像"></figure>
+            <div class="bl_2colUnit__portfolio">
+                <div class="bl_about_img bl_2colUnit_leftItem__portfolio">
+                    <img src="../img/profile/profile.png" alt="ゆりかの似顔絵" width="210" height="210" loading="lazy" decoding="async">
+                </div><!-- /.bl_about_img -->
 
-            <div class="profile-content portfolio-bg">
+                <div class="bl_2colUnit_rightItem__portfolio">
+                    <p>
+                        2歳の男の子を育児中のアラサーママ。広島県在住。<br>
+                        コードを書く楽しさにどっぷりはまり、時間が許す限りコードを書いていたい人です。<br>
+                        特にCSSの知れば知るほど深いところが大好き。<br>
+                        特にCSSの知れば知るほど深いところが大好き。<br>
+                        目標はバニラJSを使いこなせるようになること！
+                    </p>
+                </div><!-- /.bl_2colUnit_rightItem__portfolio -->
+            </div><!-- /.bl_2colUnit__portfolio -->
 
-                <div class="profile-title">
-                    <div class="profile-name">
-                        <h2 class="profile-name_en">YURIKA</h2>
-                        <h2>コーダー</h2>
-                    </div><!-- /.profile-name -->
-                    <div class="profile-link">
-                        <p><a href="index.html" class="blog"><i class="far fa-file-alt"></i></a></p>
-                        <p><a href="https://twitter.com/bnku212" class="twitter"><i class="fab fa-twitter"></i></a></p>
-                        <p><a href="" class="github"><i class="fab fa-github"></i></a></p>
-                    </div><!-- /.profile-link -->
-                </div><!-- /.profile-title -->
+            <div class="bl_about_hobby">
+                <p class="el_title__second">Other</p>
+                <p class="bl_about_hobbyText">
+                    趣味は家族といくキャンプ。<br>
+                    少しづつ息子もお手伝いできるようになったので、3人で楽しく設営してます。<br>
+                    いつか県外にもキャンプしにいくのが夢。<br>
+                    某アイドルグループがすきで、コーディング中のBGMは常に推しを聞いています。
+                </p>
+            </div><!-- /.bl_about_hobby -->
 
-                <div class="profile-text">
-                    <p>1993年生まれの広島県民。<br>2歳の男の子を育てる母です。<br>毎日を子育てに追われる中、自分だけのスキルを身につけたい！と思い、2021年2月より本格的にweb制作の勉強をスタート。<br>そこから一気にコードを書く楽しさにドップリはまりました。<br>現在は日々スキルアップに励みつつ、フリーのコーダーとして活動しています。<br>目標は思い通りの表現を可能にするフロントエンドエンジニアになること。</p>
-                    <ul class="about-skill">
-                        <li><i class="fab fa-html5"></i></li>
-                        <li><i class="fab fa-css3-alt"></i></li>
-                        <li class="about-skill_icon"><img src="./img/jquery-logo.png" alt="jQueryのアイコン"></li><!-- /.about-skill_icon -->
-                        <li><i class="fab fa-sass"></i></li>
-                        <li><i class="fab fa-wordpress"></i></li>
-                    </ul><!-- /.about-skill -->
-                </div><!-- /.profile-text -->
+            <div class="bl_about_link">
+                <a href="#works" class="el_btn el_btn__arrow">まず制作実績をご覧になられたい方はこちら</a>
+            </div><!-- /.bl_about_link -->
+        </div><!-- /.bl_about_inner -->
 
-            </div><!-- /.profile-content -->
+        <section class="bl_about__subSection">
+            <h2 class="el_title_subSection">どうしてコーダーを目指したの？</h2>
 
-        </div><!-- ./profile -->
-    </section><!-- /.about -->
+            <div class="bl_about_textWrap">
+                <div class="bl_about_leadWrap">
+                    <p class="bl_about_lead">コーディングが大好きでたまらないからです！</p>
+                </div><!-- /.bl_about_leadWrap -->
 
-    <!-- service -->
-    <section class="service portfolio-section" id="service">
-        <h3 class="section-title">SERVICE<span class="section-title_ruby">できること</span></h3>
+                <p class="bl_about_text">
+                    遊ぶ！寝る！のみを楽しみ、勉強はそっちのけの大学生活をおくって就活に失敗。<br>
+                    見事新卒フリーターになり、ようやく人生舐めてたことを痛感しました。<br>
+                    焦って医療事務の資格を取り、薬局事務として就職するも出産を機に約1年で退職。<br>
+                    子どもが2歳になり社会復帰を考えた時に、<br>
+                    「自分の自信となる武器」がないことに気づきました。<br>
+                    「わたしの好きなことってなんだろう」と考えたときに、高校時代にハマっていたホームページ作りを思い出し、<br>
+                    Web制作という世界を知りました。<br>
+                    そこからすぐに化石となっていたパソコンを引っ張りだし、HTMLとCSSをさわり、<br>
+                    その楽しさにどハマりました。<br>
+                    こんなに夢中になれるものを見つけたのは人生ではじめてで、<br>
+                    これを絶対に仕事に繋げたい！と思い<br>
+                    コーダーを目指して2021年2月から本格的に勉強を始めました。
+                </p><!-- /.bl_about_text -->
+            </div><!-- /.bl_about_textWrap -->
+        </section><!-- /.bl_about__subSection -->
 
-        <div class="portfolio-container">
+        <section class="bl_about__subSection">
+            <h2 class="el_title_subSection">あなたにコーディングを任せるメリットは？</h2>
 
-            <ul class="service-item">
-                <li class="_coding">
-                    <div class="service-item_icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div><!-- /.service-item_icon -->
-                    <div class="service-item_text">
-                        <h4 class="service-item_title">コーディング</h4>
-                        <p class="service-item_message">CSS設計の知識を元に、だれが見ても読みやすく、育てやすいコードを書くことを心がけています。</p>
+            <div class="bl_about_textWrap">
+                <div class="bl_about_leadWrap">
+                    <p class="bl_about_lead">
+                        第三者でもメンテナンスのしやすいコーディング、<br>
+                        デザインに正確かつユーザー目線の実装をします
+                    </p>
+                </div><!-- /.bl_about_leadWrap -->
 
-                        <p><a href="" class="btn modal-btn js_modal-open">コーディングポリシー</a></p>
+                <p class="bl_about_text">
+                    私はコーディングにおいて、「保守性」が最も重要だと考えています。<br>
+                    Webサイトは多くの場合は改修作業がつきものであり、<br>
+                    コードが汚いと一つ一つをほどいていかなければならないため<br>
+                    無駄に時間を取られてしまうなどの問題が生じてしまいます。<br>
+                    だれが見ても分かりやすいコードを組み立てていくために、<br>
+                    適切なタグを使用したマークアップとCSS設計に基づいた命名規則や<br>
+                    変更・拡張のしやすいコーディングを心がけています。<br>
+                    またデザインを忠実に再現するだけではなく、<br>
+                    サイトに訪れた人がストレスなく閲覧できるアニメーションやレスポンシブの実装をいたします。
+                </p><!-- /.bl_about_text -->
+            </div><!-- /.bl_about_textWrap -->
+        </section><!-- /.bl_about__subSection -->
 
-                    </div><!-- /.service-item_text -->
-                </li><!-- /.service-item_coding -->
+        <section class="bl_about__subSection">
+            <h2 class="el_title_subSection">できることを教えてください</h2>
 
-                <li class="_cms">
-                    <div class="service-item_icon">
-                        <i class="fas fa-cogs"></i>
-                    </div><!-- /.service-item_icon -->
-                    <div class="service-item_text">
-                        <h4 class="service-item_title">CMS導入</h4>
-                        <p class="service-item_message">WordPressを中心に、CMS導入も可能です。ご希望のCMSをお伝えください。</p>
-                    </div><!-- /.service-item_text -->
-                </li><!-- /.service-item -->
+            <div class="bl_skill_wrap">
+                <p class="bl_skill_title">実際にお仕事で使用したことがある</p>
 
-                <li class="_seo">
-                    <div class="service-item_icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div><!-- /.service-item_icon -->
-                    <div class="service-item_text">
-                        <h4 class="service-item_title">SEO対策</h4>
-                        <p class="service-item_message">より多くのユーザーに見てもらえるよう、SEO対策もいたします。</p>
-                    </div><!-- /.service-item_text -->
-                </li><!-- /.service-item -->
+                <ul class="bl_skill_list">
+                    <li class="bl_skill_item bl_skill_item__html"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__css"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__js"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__sass"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__github"></li><!-- /.bl_skill_item -->
+                </ul><!-- /.bl_skill_list -->
+            </div><!-- /.bl_skill_wrap -->
 
-                <li class="_maintenance">
-                    <div class="service-item_icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div><!-- /.service-item_icon -->
-                    <div class="service-item_text">
-                        <h4 class="service-item_title">保守・運営</h4>
-                        <p class="service-item_message">お客様自身での運営がしやすいよう制作いたしますが、時間に制限のある方やPCが苦手な方など、ご希望の方には保守・運営もいたします。</p>
-                    </div><!-- /.service-item_text -->
-                </li><!-- /.service-item -->
+            <div class="bl_skill_wrap">
+                <p class="bl_skill_title">問題なく使用できる</p>
 
-            </ul><!-- /.service-item -->
-        </div><!-- /.service-container -->
+                <ul class="bl_skill_list">
+                    <li class="bl_2colUnit__skill">
+                        <div class="bl_skill_item bl_skill_item__wp"></div><!-- /.bl_skill_item -->
+                        <p class="bl_about_skillText">
+                            オリジナルテーマの作成/既存テーマのカスタマイズ<br>
+                            など(プラグイン作成は勉強中です)
+                        </p>
+                    </li><!-- /.bl_skill_item -->
+                </ul><!-- /.bl_skill_list -->
+            </div><!-- /.bl_skill_wrap -->
 
-        <div class="service-message">
-            <p class="service-message_title">... and more</p>
-            <p class="service-message_text">他にもお手伝いできることがあります。<br>ぜひ一度、お気軽にご相談ください。</p>
-            <p><a href="#contact" class="btn service-btn">お問い合わせはこちら</a></p>
-        </div><!-- /.service-message -->
+            <div class="bl_skill_wrap">
+                <p class="bl_skill_title">勉強中/勉強予定</p>
 
-        <div class="js_modal modal">
-            <div class="modal-bg js_modal-close"></div>
+                <ul class="bl_skill_list">
+                    <li class="bl_skill_item bl_skill_item__js"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__gulp"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__webpack"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__pug"></li><!-- /.bl_skill_item -->
+                    <li class="bl_skill_item bl_skill_item__react"></li><!-- /.bl_skill_item -->
+                </ul><!-- /.bl_skill_list -->
+            </div><!-- /.bl_skill_wrap -->
+        </section><!-- /.bl_about__subSection -->
 
-            <div class="modal-content">
+        <section class="bl_about__subSection">
+            <h2 class="el_title_subSection">制作環境について教えてください</h2>
 
-                <div class="policy-title">
-                    <h4 class="policy-title_en _modal">Cording Policy</h4>
-                    <p class="policy-title_ruby _modal">コーディングポリシー</p>
-                </div><!-- /.policy-title -->
+            <div class="bl_production_wrap bl_production_wrap__time">
+                <div class="bl_productionTime">
+                    <p class="bl_productionTime_title">連絡対応時間</p>
+                    <p class="bl_productionTime_text">1:00～19:00（対応時間内は3時間以内に返信いたします。）</p>
+                </div><!-- /.bl_productionTime -->
 
-                <div class="policy-wrapper">
-                    <h5 class="policy-item_title">HTML / CSS</h5>
-                    <ul class="policy-item">
-                        <li>「HTML5」「CSS3」を使用します。</li>
-                        <li>第三者からも見やすく、保守・運営をスムーズに行えるマークアップをします。</li>
-                        <li>CSS設計について、すっきりと綺麗なマークアップが可能な吉本式BEM設計を基本的に採用しています。<br>ご希望があればスタンダードなBEM設計、またはPRECSS設計なども可能です。</li>
-                        <li>印刷CSSについては原則考慮しません。</li>
-                    </ul><!-- /.policy-item -->
-                    <h5 class="policy-item_title">JavaScript</h5>
-                    <ul class="policy-item">
-                        <li>主にjQueryとそのプラグインを利用しますが、jQueryの使用を希望しない場合はご連絡下さい。</li>
-                        <li>使用したプラグインやそのバージョン、注意事項などは別途まとめ、お渡しします。</li>
-                    </ul><!-- /.policy-item -->
-                    <h5 class="policy-item_title">WordPress</h5>
-                    <ul class="policy-item">
-                        <li>WordPressは制作時点で最新のバージョンを使用します。</li>
-                        <li>カスタマイズはコアファイルを操作せず、テンプレートファイル内で完結するよう設計します。</li>
-                        <li>使用したプラグインや注意事項などは別途まとめ、お渡しします。</li>
-                    </ul><!-- /.policy-item -->
-                    <h5 class="policy-item_title">制作環境 / チェックブラウザ</h5>
-                    <ul class="policy-item">
-                        <li>制作はWindows Surface Laptop4で行います。</li>
-                        <li>コーディングには「Visual Studio Code」を使用しています。</li>
-                        <li>HTML、CSSともに「validator.w3.org」にてチェックを行います。システムの都合によりエラーがゼロにならない場合、目視によるチェックで問題がないことを確認します。</li>
-                        <li>JavaScriptはブラウザが出力するエラーが原則なくなるまでチェックします。</li>
-                        <li>チェックブラウザは、Edge・IE11・Chrome・Safari・Firefoxです。（すべて最新バージョンのみでの確認です。）</li>
-                        <li>スマートフォン、タブレットでのチェックは、その時点で所有している実機以外、エミュレーターを使用します。<br>現在所有している実機：Android Galaxy S10、tablet</li>
-                    </ul><!-- /.policy-item -->
-                </div><!-- /.policy-wrapper -->
-            </div><!-- /.modal-content -->
-            <a class="js-modal-close btn modal-btn_close" href=""></a>
-        </div>
+                <div class="bl_productionTime">
+                    <p class="bl_productionTime_title">作業時間</p>
+                    <p class="bl_productionTime_text">
+                        1:00~6:00（月～日）<br>
+                        ※日によって作業時間の変動がある可能性ありますが、その場合は事前にご連絡いたします。
+                    </p>
+                </div><!-- /.bl_productionTime -->
+            </div><!-- /.bl_production_wrap -->
 
-    </section><!-- /.service -->
+            <div class="bl_production_wrap bl_production_wrap__cording">
+                <div class="bl_cordingPolicy">
+                    <div class="bl_cordingPolicy_titleWrap">
+                        <p class="bl_cordingPolicy_title">HTML/CSS</p>
+                    </div><!-- /.bl_cordingPolicy_titleWrap -->
+                    <div class="bl_cordingPolicy_contentsWrap">
+                        <ul class="bl_cordingPolicy_contentsList">
+                            <li class="bl_cordingPolicy_contentsItem">「HTML Living Standard」「CSS3」を使用します。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">第三者からも見やすく、保守・運営をスムーズに行えるマークアップをします。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">CSS設計について、特にご希望なければPRECSS設計を採用いたします。<br>ご希望があればBEM設計なども可能ですので、ご相談ください。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">印刷CSSについては原則考慮しません。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                        </ul><!-- /.bl_cordingPolicy_contentsList -->
+                    </div><!-- /.bl_cordingPolicy_contentsWrap -->
+                </div><!-- /.bl_cordingPolicy -->
+
+                <div class="bl_cordingPolicy">
+                    <div class="bl_cordingPolicy_titleWrap">
+                        <p class="bl_cordingPolicy_title">JavaScript</p>
+                    </div><!-- /.bl_cordingPolicy_titleWrap -->
+                    <div class="bl_cordingPolicy_contentsWrap">
+                        <ul class="bl_cordingPolicy_contentsList">
+                            <li class="bl_cordingPolicy_contentsItem">使用したプラグインやそのバージョン、注意事項などは別途まとめ、お渡しします。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                        </ul><!-- /.bl_cordingPolicy_contentsList -->
+                    </div><!-- /.bl_cordingPolicy_contentsWrap -->
+                </div><!-- /.bl_cordingPolicy -->
+
+                <div class="bl_cordingPolicy">
+                    <div class="bl_cordingPolicy_titleWrap">
+                        <p class="bl_cordingPolicy_title">WordPress</p>
+                    </div><!-- /.bl_cordingPolicy_titleWrap -->
+                    <div class="bl_cordingPolicy_contentsWrap">
+                        <ul class="bl_cordingPolicy_contentsList">
+                            <li class="bl_cordingPolicy_contentsItem">WordPressは制作時点で最新のバージョンを使用します。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">カスタマイズはコアファイルを操作せず、テンプレートファイル内で完結するよう設計します。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">使用したプラグインや注意事項などは別途まとめ、お渡しします。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                        </ul><!-- /.bl_cordingPolicy_contentsList -->
+                    </div><!-- /.bl_cordingPolicy_contentsWrap -->
+                </div><!-- /.bl_cordingPolicy -->
+
+                <div class="bl_cordingPolicy">
+                    <div class="bl_cordingPolicy_titleWrap">
+                        <p class="bl_cordingPolicy_title">制作環境 / チェックブラウザ</p>
+                    </div><!-- /.bl_cordingPolicy_titleWrap -->
+                    <div class="bl_cordingPolicy_contentsWrap">
+                        <ul class="bl_cordingPolicy_contentsList">
+                            <li class="bl_cordingPolicy_contentsItem">制作はWindows Surface Laptop3で行います。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">コーディングには「Visual Studio Code」を使用しています。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">HTML、CSSともに「validator.w3.org」にてチェックを行います。<br>システムの都合によりエラーがゼロにならない場合、目視によるチェックで問題がないことを確認します。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">JavaScriptはブラウザが出力するエラーが原則なくなるまでチェックします。</li><!-- /.bl_cordingPolicy_contentsItem -->
+                            <li class="bl_cordingPolicy_contentsItem">
+                                実機確認は以下のとおりです。<br>
+                                Windows - Chrome/Edge/Firefox<br>
+                                iPhone11 - Chrome/safari<br>
+                                Android Galaxy S10 - Chrome<br>
+                                tablet - Chrome<br>
+                                ※すべて最新バージョンでの確認になります。
+                            </li><!-- /.bl_cordingPolicy_contentsItem -->
+                        </ul><!-- /.bl_cordingPolicy_contentsList -->
+                    </div><!-- /.bl_cordingPolicy_contentsWrap -->
+                </div><!-- /.bl_cordingPolicy -->
+            </div><!-- /.bl_production_wrap -->
+        </section><!-- /.bl_about__subSection -->
+    </section><!-- /.bl_about -->
 
     <!-- works -->
-    <section class="works portfolio-section" id="works">
-        <h3 class="section-title">WORKS<span class="section-title_ruby">制作実績</span></h3>
+    <section class="bl_works">
+        <h1 class="el_title__section">制作実績</h1>
 
-        <div class="portfolio-container">
+        <div class="bl_works_cardWrap">
+            <div class="bl_works_selectCard">
+                <div class="bl_works_img"><a href="https://sample.com">
+                    <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="274" height="422" loading="lazy" decoding="async">
+                </a></div><!-- /.bl_works_img -->
 
-            <div class="swiper-container">
+                <div class="bl_works_info">
+                    <h2 class="bl_works_title">架空企業様のLPサイト<span><a href="https://sample.com">https://sample.com</a></span></h2>
+                    <ul class="bl_works_skillList">
+                        <li class="bl_works_skillItem">HTML</li><!-- /.bl_works_skillItem -->
+                        <li class="bl_works_skillItem">CSS(Sass)</li><!-- /.bl_works_skillItem -->
+                        <li class="bl_works_skillItem">Javascript</li><!-- /.bl_works_skillItem -->
+                        <li class="bl_works_skillItem">Wordpress</li><!-- /.bl_works_skillItem -->
+                    </ul><!-- /.bl_works_skillList -->
 
-                <div class="swiper-wrapper">
+                    <div class="bl_works_infoWrap">
+                        <p class="bl_works_infoTitle">制作期間</p>
+                        <p class="bl_works_infoText">100時間（14日）</p>
+                    </div><!-- /.bl_works_infoWrap -->
 
-                    <div class="swiper-slide works-card_item">
-                        <a href="" class="card-wrapper">
-                            <div class="card-thumbnail"><img src="/img/works.png" alt="制作実績のサムネイル"></div>
-                            <div class="works-card_text">
-                                <h3 class="works-card_title">自身のブログ・ポートフォリオ</h3>
-                                <ul class="works-card_area">
-                                    <li>デザイン</li>
-                                    <li>コーディング</li>
-                                    <li>CMS導入</li>
-                                    <li>SEO対策</li>
-                                </ul>
-                            </div><!-- /.works-card_text -->
-                        </a>
-                    </div>
-                    <div class="swiper-slide works-card_item">
-                        <a href="" class="card-wrapper">
-                            <div class="card-thumbnail"><img src="/img/works.png" alt="制作実績のサムネイル"></div>
-                            <div class="works-card_text">
-                                <h3 class="works-card_title">ほにゃらら（架空）</h3>
-                                <ul class="works-card_area">
-                                    <li>コーディング</li>
-                                </ul>
-                            </div><!-- /.works-card_text -->
-                        </a>
-                    </div>
-                    <div class="swiper-slide works-card_item">
-                        <a href="" class="card-wrapper">
-                            <div class="card-thumbnail"><img src="/img/works.png" alt="制作実績のサムネイル"></div>
-                            <div class="works-card_text">
-                                <h3 class="works-card_title">ほにゃらら（架空）</h3>
-                                <ul class="works-card_area">
-                                    <li>コーディング</li>
-                                </ul>
-                            </div><!-- /.works-card_text -->
-                        </a>
-                    </div>
-                </div>
+                    <div class="bl_works_infoWrap">
+                        <p class="bl_works_infoTitle">担当領域</p>
+                        <p class="bl_works_infoText">コーディング</p>
+                    </div><!-- /.bl_works_infoWrap -->
 
-            </div><!-- /.swiper-container -->
+                    <div class="bl_works_infoWrap">
+                        <p class="bl_works_infoTitle">実装内容</p>
+                        <p class="bl_works_infoText">ドロワーメニュー/アコーディオン/モーダル/スクロールアニメーション/ など</p>
+                    </div><!-- /.bl_works_infoWrap -->
 
-            <div class="swiper-pagination"></div>
+                    <div class="bl_works_infoWrap">
+                        <p class="bl_works_infoTitle">その他</p>
+                        <p class="bl_works_infoText">githubを使用し、共同でコーディングをしました。ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら</p>
+                    </div><!-- /.bl_works_infoWrap -->
+                </div><!-- /.bl_works_info -->
+            </div><!-- /.bl_works_selectCard -->
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="bl_works_slide">
+                <ul class="bl_works_slideList">
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                    <li class="bl_works_slideItem">
+                        <img src="../img/portfolio/portfolio_noimg.png" alt="実績画像" width="204" height="315" loading="lazy" decoding="async">
+                    </li><!-- /.bl_works_slideItem -->
+                </ul><!-- /.bl_works_slideList -->
 
-        </div><!-- /.portfolio-container -->
-    </section><!-- /.works -->
+                <div class="bl_works_pagenation"></div><!-- /.bl_works_pagenation -->
+            </div><!-- /.bl_works_slide -->
+        </div><!-- /.bl_works_cardWrap -->
 
-    <!-- contact -->
-    <section class="contact portfolio-section" id="contact">
-        <h3 class="section-title">CONTACT<span class="section-title_ruby">お問い合わせ</span></h3>
-
-        <div class="portfolio-container">
-            <div class="contact-message">
-                <div class="select-work">
-                    <p>制作依頼の場合、こちらの内容のご記入をお願いいたします。</p>
-                    <ol class="work-temp">
-                        <li>依頼内容</li>
-                        <li>スケジュールやご予算</li>
-                        <li>ポートフォリオなどに実績としての掲載の可否</li>
-                    </ol><!-- /.work-temp -->
-                </div><!-- /.select-work -->
-
-                <details class="schedule-container">
-                    <summary>
-                        <p class="schedule-btn btn">対応可能日の確認はこちら</p>
-                    </summary>
-                    <div class="schedule-wrapper">
-                        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23cabfb9&amp;ctz=Asia%2FTokyo&amp;src=dWplcWZhOHVkMW4zMWM1OXI2Y25ydTMzdW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%239E69AF&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTabs=0&amp;showNav=1&amp;showDate=1&amp;showTz=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                    </div><!-- /.schedule-wrapper -->
-                </details><!-- /.schedule-container -->
-            </div><!-- /.contact-message -->
-
-            <!-- form -->
-            <div class="contact-content contact-inner">
-                <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6OwmXtRfGTKa5itTecHYSuS8MZaOlPXbp2j5GFxABatgorg/formResponse" class="contact-form" id="js-form">
-                    <div class="form-item">
-                        <dt class="contact-label"><label for="name" class="is_must">お名前</label></dt>
-                        <dd class="name-wrapper">
-                            <div class="contact-input _name">
-                                <input type="text" name="entry.1779209409" id="name" placeholder="姓" required autocomplete="family-name">
-                                <p class="input-ex">例：山田</p><!-- /.input-ex -->
-                            </div>
-                            <div class="contact-input _name">
-                                <input type="text" name="entry.1554881563" id="given-name" placeholder="名" required autocomplete="given-name">
-                                <p class="input-ex">例：太郎</p><!-- /.input-ex -->
-                            </div>
-                        </dd><!-- /.name-wrapper -->
-                    </div><!-- /.form-item -->
-
-                    <div class="form-item">
-                        <dt class="contact-label"><label for="ruby">フリガナ</label></dt>
-                        <dd class="name-wrapper">
-                            <div class="contact-input _name">
-                                <input type="text" name="entry.2096985610" id="ruby" placeholder="セイ" autocomplete="family-name">
-                                <p class="input-ex">例：ヤマダ</p><!-- /.input-ex -->
-                            </div>
-                            <div class="contact-input _name">
-                                <input type="text" name="entry.1334727094" id="given-ruby" placeholder="メイ" autocomplete="given-name">
-                                <p class="input-ex">例：タロウ</p><!-- /.input-ex -->
-                            </div>
-                        </dd><!-- /.name-wrapper -->
-                    </div><!-- /.form-item -->
-
-                    <div class="form-item">
-                        <dt class="contact-label"><label for="mail" class="is_must">ご連絡先</label></dt>
-                        <dd class="contact-input">
-                            <input type="email" name="entry.1827557894" id="mail" placeholder="" required autocomplete="email">
-                            <p class="input-ex">例：info@sample.com</p><!-- /.input-ex -->
-                        </dd>
-                    </div><!-- /.form-item -->
-
-                    <div class="form-item">
-                        <dt class="contact-label"><label for="type" class="is_must">お問合せ種別</label></dt>
-                        <dd class="contact-select _radio">
-                            <div class="select-item">
-                                <label for="work" class="select-label">
-                                    <input type="radio" name="entry.1933523182" id="work" value="お仕事のご依頼" checked>
-                                    <span class="check-item-parts"></span>お仕事のご依頼
-                                </label>
-                            </div>
-                            <div class="select-item">
-                                <label for="opinion" class="select-label">
-                                    <input type="radio" name="entry.1933523182" id="opinion" value="ご意見・ご感想">
-                                    <span class="check-item-parts"></span>ご意見・ご感想
-                                </label>
-                            </div>
-                            <div class="select-item">
-                                <label for="other" class="select-label">
-                                    <input type="radio" name="entry.1933523182" id="other" value="その他">
-                                    <span class="check-item-parts"></span>その他
-                                </label>
-                            </div>
-                        </dd>
-                    </div><!-- /.form-item -->
-
-                    <div class="form-item">
-                        <dt class="contact-label _textarea"><label for="text" class="is_must _textarea">お問合せ内容</label></dt>
-                        <dd class="contact-input-text">
-                            <textarea name="entry.17644278" id="text" required></textarea>
-                        </dd>
-                    </div><!-- /.form-item -->
-
-                    <div class="form-item_check">
-                        <div class="privacy-text">
-                            <h2 class="privacy-title">プライバシーポリシー</h2>
-                            <p>YURIKA.LOG、YURIKA's PORTFOLIO（以下、「当サイト」）は、ユーザーの個人情報の取扱いについて以下のとおりプライバシーポリシー（以下、「本ポリシー」）を定めます。</p>
-                            <h3 class="privacy-section">個人情報の利用目的</h3>
-                            <p>当サイトでは、名前やメールアドレス等の個人情報を取得させていただく場合がございます。取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用いたしません。</p>
-                            <h3 class="privacy-section">個人情報の安全管理</h3>
-                            <p>当サイトではお客様よりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。</p>
-                            <h3 class="privacy-section">個人情報の第三者への開示・提供</h3>
-                            <p>当サイトは次に掲げる場合を除いて、同意を得ることなく第三者に個人情報を提供することはありません。<br>ただし、個人情報保護法その他の法令で認められる場合を除きます。</p>
-                            <ul class="privacy-list">
-                                <li>法律上照会権限を有する者から書面による正式な協力要請、照会があった場合</li>
-                                <li>お客様の同意があった場合</li>
-                            </ul><!-- /.privacy-list -->
-                            <h3 class="privacy-section">プライバシーポリシーの変更</h3>
-                            <p>本ポリシーの内容は、法令変更などを受けて、ユーザーに通知することなく随時変更することができるものとします。変更後のプライバシーポリシーは、本サイトに掲載したときから効力を生じるものとします。</p>
-                            <h3 class="privacy-section">個人情報に関するお問い合わせ</h3>
-                            <p>本ポリシー関するお問い合わせは、下記までお願い致します。<br>YURIKA　メールアドレス：info@yurika1202.com</p>
-                        </div><!-- /.privacy-text -->
-                        <div class="privacy-check">
-                            <label for="privacy" class="privacy-label">
-                                <input type="checkbox" name="entry.621122530" id="privacy" value="プライバシーポリシーの同意" required>
-                                <span class="check-item-parts"></span>プライバシーポリシーの内容を確認し同意します
-                                </div><!-- /.privacy-text -->
-                            </label>
-                        </div><!-- /.privacy-check -->
-                    </div>
-
-                    <div class="form-item_btn">
-                        <button type="submit" id="js-submit" disabled>送信</button>
-                    </div>
-                </form><!-- /.contact-form -->
-
-                <!-- form-message -->
-                <div id="js-success" class="send-message inner">
-                    <p class="send-message_title">お問い合わせありがとうございます。</p>
-                    <p class="send-message_text">対応可能日の場合は6時間以内に返信しますので、少しお待ちください。<br>お休みを頂いている場合は、対応可能日に返信いたします。<br>もし対応可能日にも関わらず1日経っても返信がない場合、こちらへ届いてない可能性がありますので、お手数ですが再度お問い合わせフォーム、またはTwittweのDMからご連絡よろしくお願いいたします。</p>
-                    <p class="to-home"><a href="index.html"><i class="fas fa-home"></i></a></p>
-                </div>
-                <div id="js-error" class="send-message _error inner">
-                    <p class="send-message_title">送信に失敗しました。</p>
-                    <p class="send-message_text">ページを更新して再度送信してください。</p>
-                    <p class="to-home"><a href="index.html"><i class="fas fa-home"></i></a></p>
-                </div>
-
-            </div><!-- /.contact-content contact-inner -->
-        </div><!-- /.portfolio-container -->
-    </section><!-- /.contact -->
-
+        <div class="bl_works_link">
+            <a href="" class="el_btn el_btn_headerNav">お問い合わせはこちら</a>
+        </div><!-- /.bl_works_link -->
+    </section><!-- /.bl_works -->
 </main>
 
 <!-- footer -->
-<footer>
-    <div class="section-line"><img src="/img/section-line.png" alt="セクションの区切り" loading="lazy" decoding="async"></div><!-- /.section__line -->
+<footer class="ly_footer js_drawerFixed">
+    <nav class="bl_footerNav">
+        <a href="" class="el_btn_footerNav">プライバシーポリシー</a>
+    </nav><!-- /.bl_footerNav -->
 
-    <div class="footer-bg">
-        <img src="/img/circle.png" alt="フッターの背景" class="footer-bg _circle">
-        <img src="/img/footer-line.svg" alt="フッターの画像" class="footer-bg _line">
-    </div><!-- /.footer-bg -->
+    <div class="bl_footer_copyWrap">
+        <small class="el_copy">&copy; 2021 Yurika.log</small>
+    </div><!-- /.bl_footer_copyWrap -->
 
-    <div class="footer-link">
-        <div class="icons">
-            <a href="index.html" class="blog"><i class="far fa-file-alt"></i></a><!-- /.blog -->
-            <a href="https://twitter.com/bnku212" class="twitter"><i class="fab fa-twitter"></i></a><!-- /.twitter -->
-            <a href="" class="github"><i class="fab fa-github"></i></a><!-- /.github -->
-        </div><!-- /.icons -->
-        <p class="privacy"><a href="">プライバシーポリシー</a></p>
-    </div><!-- /.footer__menu_link -->
+    <div class="el_toTop" id="js_toTopBtn">
+        <i class="fas fa-caret-up"></i>
+    </div><!-- /.el_toTop -->
+</footer><!-- /.ly_footer -->
 
-    <small class="copy">&copy; 2021 Yurika.portfolio
-    </small>
-</footer>
-
-<div class="top-scroll">TOP</div><!-- /.top-scroll -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="/js/script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
