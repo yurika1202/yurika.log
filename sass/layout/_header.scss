@@ -17,4 +17,11 @@
         height: 70px;
         padding: 20px 0;
     }
+
+    &__pf {
+        height: auto;
+        top: auto;
+        bottom: 0;
+        background: transparent;
+    }
 }

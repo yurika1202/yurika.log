@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="hp_anime">
+<html lang="ja">
 
 <head>
     <meta charset="utf-8">
@@ -14,10 +14,10 @@
 
 </head>
 
-<body id="js_fixed" class="hp_anime">
+<body id="js_fixed">
 
     <!-- header -->
-    <header class="ly_header hp_anime">
+    <header class="ly_header">
         <div class="bl_header_inner hp_anime">
             <h1 class="bl_header_logo">
                 <a href="<?php echo esc_url(home_url()); ?>">

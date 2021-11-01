@@ -38,6 +38,7 @@
         background: g.$cSober;
         border-radius: 1px;
         transition: opacity .3s ease;
+        pointer-events: none;
 
         &:not(:nth-of-type(3n + 1)) {
             margin-left: 8px;
@@ -54,6 +55,17 @@
 
     @include g.mq(md) {
         display: none;
+    }
+
+    &__pf {
+        width: 60px;
+        height: 60px;
+        padding: 15px 15px 8px;
+        background: g.$cBg_main;
+        border-radius: 50%;
+        border: 1px solid g.$cAccent;
+        position: static;
+        right: auto;
     }
 }
 
@@ -81,6 +93,24 @@
 
     @include g.mq(md) {
         display: none;
+    }
+
+    &__pf {
+        width: 80%;
+        height: auto;
+        padding-bottom: 40px;
+        border-radius: 20px;
+        top: auto;
+        bottom: 80px;
+        right: 10%;
+        transform: scale(0);
+        transform-origin: center bottom;
+        transition: transform .4s ease-in-out;
+
+        &.is_open {
+            right: 10%;
+            transform: scale(1);
+        }
     }
 }
 

@@ -3,6 +3,50 @@
 
 /* title
 ----------------------------------------- */
+.el_title_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include g.mq(sm) {
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+}
+
+.el_title__mainTitle {
+    font-size: g.rem(16px);
+    text-transform: uppercase;
+    font-family: g.$fontEn;
+    letter-spacing: .15em;
+
+    @include g.mq(sm) {
+        font-size: g.rem(20px);
+    }
+}
+
+.el_title__contentsTitle {
+    padding-left: 40px;
+    margin-left: 20px;
+    line-height: 2em;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 3px;
+        background: g.$cMain;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    @include g.mq(sm) {
+        font-size: g.rem(16px);
+    }
+}
+
 .el_title__widget {
     text-transform: uppercase;
     font-family: g.$fontEn;

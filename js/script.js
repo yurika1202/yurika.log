@@ -10,21 +10,34 @@ window.onscroll = () => {
     const nav = document.getElementById('js_drawerContents');
     const fixed = document.getElementById('js_fixed');
 
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('is_open');
-        nav.classList.toggle('is_open');
-
+    document.addEventListener('click', (e) => {
         const position = document.querySelector('html body').getBoundingClientRect().top;
 
-        if(btn.classList.contains('is_open')) {
-            fixed.setAttribute('style', 'top:' + position + 'px;');
-            fixed.classList.add('is_fixed');
+        if(e.target != btn) {
+            btn.classList.remove('is_open');
+            nav.classList.remove('is_open');
+
+            if(fixed) {
+                fixed.classList.remove('is_fixed');
+                fixed.setAttribute('style', '');
+                window.scrollTo(0, position * -1);
+            }
         } else {
-            fixed.classList.remove('is_fixed');
-            fixed.setAttribute('style', '');
-            window.scrollTo(0, position * -1);
+            btn.classList.toggle('is_open');
+            nav.classList.toggle('is_open');
+
+            if(fixed) {
+                if(btn.classList.contains('is_open')) {
+                    fixed.setAttribute('style', 'top:' + position + 'px;');
+                    fixed.classList.add('is_fixed');
+                } else {
+                    fixed.classList.remove('is_fixed');
+                    fixed.setAttribute('style', '');
+                    window.scrollTo(0, position * -1);
+                }
+            }
         }
-    });
+    })
 })();
 
 
