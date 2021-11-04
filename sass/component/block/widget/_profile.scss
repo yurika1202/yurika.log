@@ -106,6 +106,17 @@
         justify-content: center;
         margin: 25px auto 0;
     }
+
+    &__pf {
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @include g.mq(sm) {
+            width: auto;
+            margin: 0;
+        }
+    }
 }
 
 .bl_profile_snsItem {

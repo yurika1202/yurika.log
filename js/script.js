@@ -1,6 +1,7 @@
 /* スクロール時イベント
 --------------------------------- */
 window.onscroll = () => {
+    fadeOutBtn();
 }
 
 /* headerNav
@@ -11,20 +12,18 @@ window.onscroll = () => {
     const fixed = document.getElementById('js_fixed');
 
     document.addEventListener('click', (e) => {
-        const position = document.querySelector('html body').getBoundingClientRect().top;
-
         if(e.target != btn) {
             btn.classList.remove('is_open');
             nav.classList.remove('is_open');
-
-            if(fixed) {
-                fixed.classList.remove('is_fixed');
-                fixed.setAttribute('style', '');
-                window.scrollTo(0, position * -1);
-            }
+            windowFix();
         } else {
             btn.classList.toggle('is_open');
             nav.classList.toggle('is_open');
+            windowFix();
+        }
+
+        function windowFix() {
+            const position = document.querySelector('html body').getBoundingClientRect().top;
 
             if(fixed) {
                 if(btn.classList.contains('is_open')) {
@@ -39,6 +38,19 @@ window.onscroll = () => {
         }
     })
 })();
+
+function fadeOutBtn() {
+    const btn = document.getElementById('js_drawerBtn');
+    const check = window.pageYOffset;
+    const docHeight = document.body.clientHeight;
+    const windowHeight = window.innerHeight;
+
+    if(check > docHeight - windowHeight - 150) {
+        btn.classList.remove('is_display');
+    } else {
+        btn.classList.add('is_display');
+    }
+};
 
 
 /* スクロールトップ

@@ -60,12 +60,25 @@
     &__pf {
         width: 60px;
         height: 60px;
-        padding: 15px 15px 8px;
+        padding: 15px 14px 8px;
         background: g.$cBg_main;
         border-radius: 50%;
-        border: 1px solid g.$cAccent;
+        border: 2px solid g.$cAccent;
         position: static;
         right: auto;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-in-out,
+                    visibility .3s ease-in-out;
+
+        &.is_display {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include g.mq(md) {
+            display: flex;
+        }
     }
 }
 
@@ -96,20 +109,31 @@
     }
 
     &__pf {
-        width: 80%;
+        width: 85%;
+        max-width: 300px;
         height: auto;
-        padding-bottom: 40px;
+        overflow-y: hidden;
+        padding: 40px 0;
         border-radius: 20px;
+        border: 2px solid g.$cAccent;
         top: auto;
-        bottom: 80px;
-        right: 10%;
-        transform: scale(0);
+        left: 50%;
+        bottom: 90px;
+        transform: translateX(-50%) scale(0);
         transform-origin: center bottom;
         transition: transform .4s ease-in-out;
 
         &.is_open {
-            right: 10%;
-            transform: scale(1);
+            transform: translateX(-50%) scale(1);
+        }
+
+        @include g.mq(sm) {
+            max-width: 500px;
+            bottom: 100px;
+        }
+
+        @include g.mq(md) {
+            display: block;
         }
     }
 }
@@ -118,8 +142,25 @@
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
+
+    &__pf {
+        @include g.mq(sm) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
 }
 
 .bl_header_navLink {
     text-align: center;
+
+    &__pf {
+        margin-top: 30px;
+
+        @include g.mq(sm) {
+            margin-top: 0;
+        }
+    }
 }
